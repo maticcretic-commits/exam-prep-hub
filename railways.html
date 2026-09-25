@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Railways Exam Prep (RRB NTPC / Group D / ALP) — Exam Prep Hub</title>
+<link rel="stylesheet" href="assets/theme.css">
+<style>
+:root{--accent:#84CC16;--bg:#0b0f14;--bg2:#111722;--card:#141c29;--line:rgba(255,255,255,.09);--ink:#e8eef6;--muted:#9aa7b8}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Segoe UI',system-ui,-apple-system,Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.65;margin:0}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.glass-nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:1rem;padding:.7rem 1.2rem;background:rgba(11,15,20,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.brand{font-weight:800;font-size:1.05rem;color:var(--ink);white-space:nowrap}
+.brand span{color:var(--accent)}
+.nav-links{display:flex;flex-wrap:wrap;gap:.15rem;margin-left:auto}
+.nav-links a{color:var(--muted);font-size:.85rem;padding:.4rem .6rem;border-radius:.5rem}
+.nav-links a:hover{color:var(--ink);background:rgba(255,255,255,.06);text-decoration:none}
+.nav-links a[aria-current="page"]{color:var(--accent);font-weight:700}
+.nav-btns{display:flex;gap:.4rem;align-items:center}
+#theme-toggle,.nav-toggle{background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--ink);border-radius:.55rem;padding:.4rem .7rem;cursor:pointer;font-size:.95rem}
+.nav-toggle{display:none}
+.breadcrumb{max-width:1120px;margin:0 auto;padding:1rem 1.2rem .2rem;color:var(--muted);font-size:.88rem}
+.breadcrumb a{color:var(--muted)}
+.hero{max-width:1120px;margin:0 auto;padding:1.6rem 1.2rem 1.2rem}
+.hero h1{font-size:clamp(1.7rem,4vw,2.6rem);margin:.2rem 0 .6rem;line-height:1.15}
+.hero h1 .ac{color:var(--accent)}
+.tagline{color:var(--muted);font-size:1.05rem;max-width:62ch;margin:0 0 1.1rem}
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.7rem}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:.8rem 1rem}
+.stat b{display:block;font-size:1.05rem;color:var(--accent)}
+.stat small{color:var(--muted)}
+.section-nav{position:sticky;top:58px;z-index:40;background:rgba(11,15,20,.85);backdrop-filter:blur(10px);border-block:1px solid var(--line);display:flex;gap:.2rem;overflow-x:auto;padding:.45rem 1rem}
+.section-nav a{color:var(--muted);font-size:.88rem;padding:.45rem .75rem;border-radius:2rem;white-space:nowrap}
+.section-nav a:hover{color:var(--ink);background:rgba(255,255,255,.06);text-decoration:none}
+.page-wrap{max-width:1120px;margin:0 auto;padding:1rem 1.2rem 3rem}
+.exam-section{margin:2.2rem 0;scroll-margin-top:120px}
+.section-title{font-size:1.45rem;margin:0 0 .4rem;padding-bottom:.5rem;border-bottom:2px solid var(--accent);display:inline-block}
+.section-kicker{color:var(--accent);font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.section-sub{color:var(--muted);margin:.3rem 0 1.2rem;max-width:70ch}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem;margin:1rem 0}
+.note-card{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1rem 1.1rem}
+.note-card h3{margin:.1rem 0 .5rem;font-size:1.02rem;color:var(--accent)}
+.note-card p,.note-card li{font-size:.93rem;color:#cdd6e2}
+.note-card ul{margin:.4rem 0;padding-left:1.1rem}
+table.data-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.92rem;background:var(--card);border-radius:.8rem;overflow:hidden}
+table.data-table th{background:rgba(255,255,255,.05);text-align:left;padding:.65rem .8rem;color:var(--accent)}
+table.data-table td{padding:.6rem .8rem;border-top:1px solid var(--line);vertical-align:top}
+table.data-table tr.total td{font-weight:700}
+.callout{border-left:4px solid var(--accent);background:rgba(255,255,255,.04);border-radius:0 .7rem .7rem 0;padding:.85rem 1.1rem;margin:1rem 0;font-size:.94rem}
+.callout-warn{border-left:4px solid #f59e0b;background:rgba(245,158,11,.08);border-radius:0 .7rem .7rem 0;padding:.85rem 1.1rem;margin:1rem 0;font-size:.94rem}
+.btn{display:inline-block;border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--ink);padding:.6rem 1.1rem;border-radius:.7rem;cursor:pointer;font-size:.95rem;font-weight:600}
+.btn:hover{background:rgba(255,255,255,.12);text-decoration:none}
+.btn-accent,.btn.primary{background:var(--accent);border-color:var(--accent);color:#0b0f14}
+.btn-accent:hover,.btn.primary:hover{filter:brightness(1.08);text-decoration:none}
+.btn.secondary{background:transparent}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.tag{display:inline-block;font-size:.75rem;font-weight:700;color:var(--accent);border:1px solid var(--accent);border-radius:2rem;padding:.1rem .6rem;margin:.1rem .15rem .1rem 0}
+.quiz-block{background:var(--card);border:1px solid var(--line);border-radius:1rem;padding:1.2rem;margin:1rem 0}
+.site-footer{border-top:1px solid var(--line);padding:1.6rem 1.2rem 2.5rem;text-align:center;color:var(--muted);font-size:.88rem}
+.reveal{}
+.exam-tabs,.subject-tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.exam-tab,.subject-tab,.tab,.nav button{border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--ink);padding:.55rem 1rem;border-radius:2rem;cursor:pointer;font-size:.9rem;font-weight:600}
+.exam-tab.active,.subject-tab.active,.tab.active,.nav button.active{background:var(--accent);border-color:var(--accent);color:#0b0f14}
+.study-panel.hidden,.hide{display:none!important}
+.panel{display:none}
+.panel.active{display:block}
+.pattern-row{display:grid;grid-template-columns:2fr 1fr 1fr;gap:.5rem;padding:.5rem .2rem;border-bottom:1px dashed var(--line);font-size:.93rem}
+.exam-route{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin:.6rem 0;font-weight:600}
+.exam-route i{color:var(--accent);font-style:normal}
+.search{width:100%;max-width:420px;background:var(--bg2);border:1px solid var(--line);color:var(--ink);border-radius:.6rem;padding:.6rem .9rem;font-size:.92rem;margin:.6rem 0}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:.8rem;margin:1rem 0}
+.topic,.module{background:var(--card);border:1px solid var(--line);border-radius:.85rem;padding:.9rem 1rem}
+details.topic summary{cursor:pointer;font-weight:700;color:var(--accent);font-size:.98rem}
+details.topic .body{padding-top:.6rem;font-size:.92rem;color:#cdd6e2}
+details.topic .body strong{color:var(--ink)}
+span.formula,code.formula{display:block;background:var(--bg2);border:1px solid var(--line);border-radius:.5rem;padding:.45rem .7rem;margin:.45rem 0;font-family:ui-monospace,Consolas,monospace;font-size:.88rem;color:var(--ink)}
+.worked{background:rgba(255,255,255,.04);border-left:3px solid var(--accent);padding:.5rem .8rem;margin:.6rem 0;font-size:.9rem;border-radius:0 .5rem .5rem 0}
+.note{border:1px solid var(--line);border-radius:.8rem;margin:.6rem 0;background:var(--card);overflow:hidden}
+.note>button{width:100%;display:flex;justify-content:space-between;align-items:center;background:none;border:0;color:var(--ink);padding:.85rem 1rem;cursor:pointer;font-size:.95rem;font-weight:600;text-align:left}
+.note>button span:last-child{color:var(--accent);font-size:1.1rem}
+.note-body{display:none;padding:0 1rem 1rem;font-size:.92rem;color:#cdd6e2}
+.note.open .note-body{display:block}
+.note-body ul{margin:.4rem 0;padding-left:1.1rem}
+.empty{color:var(--muted);padding:1rem}
+.question,.q{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:.85rem;padding:1rem 1.1rem;margin:.8rem 0}
+.qnum{font-size:.75rem;font-weight:700;letter-spacing:.08em;color:var(--accent);margin-bottom:.3rem}
+.question h3,.q h3{margin:.2rem 0 .7rem;font-size:1rem}
+.options,.opts{display:grid;gap:.45rem}
+.option,.opt{display:block;text-align:left;background:var(--bg2);border:1px solid var(--line);color:var(--ink);border-radius:.6rem;padding:.6rem .9rem;cursor:pointer;font-size:.93rem;width:100%}
+.option:hover,.opt:hover{border-color:var(--accent)}
+.option.selected{outline:2px solid var(--accent)}
+.question.revealed .option.correct,.q.checked.right{outline:2px solid #22c55e;background:rgba(34,197,94,.1)}
+.question.revealed .option.wrong,.q.checked.wrong{outline:2px solid #ef4444;background:rgba(239,68,68,.1)}
+.explain{display:none;margin-top:.7rem;font-size:.92rem;color:#cdd6e2}
+.question.revealed .explain{display:block}
+.explain.show{display:block}
+.score-line{display:flex;align-items:center;gap:1rem;margin:1rem 0;flex-wrap:wrap}
+#score{font-size:1.5rem;font-weight:800;color:var(--accent)}
+#toast{display:none;background:var(--accent);color:#0b0f14;font-weight:700;border-radius:.6rem;padding:.55rem 1rem;margin:.6rem 0}
+.qmeta{display:flex;justify-content:space-between;color:var(--muted);font-size:.82rem;margin-bottom:.5rem}
+.answers{display:grid;gap:.45rem}
+.answer{background:var(--bg2);border:1px solid var(--line);color:var(--ink);border-radius:.6rem;padding:.6rem .9rem;cursor:pointer;text-align:left;font-size:.93rem;width:100%}
+.answer.selected{outline:2px solid var(--accent)}
+.answer.correct{outline:2px solid #22c55e;background:rgba(34,197,94,.1)}
+.answer.wrong{outline:2px solid #ef4444;background:rgba(239,68,68,.1)}
+.controls{display:flex;gap:.6rem;margin-top:1rem}
+.dots{display:flex;flex-wrap:wrap;gap:.35rem;margin:.8rem 0}
+.dot{width:2rem;height:2rem;border-radius:50%;border:1px solid var(--line);background:var(--bg2);color:var(--ink);cursor:pointer;font-size:.8rem}
+.dot.done{background:var(--accent);border-color:var(--accent);color:#0b0f14;font-weight:700}
+.timer-btn{background:rgba(255,255,255,.06);border:1px solid var(--accent);color:var(--accent);border-radius:.7rem;padding:.6rem 1.2rem;font-weight:800;letter-spacing:.06em;cursor:pointer;font-size:.95rem}
+.week{background:var(--card);border:1px solid var(--line);border-radius:.85rem;padding:.9rem 1rem}
+.week .num,.mini-label{color:var(--accent);font-weight:800;font-size:.8rem;letter-spacing:.1em}
+.week h3{margin:.2rem 0 .4rem;font-size:1.02rem}
+.week p{font-size:.9rem;color:#cdd6e2;margin:0}
+.plan-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.8rem;margin:1rem 0}
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.8rem;margin:1rem 0}
+.tip,.formula{background:var(--card);border:1px solid var(--line);border-radius:.85rem;padding:.9rem 1rem}
+.tip h3,.formula h3{margin:.1rem 0 .4rem;font-size:.98rem;color:var(--accent)}
+.tip p,.formula p{font-size:.9rem;color:#cdd6e2;margin:.3rem 0}
+.formula code{display:block;background:var(--bg2);border:1px solid var(--line);border-radius:.5rem;padding:.45rem .7rem;margin:.45rem 0;font-size:.88rem}
+.day-table td:first-child{font-weight:700;color:var(--accent);white-space:nowrap}
+.resource-list{display:grid;gap:.7rem;margin:1rem 0}
+.resource{background:var(--card);border:1px solid var(--line);border-radius:.85rem;padding:.85rem 1rem}
+.resource b{color:var(--ink)}
+.resource small{color:var(--muted);display:block;margin-top:.25rem}
+.module h3{color:var(--accent);font-size:1rem;margin:.2rem 0 .5rem}
+.module ul{margin:.4rem 0;padding-left:1.1rem;font-size:.92rem;color:#cdd6e2}
+.module li{margin:.25rem 0}
+.section-head h2{margin:.2rem 0}
+.section-head p{color:var(--muted)}
+.quiz-layout{display:grid;grid-template-columns:1.6fr 1fr;gap:1rem;margin:1rem 0}
+.question-card{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:.9rem;padding:1.1rem;min-height:320px}
+.score-card{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1rem;align-self:start}
+.score-card .score{font-size:1.6rem;font-weight:800;color:var(--accent)}
+.roadmap{display:grid;gap:.7rem;margin:1rem 0}
+.route{display:flex;gap:.8rem;align-items:flex-start}
+.route-num{background:var(--accent);color:#0b0f14;font-weight:800;border-radius:50%;width:1.8rem;height:1.8rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.footer-note{color:var(--muted);font-size:.88rem;margin-top:1.5rem}
+@media(max-width:760px){.quiz-layout{grid-template-columns:1fr}}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:.8rem;margin:1rem 0}
+.col-4{grid-column:span 4}.col-6{grid-column:span 6}.col-7{grid-column:span 7}
+.card{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1rem}
+.kpi{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.card h3{margin:.3rem 0 .4rem;font-size:1rem}
+.card p{color:#cdd6e2;font-size:.92rem}
+.rail{display:flex;gap:0;margin:.6rem 0}
+.station{background:var(--accent);color:#0b0f14;font-weight:800;border-radius:.5rem;padding:.3rem .6rem;font-size:.85rem;flex-shrink:0;align-self:flex-start}
+.track{border-left:2px solid var(--accent);margin-left:1rem;padding:.2rem 0 .2rem 1rem}
+.track p{margin:.15rem 0}
+.topic-grid{display:grid;gap:.6rem;margin:1rem 0}
+.topic{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:.7rem}
+.topic summary{padding:.7rem 1rem;cursor:pointer;font-weight:600}
+.topic .body{padding:0 1rem .9rem;font-size:.92rem;color:#cdd6e2}
+.formula{display:block;background:rgba(255,255,255,.04);border:1px dashed var(--accent);border-radius:.5rem;padding:.5rem .7rem;margin:.4rem 0;font-size:.9rem}
+.worked{background:rgba(255,255,255,.03);border-radius:.5rem;padding:.5rem .7rem;margin-top:.4rem}
+table.pattern{width:100%;border-collapse:collapse;margin:.8rem 0;font-size:.9rem}
+table.pattern th,table.pattern td{border:1px solid var(--line);padding:.5rem .6rem;text-align:left}
+table.pattern thead{background:rgba(255,255,255,.04)}
+.tabs-wrap .tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0}
+.tabs-wrap .tab{background:var(--card);border:1px solid var(--line);color:var(--text);padding:.5rem 1rem;border-radius:2rem;cursor:pointer;font-size:.9rem}
+.tabs-wrap .tab.active{background:var(--accent);border-color:var(--accent);color:#0b0f14;font-weight:700}
+@media(max-width:760px){.col-4,.col-6,.col-7{grid-column:span 12}}
+.hidden{display:none!important}
+.study-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.8rem;margin:1rem 0}
+/* banking generated components */
+.formula{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:.9rem}
+.formula h3{font-size:.95rem;margin:.1rem 0 .4rem;color:var(--accent)}
+.formula code{display:block;background:rgba(14,165,233,.1);border:1px dashed var(--accent);border-radius:.5rem;padding:.45rem .6rem;margin:.35rem 0;font-size:.88rem}
+.formula p{font-size:.88rem;color:#cdd6e2;margin:.3rem 0 0}
+.note{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:.8rem;margin-bottom:.6rem}
+.note button{width:100%;background:none;border:0;color:var(--text);padding:.8rem 1rem;display:flex;justify-content:space-between;cursor:pointer;font-size:.95rem;font-weight:600;text-align:left}
+.note .note-body{display:none;padding:0 1rem .9rem;font-size:.9rem;color:#cdd6e2}
+.note.open .note-body{display:block}
+.note .note-body ul{padding-left:1.1rem;margin:.4rem 0}
+.note .note-body li{margin:.2rem 0}
+.empty{color:var(--muted);padding:1rem;text-align:center}
+.qmeta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);margin-bottom:.6rem}
+.question-card h3{font-size:1.05rem;line-height:1.45;margin:.2rem 0 .8rem}
+.answers{display:grid;gap:.5rem;margin:.8rem 0}
+.answer{background:rgba(255,255,255,.03);border:1px solid var(--line);color:var(--text);border-radius:.6rem;padding:.65rem .9rem;text-align:left;cursor:pointer;font-size:.95rem}
+.answer:hover{border-color:var(--accent)}
+.answer.selected{border-color:var(--accent);background:rgba(14,165,233,.12)}
+.answer.correct{border-color:#22c55e;background:rgba(34,197,94,.12)}
+.answer.wrong{border-color:#ef4444;background:rgba(239,68,68,.12)}
+.explain{display:none;background:rgba(255,255,255,.03);border-left:3px solid var(--accent);border-radius:0 .5rem .5rem 0;padding:.7rem .9rem;margin:.8rem 0;font-size:.92rem;color:#cdd6e2}
+.explain.show{display:block}
+.controls{display:flex;gap:.6rem;margin-top:.8rem}
+.btn.primary{background:var(--accent);color:#0b0f14}
+.btn.secondary{background:rgba(255,255,255,.06)}
+.dots{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.8rem}
+.dot{width:2rem;height:2rem;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.8rem}
+.dot.done{background:var(--accent);color:#0b0f14;border-color:var(--accent);font-weight:700}
+/* ssc quiz */
+.question{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:1.1rem;margin-bottom:.8rem}
+.question h3{font-size:1.02rem;margin:.3rem 0 .8rem}
+.qnum{font-size:.75rem;letter-spacing:.08em;color:var(--accent);font-weight:700}
+.options{display:grid;gap:.5rem}
+.option{background:rgba(255,255,255,.03);border:1px solid var(--line);color:var(--text);border-radius:.55rem;padding:.6rem .9rem;text-align:left;cursor:pointer;font-size:.93rem}
+.option:hover{border-color:var(--accent)}
+.option.selected{border-color:var(--accent);background:rgba(255,255,255,.07)}
+.option.correct{border-color:#22c55e;background:rgba(34,197,94,.12)}
+.option.wrong{border-color:#ef4444;background:rgba(239,68,68,.12)}
+.question.revealed .explain{display:block}
+.pattern-row{display:grid;grid-template-columns:1.5fr .65fr .65fr;gap:.6rem;padding:.6rem 0;border-bottom:1px solid var(--line)}
+/* railways quiz */
+.q{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:1.1rem;margin-bottom:.8rem}
+.q h3{font-size:1rem;margin-bottom:.8rem}
+.q.right{border-color:#22c55e}
+.q.wrong{border-color:#ef4444}
+.q.checked .explain{display:block}
+.opts{display:grid;gap:.5rem}
+.opt{display:flex;align-items:flex-start;gap:.6rem;border:1px solid var(--line);padding:.6rem .8rem;border-radius:.55rem;cursor:pointer;font-size:.93rem}
+.opt:hover{border-color:var(--accent)}
+.opt input{margin-top:.25rem;accent-color:var(--accent)}
+.hide{display:none!important}
+@media(max-width:760px){.nav-links{display:none}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);padding:.5rem 1rem}.nav-toggle{display:inline-block}}
+</style>
+</head>
+<body style="--accent:#EF4444">
+<header class="glass-nav">
+  <a class="brand" href="index.html">Exam <span>Prep Hub</span></a>
+  <nav class="nav-links" aria-label="Exam pages"><a href="index.html">Home</a><a href="upsc.html">UPSC</a><a href="bpsc.html">BPSC</a><a href="neet.html">NEET</a><a href="law.html">Law</a><a href="tech.html">Tech</a><a href="ca.html">CA</a><a href="jee.html">JEE</a><a href="ssc.html">SSC</a><a href="banking.html">Banking</a><a href="railways.html" aria-current="page">Railways</a><a href="teaching.html">Teaching</a><a href="defence.html">Defence</a></nav>
+  <div class="nav-btns">
+    <button id="theme-toggle" aria-label="Toggle theme">&#127769;</button>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / Railways</nav>
+<div class="hero reveal">
+  <h1>Railways <span class="ac">Exam Prep</span></h1>
+  <p class="tagline">Know the paper before you study it: NTPC, Group D and ALP routes, searchable maths and reasoning notebooks, Class 10 science, railway GK, a six-week plan and a negatively-marked drill.</p>
+  <div class="stat-row"><div class="stat reveal"><b>NTPC / Group D / ALP</b><small>Three routes, one hub</small></div><div class="stat reveal"><b>20 topic notebooks</b><small>Searchable, with worked examples</small></div><div class="stat reveal"><b>15-question drill</b><small>+1 / −⅓ scoring like the exam</small></div><div class="stat reveal"><b>6-week plan</b><small>2½–3 hours daily</small></div></div>
+</div>
+<nav class="section-nav" aria-label="On this page"><a href="#overview">Overview & Dates</a><a href="#syllabus">Syllabus</a><a href="#study-material">Study Material</a><a href="#practice">Practice</a><a href="#study-plan">Study Plan</a><a href="#resources">Telegram & Resources</a></nav>
+<main class="page-wrap">
+<section id="overview" class="exam-section">
+  <div class="section-kicker reveal">01 / route</div>
+  <h2 class="section-title reveal">Overview & Dates</h2>
+  
+<div class="reveal">
+    <div class="section-head"><div><span class="mini-label">Choose your route</span><h2>Know the paper before you study it</h2><p>The exact stages vary by post and notification. Use these patterns as a preparation map, then verify the current Centralised Employment Notice before applying.</p></div></div>
+    <div class="grid">
+      <article class="card accent col-4"><div class="kpi">NTPC</div><h3>Non-technical posts</h3><p>Graduate and undergraduate routes. CBT 1 screens broad aptitude; CBT 2 raises difficulty. Some posts add typing or aptitude tests.</p></article>
+      <article class="card signal col-4"><div class="kpi">Group D</div><h3>Level-1 posts</h3><p>CBT followed by a qualifying physical efficiency test, document verification and medical examination.</p></article>
+      <article class="card dark col-4"><div class="kpi">ALP / JE</div><h3>Technical routes</h3><p>ALP adds trade/technical knowledge and aptitude; JE adds engineering subjects. Use this hub for the common aptitude base.</p></article>
+      <article class="card col-7">
+        <span class="mini-label">NTPC CBT 1 · common pattern</span>
+        <table class="pattern"><thead><tr><th>Section</th><th>Questions</th><th>Marks</th></tr></thead><tbody>
+          <tr><td data-label="Section">General Awareness</td><td data-label="Questions">40</td><td data-label="Marks">40</td></tr>
+          <tr><td data-label="Section">Mathematics</td><td data-label="Questions">30</td><td data-label="Marks">30</td></tr>
+          <tr><td data-label="Section">Reasoning</td><td data-label="Questions">30</td><td data-label="Marks">30</td></tr>
+          <tr><td data-label="Section"><strong>Total</strong></td><td data-label="Questions"><strong>100</strong></td><td data-label="Marks"><strong>100 · 90 min</strong></td></tr>
+        </tbody></table>
+        <div class="notice"><strong>CBT 2:</strong> commonly 120 questions in 90 minutes—50 Awareness, 35 Mathematics and 35 Reasoning—with the same one-third negative marking.</div>
+      </article>
+      <article class="card col-5">
+        <span class="mini-label">Group D CBT · common pattern</span>
+        <table class="pattern"><tbody>
+          <tr><td data-label="Section">General Science</td><td data-label="Questions">25</td><td data-label="Marks">25</td></tr>
+          <tr><td data-label="Section">Mathematics</td><td data-label="Questions">25</td><td data-label="Marks">25</td></tr>
+          <tr><td data-label="Section">Reasoning</td><td data-label="Questions">30</td><td data-label="Marks">30</td></tr>
+          <tr><td data-label="Section">Awareness & Current Affairs</td><td data-label="Questions">20</td><td data-label="Marks">20</td></tr>
+          <tr><td data-label="Section"><strong>Total</strong></td><td data-label="Questions"><strong>100</strong></td><td data-label="Marks"><strong>100 · 90 min</strong></td></tr>
+        </tbody></table>
+      </article>
+      <article class="card col-12">
+        <span class="mini-label">Selection journey</span>
+        <div class="rail"><div class="station">01 · Diagnose</div><div class="track"><h3>Take the 15-question test</h3><p>Do it without notes. Your weakest subject becomes the first 45-minute block each day.</p></div></div>
+        <div class="rail"><div class="station">02 · Learn</div><div class="track"><h3>Study concepts, not answer patterns</h3><p>Open the subject tabs. Each topic has a compact rule, formula and worked example.</p></div></div>
+        <div class="rail"><div class="station">03 · Drill</div><div class="track"><h3>Build a mistake log on paper</h3><p>Write: question type → your error → correct rule → one fresh example. Re-test after 48 hours.</p></div></div>
+        <div class="rail"><div class="station">04 · Simulate</div><div class="track"><h3>Move from accuracy to speed</h3><p>Target ≥85% accuracy untimed, then practise 100 questions in 90 minutes. Avoid blind guessing because of negative marking.</p></div></div>
+      </article>
+    </div>
+  </div>
+<h3 class="reveal">NTPC CBT 2 · standard map</h3>
+<table class="data-table reveal">
+<thead><tr><th>Section</th><th>Questions</th><th>Marks</th></tr></thead>
+<tbody>
+<tr><td>General Awareness</td><td>50</td><td>50</td></tr>
+<tr><td>Mathematics</td><td>35</td><td>35</td></tr>
+<tr><td>General Intelligence &amp; Reasoning</td><td>35</td><td>35</td></tr>
+<tr class="total"><td>Total (90 min)</td><td>120</td><td>120</td></tr>
+</tbody></table>
+<h3 class="reveal">Group D (Level-1) CBT · standard map</h3>
+<table class="data-table reveal">
+<thead><tr><th>Section</th><th>Questions</th><th>Marks</th></tr></thead>
+<tbody>
+<tr><td>General Science</td><td>25</td><td>25</td></tr>
+<tr><td>Mathematics</td><td>25</td><td>25</td></tr>
+<tr><td>General Intelligence &amp; Reasoning</td><td>30</td><td>30</td></tr>
+<tr><td>General Awareness &amp; Current Affairs</td><td>20</td><td>20</td></tr>
+<tr class="total"><td>Total (90 min)</td><td>100</td><td>100</td></tr>
+</tbody></table>
+<div class="callout reveal"><b>Negative marking:</b> 1/3 mark is deducted per wrong answer across NTPC and Group D CBTs &mdash; 3 wrong answers erase 1 correct one.</div>
+<div class="callout reveal"><b>ALP:</b> Assistant Loco Pilot recruitment adds trade/technical knowledge and an aptitude stage beyond CBT; the exact CBT structure and section mix are set by the current Centralised Employment Notice, which has been revised in recent cycles. Always verify against the live CEN.</div>
+<div class="callout-warn reveal"><b>Always check the current CEN.</b> Stages, question counts and eligibility vary by post and recruitment cycle. Use these maps for preparation direction, then verify the Centralised Employment Notice for your exact exam before applying.</div>
+
+</section><section id="syllabus" class="exam-section">
+  <div class="section-kicker reveal">02 / syllabus</div>
+  <h2 class="section-title reveal">Syllabus</h2>
+  
+<p class="section-sub reveal">The topic map behind the study notebooks. NTPC weights awareness; Group D weights Class 10 science.</p>
+<div class="card-grid">
+<div class="note-card reveal"><h3>Mathematics</h3><ul><li>Number system, BODMAS, decimals &amp; fractions</li><li>LCM &amp; HCF; ratio &amp; proportion; percentages</li><li>Profit &amp; loss; simple &amp; compound interest</li><li>Time &amp; work; pipes &amp; cisterns</li><li>Time, speed &amp; distance; trains</li><li>Algebra; geometry &amp; mensuration</li><li>Trigonometry; elementary statistics</li><li>Age calculations; calendar &amp; clock</li></ul></div>
+<div class="note-card reveal"><h3>General Intelligence &amp; Reasoning</h3><ul><li>Analogies; number &amp; alphabetical series</li><li>Coding &amp; decoding; mathematical operations</li><li>Syllogism; jumbling; Venn diagrams</li><li>Blood relations; direction sense</li><li>Statements &amp; assumptions; conclusions</li><li>Data sufficiency; decision making</li><li>Similarities &amp; differences; classification</li></ul></div>
+<div class="note-card reveal"><h3>General Science (Group D)</h3><ul><li>Physics: motion, force, work &amp; energy, sound, light, electricity, magnetism</li><li>Chemistry: matter, atoms &amp; molecules, acids/bases/salts, metals &amp; non-metals, carbon compounds</li><li>Life science: cell, tissues, human body systems, nutrition, diseases, environment</li></ul></div>
+<div class="note-card reveal"><h3>General Awareness &amp; Railway GK</h3><ul><li>Current affairs; Indian history &amp; freedom movement</li><li>Geography; polity &amp; Constitution basics; economy basics</li><li>Sports; awards; books &amp; authors</li><li>Railway history timeline; railway operating basics</li><li>Static facts verified from official material (dates, zone counts change)</li></ul></div>
+</div>
+
+</section><section id="study-material" class="exam-section">
+  <div class="section-kicker reveal">03 / library</div>
+  <h2 class="section-title reveal">Study Material</h2>
+  
+<div class="reveal"><p class="section-sub"><b>Use the tabs.</b> Mathematics and Reasoning are searchable topic notebooks &mdash; type to filter, expand a card, and solve the worked example without looking.</p></div>
+<div class="tabs-wrap reveal">
+<div class="tabs" role="tablist" aria-label="Railways study sections">
+  <button class="tab active" data-panel="rw-math">Mathematics</button>
+  <button class="tab" data-panel="rw-reasoning">Reasoning</button>
+  <button class="tab" data-panel="rw-science">General science</button>
+  <button class="tab" data-panel="rw-awareness">General awareness</button>
+  <button class="tab" data-panel="rw-railway">Railway GK</button>
+</div>
+<div class="panel active" id="rw-math">
+    <div class="section-head"><div><span class="mini-label">Arithmetic first</span><h2>Mathematics notebook</h2><p>RRB maths rewards clean setup and mental arithmetic. Search a topic, expand it, then solve the worked example without looking.</p></div><input class="search" data-search="mathTopics" placeholder="Search maths topics" aria-label="Search mathematics topics"></div>
+    <div class="topic-grid" id="mathTopics">
+<details class="topic" data-keywords="trigonometry sin cos tan identities angles"><summary>Trigonometry essentials</summary>
+<div class="body"><strong>Core identities:</strong><span class="formula">sin&#178;&theta; + cos&#178;&theta; = 1 &nbsp;&middot;&nbsp; 1 + tan&#178;&theta; = sec&#178;&theta; &nbsp;&middot;&nbsp; 1 + cot&#178;&theta; = cosec&#178;&theta;</span><strong>Standard values:</strong> sin 30&deg; = 1/2, sin 45&deg; = 1/&radic;2, sin 60&deg; = &radic;3/2; cos mirrors sin; tan 45&deg; = 1.<div class="worked"><b>Worked:</b> A 10 m ladder makes 60&deg; with the ground. Height reached = 10 &middot; sin 60&deg; = 5&radic;3 &asymp; 8.66 m.</div></div></details>
+<details class="topic" data-keywords="pipes cisterns inlet outlet fill empty tank"><summary>Pipes &amp; cisterns</summary>
+<div class="body">Treat filling as work. <span class="formula">Part filled in 1 hour = 1 &divide; hours to fill</span> A pipe that empties subtracts: net rate = 1/a &minus; 1/b.<div class="worked"><b>Worked:</b> Pipe A fills in 6 h, pipe B empties in 8 h. Net per hour = 1/6 &minus; 1/8 = 1/24; the tank fills in 24 hours.</div></div></details>
+<details class="topic" data-keywords="age calculations father son years hence ago"><summary>Age calculations</summary>
+<div class="body">Set up with the present as base year. <span class="formula">If A is x now, A was x &minus; k "k years ago" and will be x + k "k years hence"</span><div class="worked"><b>Worked:</b> A father is 3 times his son's age; after 12 years he will be twice as old. 3x + 12 = 2(x + 12) &rarr; x = 12. Son is 12, father is 36.</div></div></details>
+
+      <details class="topic" open data-keywords="percentage profit loss discount"><summary>Percentages & profit/loss</summary><div class="body"><strong>Percentage change:</strong><span class="formula">% change = (change ÷ original) × 100</span><strong>Successive changes:</strong> net % = a + b + ab/100, using negative values for decreases.<span class="formula">Profit% = Profit ÷ CP × 100 · Discount% = Discount ÷ MP × 100</span><div class="worked"><b>Worked:</b> Price rises 20% then falls 20%. Net = 20 − 20 − 4 = −4%; ₹500 becomes ₹480.</div></div></details>
+      <details class="topic" data-keywords="ratio proportion partnership mixture"><summary>Ratio, proportion & mixture</summary><div class="body">If a:b = m:n, write a = mk and b = nk. In direct proportion, x/y is constant; in inverse proportion, xy is constant.<span class="formula">Alligation ratio = (dearer − mean) : (mean − cheaper)</span><div class="worked"><b>Worked:</b> Mix ₹40/kg and ₹70/kg rice to get ₹50/kg. Ratio = (70−50):(50−40) = 20:10 = 2:1.</div></div></details>
+      <details class="topic" data-keywords="average mean weighted age"><summary>Averages</summary><div class="body"><span class="formula">Average = sum of observations ÷ number of observations</span>When one value changes, total changes by the same amount. Weighted average uses Σ(wx)/Σw.<div class="worked"><b>Worked:</b> Average of 8 numbers is 24. Replacing 18 with 30 adds 12 to total, so new average = 24 + 12/8 = 25.5.</div></div></details>
+      <details class="topic" data-keywords="simple compound interest si ci"><summary>Simple & compound interest</summary><div class="body"><span class="formula">SI = PRT/100 · Amount(CI) = P(1 + R/100)ᵀ</span>For 2 years, CI − SI = P(R/100)².<div class="worked"><b>Worked:</b> ₹5,000 at 10% compound interest for 2 years: 5000×1.1² = ₹6,050; CI = ₹1,050.</div></div></details>
+      <details class="topic" data-keywords="time work pipes efficiency"><summary>Time & work</summary><div class="body">If A finishes in x days, A’s one-day work is 1/x. Add rates when working together; subtract for leaks.<span class="formula">Together time for A(x days), B(y days) = xy/(x+y)</span><div class="worked"><b>Worked:</b> A takes 12 days, B 18. Together = 216/30 = 7.2 days.</div></div></details>
+      <details class="topic" data-keywords="speed distance time train platform relative"><summary>Speed, time & trains</summary><div class="body"><span class="formula">Speed = distance/time · 1 m/s = 18/5 km/h</span>Train crossing a pole uses train length; crossing a platform uses train + platform length. Opposite direction: add speeds; same direction: subtract.<div class="worked"><b>Worked:</b> A 180 m train at 54 km/h crosses a pole in 180÷15 = 12 seconds.</div></div></details>
+      <details class="topic" data-keywords="lcm hcf number system divisibility remainder"><summary>Number system, HCF & LCM</summary><div class="body">For two positive integers: product = HCF × LCM. Divisibility: 3/9 use digit sum; 11 uses alternating digit sum.<span class="formula">Euclid: gcd(a,b) = gcd(b, a mod b)</span><div class="worked"><b>Worked:</b> HCF of 84 and 126: 126 mod 84 = 42; 84 mod 42 = 0, so HCF = 42.</div></div></details>
+      <details class="topic" data-keywords="algebra identities equations"><summary>Algebra essentials</summary><div class="body"><span class="formula">(a+b)²=a²+2ab+b² · (a−b)²=a²−2ab+b² · a²−b²=(a−b)(a+b)</span>For ax+b=c, isolate x by inverse operations on both sides.<div class="worked"><b>Worked:</b> If x + 1/x = 5, then x² + 1/x² = 25 − 2 = 23.</div></div></details>
+      <details class="topic" data-keywords="mensuration geometry area volume cylinder circle"><summary>Mensuration & geometry</summary><div class="body"><span class="formula">Triangle area=½bh · Circle=πr² · Cylinder volume=πr²h · Cuboid=lbh</span>Similar figures: lengths scale k, areas k², volumes k³.<div class="worked"><b>Worked:</b> Radius doubles; circle area becomes 2² = 4 times.</div></div></details>
+      <details class="topic" data-keywords="data statistics pie chart median mode"><summary>Data interpretation</summary><div class="body">Read units and base totals first. Convert pie angle to value with angle/360 × total. Median is the middle ordered value; mode is most frequent.<div class="worked"><b>Worked:</b> A 72° sector from total 450 represents 72/360×450 = 90.</div></div></details>
+    </div>
+  </div>
+<div class="panel" id="rw-reasoning">
+    <div class="section-head"><div><span class="mini-label">Patterns with proof</span><h2>Reasoning toolkit</h2><p>Write the rule beside every answer. A pattern you cannot state is only a guess.</p></div><input class="search" data-search="reasonTopics" placeholder="Search reasoning topics" aria-label="Search reasoning topics"></div>
+    <div class="topic-grid" id="reasonTopics">
+<details class="topic" data-keywords="venn diagram sets circles union intersection"><summary>Venn diagrams</summary>
+<div class="body">Translate "all / some / no" into containment or overlap before reading the options. <span class="formula">n(A &cup; B) = n(A) + n(B) &minus; n(A &cap; B)</span><div class="worked"><b>Worked:</b> 60 students play cricket, 40 play football, 20 play both. Only cricket = 60 &minus; 20 = 40.</div></div></details>
+<details class="topic" data-keywords="assumption statement inference"><summary>Statements &amp; assumptions</summary>
+<div class="body">An assumption is unstated but necessary. Test it: would the statement collapse if the assumption were false?<div class="worked"><b>Worked:</b> Statement: "Join our course &mdash; 90% of users got a job." Assumption: the course caused the jobs. If users were already employable, the claim collapses.</div></div></details>
+<details class="topic" data-keywords="jumbled sentence rearrangement para jumble"><summary>Jumbled sentences (para jumbles)</summary>
+<div class="body">Find the independent opener (no pronouns or demonstratives), then link pronoun &rarr; noun and cause &rarr; effect.<div class="worked"><b>Worked:</b> P: "He arrived late." Q: "Ravi had missed the bus." The name "Ravi" must precede "he": Q &rarr; P.</div></div></details>
+
+      <details class="topic" open data-keywords="series number alphabet"><summary>Number & alphabet series</summary><div class="body">Check first differences, second differences, multiplication, alternating terms and squares/cubes—in that order. Map A=1 … Z=26.<div class="worked"><b>Worked:</b> 3, 8, 15, 24, 35 → differences 5,7,9,11; next +13 = 48.</div></div></details>
+      <details class="topic" data-keywords="coding decoding alphabet"><summary>Coding–decoding</summary><div class="body">Test letter shift, reverse alphabet (A↔Z), position operations and word reordering. Apply the same transformation to every character.<div class="worked"><b>Worked:</b> If CAT → DBU (+1 each), TRAIN → USBJO.</div></div></details>
+      <details class="topic" data-keywords="analogy classification odd one"><summary>Analogy & classification</summary><div class="body">State the relation precisely: object–function, part–whole, worker–tool, degree, cause–effect, or numeric operation.<div class="worked"><b>Worked:</b> Odometer : distance :: thermometer : temperature.</div></div></details>
+      <details class="topic" data-keywords="syllogism venn logic statement conclusion"><summary>Syllogisms</summary><div class="body">Draw minimal Venn diagrams. “All A are B” does not mean all B are A. “Some” establishes existence; universal statements alone do not always do so.<div class="worked"><b>Worked:</b> All trains are vehicles; some vehicles are electric. “Some trains are electric” does not follow.</div></div></details>
+      <details class="topic" data-keywords="direction distance north south east west"><summary>Direction sense</summary><div class="body">Use coordinates: north +y, east +x. Keep orientation separate from displacement.<div class="worked"><b>Worked:</b> 6 km east then 8 km north gives straight distance √(36+64)=10 km, north-east.</div></div></details>
+      <details class="topic" data-keywords="blood relation family"><summary>Blood relations</summary><div class="body">Build a tiny family tree using generations. Mark gender only when stated; never infer from a role-neutral word.<div class="worked"><b>Worked:</b> “My mother’s only son” is the speaker if male; otherwise the speaker’s brother. Context matters.</div></div></details>
+      <details class="topic" data-keywords="ranking order position"><summary>Ranking & order</summary><div class="body"><span class="formula">Total people = rank from top + rank from bottom − 1</span><div class="worked"><b>Worked:</b> Riya is 12th from top and 19th from bottom: total = 12+19−1 = 30.</div></div></details>
+      <details class="topic" data-keywords="clock calendar day date"><summary>Clock & calendar</summary><div class="body"><span class="formula">Clock angle = |30H − 5.5M|; choose the smaller angle</span>Ordinary year shifts weekday by 1; leap year by 2 (when the interval includes Feb 29).<div class="worked"><b>Worked:</b> At 3:20, angle = |90−110| = 20°.</div></div></details>
+      <details class="topic" data-keywords="statement assumption argument decision"><summary>Statement & conclusion</summary><div class="body">Use only the given statement. A conclusion must necessarily follow, not merely sound reasonable. Watch absolute words: always, never, only.<div class="worked"><b>Worked:</b> “Some stations are crowded” cannot prove “all stations are crowded.”</div></div></details>
+      <details class="topic" data-keywords="puzzle seating arrangement"><summary>Seating & puzzles</summary><div class="body">Create fixed slots, place absolute clues first, then relational clues. In circular seating facing centre, a person’s left is clockwise; facing outward reverses it.<div class="worked"><b>Worked:</b> If A is immediately left of B and both face centre, place A one clockwise seat from B.</div></div></details>
+    </div>
+  </div>
+<div class="panel" id="rw-science">
+    <div class="section-head"><div><span class="mini-label">Class 10 core</span><h2>General science essentials</h2><p>Group D science usually tests school-level Physics, Chemistry and Life Science. Learn definitions with units, causes and one application.</p></div></div>
+    <div class="grid">
+      <article class="card col-4"><span class="mini-label">Physics</span><h3>Motion & force</h3><p><strong>Speed</strong> is scalar; velocity has direction. Acceleration is change in velocity per unit time. Newton’s second law: F = ma. Momentum p = mv; impulse equals change in momentum.</p><span class="formula">Work = force × displacement · Power = work/time · KE = ½mv²</span></article>
+      <article class="card col-4"><span class="mini-label">Physics</span><h3>Electricity</h3><p>Current is charge flow per second. Potential difference supplies energy per unit charge. In series, resistance adds; in parallel, reciprocals add.</p><span class="formula">V = IR · Power = VI = I²R = V²/R · Energy = Pt</span></article>
+      <article class="card col-4"><span class="mini-label">Physics</span><h3>Light & sound</h3><p>Reflection obeys angle i = angle r. Convex lenses converge; concave lenses diverge. Sound needs a medium; pitch depends on frequency, loudness on amplitude.</p><span class="formula">Wave speed = frequency × wavelength</span></article>
+      <article class="card col-4"><span class="mini-label">Chemistry</span><h3>Atoms, elements & compounds</h3><p>Atomic number = protons. Mass number = protons + neutrons. Isotopes share atomic number but differ in mass. Ionic bonds transfer electrons; covalent bonds share them.</p></article>
+      <article class="card col-4"><span class="mini-label">Chemistry</span><h3>Acids, bases & salts</h3><p>Acids give H⁺ in water; bases give OH⁻. pH below 7 is acidic, 7 neutral, above 7 basic. Acid + base → salt + water.</p><span class="formula">pH = −log₁₀[H⁺]</span></article>
+      <article class="card col-4"><span class="mini-label">Chemistry</span><h3>Metals & reactions</h3><p>Oxidation is loss of electrons; reduction is gain. More reactive metals displace less reactive metals from salts. Rusting needs oxygen and moisture.</p></article>
+      <article class="card col-4"><span class="mini-label">Biology</span><h3>Cell & tissues</h3><p>Cell membrane controls exchange; nucleus holds genetic material; mitochondria release usable energy; chloroplasts perform photosynthesis. Tissues are groups of similar cells with a function.</p></article>
+      <article class="card col-4"><span class="mini-label">Biology</span><h3>Human systems</h3><p>Alveoli exchange gases. Small intestine absorbs nutrients. Nephrons filter blood. Arteries carry blood away from the heart; veins return it. Insulin lowers blood glucose.</p></article>
+      <article class="card col-4"><span class="mini-label">Biology</span><h3>Heredity & ecology</h3><p>Genes are units of heredity on chromosomes. Dominant traits appear in heterozygotes. Energy flows one way through food chains; only a fraction passes to the next trophic level.</p></article>
+      <article class="card signal col-12"><strong>Memory drill:</strong> write SI unit → formula → common instrument for each quantity: force–newton–spring balance; current–ampere–ammeter; potential difference–volt–voltmeter; power–watt–wattmeter; temperature–kelvin–thermometer.</article>
+    </div>
+  </div>
+<div class="panel" id="rw-awareness">
+    <div class="section-head"><div><span class="mini-label">Static GK + current events</span><h2>General awareness foundation</h2><p>Stable facts are built in below. For current affairs, revise the 6–8 months before your exam from reliable dated notes and the official notification.</p></div></div>
+    <div class="fact-grid">
+      <div class="fact"><b>Constitution</b><span>Adopted 26 Nov 1949; in force 26 Jan 1950. Fundamental Rights: Part III. Directive Principles: Part IV.</span></div>
+      <div class="fact"><b>Parliament</b><span>President + Lok Sabha + Rajya Sabha. Money Bills originate only in Lok Sabha; Speaker certifies them.</span></div>
+      <div class="fact"><b>Judiciary</b><span>Supreme Court is the apex court. Judicial review tests laws against the Constitution.</span></div>
+      <div class="fact"><b>Freedom movement</b><span>INC: 1885. Non-Cooperation: 1920. Civil Disobedience began with Dandi March: 1930. Quit India: 1942.</span></div>
+      <div class="fact"><b>Geography</b><span>Tropic of Cancer crosses 8 Indian states. Standard Meridian: 82°30′E. Indian Standard Time = UTC+5:30.</span></div>
+      <div class="fact"><b>Rivers</b><span>Himalayan rivers are largely perennial; peninsular rivers are mainly rain-fed. Ganga–Brahmaputra forms a vast delta.</span></div>
+      <div class="fact"><b>Economy</b><span>GDP measures final goods and services produced within a country. Inflation is a sustained rise in the general price level.</span></div>
+      <div class="fact"><b>RBI</b><span>Monetary policy influences liquidity and interest rates. Repo rate is the rate at which RBI lends short-term funds to banks against securities.</span></div>
+      <div class="fact"><b>Computer basics</b><span>CPU executes instructions; RAM is volatile working memory; ROM is non-volatile. 8 bits = 1 byte.</span></div>
+      <div class="fact"><b>Environment</b><span>Producers form the first trophic level. Ozone absorbs much harmful UV radiation. CO₂, methane and nitrous oxide are greenhouse gases.</span></div>
+      <div class="fact"><b>Space & science</b><span>Earth rotates west to east. A geostationary satellite orbits above the equator with the same period as Earth’s rotation.</span></div>
+      <div class="fact"><b>Sports & awards</b><span>Study winners, venues, trophies and governing bodies from the months before the exam—always attach a date to current facts.</span></div>
+    </div>
+    <article class="card" style="margin-top:16px"><span class="mini-label">A 20-minute current-affairs method</span><div class="day"><b>8 min</b><span>National policy, appointments, schemes</span><span>Write 5 one-line facts</span><span>Add month/year</span></div><div class="day"><b>5 min</b><span>Economy, banking, reports</span><span>Issuer + headline figure</span><span>Avoid undated screenshots</span></div><div class="day"><b>4 min</b><span>Science, environment, space</span><span>Mission + agency + purpose</span><span>Revise weekly</span></div><div class="day"><b>3 min</b><span>Sports, awards, books</span><span>Person + event + place</span><span>Quiz yourself</span></div></article>
+  </div>
+<div class="panel" id="rw-railway">
+    <div class="section-head"><div><span class="mini-label">Domain knowledge</span><h2>Railway awareness capsule</h2><p>High-value historical and operating-system basics. For organisation counts, zones and current office-holders, use the latest official material because these can change.</p></div></div>
+    <div class="grid">
+      <article class="card col-6"><h3>History timeline</h3><div class="rail"><div class="station">1853</div><div class="track"><p>India’s first passenger train ran from Bombay (Bori Bunder) to Thane on 16 April.</p></div></div><div class="rail"><div class="station">1925</div><div class="track"><p>India’s first electric passenger train ran between Bombay VT and Kurla.</p></div></div><div class="rail"><div class="station">1951</div><div class="track"><p>Major railway systems were grouped into zones as the network was reorganised.</p></div></div><div class="rail"><div class="station">1986</div><div class="track"><p>Computerised passenger reservation began in New Delhi.</p></div></div></article>
+      <article class="card col-6"><h3>Track & operations vocabulary</h3><p><strong>Gauge:</strong> distance between inner faces of rails; broad gauge in India is 1,676 mm.</p><p><strong>Block section:</strong> track portion between two block stations where train movement is controlled.</p><p><strong>Points & crossings:</strong> track components that guide vehicles from one track to another.</p><p><strong>Interlocking:</strong> arrangement preventing conflicting routes or unsafe signal operation.</p><p><strong>Loco pilot:</strong> operates the locomotive/train; guard or train manager oversees train operations from the rear/end position according to duty.</p></article>
+      <article class="card col-4"><h3>Signals</h3><p><strong>Red:</strong> stop. <strong>Yellow:</strong> caution, be prepared for a restrictive indication. <strong>Green:</strong> proceed subject to rules. Never reduce real operating rules to colour alone.</p></article>
+      <article class="card col-4"><h3>Traction</h3><p>Electric traction draws power through overhead equipment and pantograph. Diesel-electric locomotives use a diesel engine to generate electricity for traction motors.</p></article>
+      <article class="card col-4"><h3>Safety</h3><p>Train protection combines signalling, interlocking, communication, braking discipline and human procedures. Kavach is India’s indigenous automatic train protection system.</p></article>
+      <article class="card dark col-12"><span class="mini-label">Exam caution</span><h3>Do not memorise stale “largest / longest / newest” lists</h3><p>Those answers change with commissioning and reorganisation. Build your static foundation here, then verify any superlative or current railway fact from the current CEN or official railway publication close to your exam date.</p></article>
+    </div>
+  </div>
+</div>
+<div class="callout-warn reveal"><b>Honest limitation:</b> this hub covers the common aptitude base (maths, reasoning, general science, awareness, railway GK). Technical/trade syllabi for ALP, JE and technician posts &mdash; and mutable facts like zone counts or office-holders &mdash; must come from the current CEN and official material.</div>
+
+</section><section id="practice" class="exam-section">
+  <div class="section-kicker reveal">04 / practice</div>
+  <h2 class="section-title reveal">Practice</h2>
+  
+<p class="section-sub reveal"><b>A scored drill with real negative marking.</b> 15 questions, +1 for each correct answer, &minus;1/3 for each wrong one, 0 for a skip &mdash; exactly like the exam. Choose one answer per question.</p>
+<div class="quiz-layout reveal">
+  <div>
+    <div id="questions"></div>
+    <button class="btn btn-accent" id="scoreBtn">Check my score</button>
+    <button class="btn" id="resetBtn">Reset test</button>
+  </div>
+  <aside class="score-card quiz-side">
+    <div class="score"><span id="score">&mdash; / 15</span></div>
+    <p id="scoreText">Answer the questions, then check.</p>
+    <div class="mini-label">Scoring: +1 correct · &minus;1/3 wrong · 0 skipped</div>
+  </aside>
+</div>
+
+</section><section id="study-plan" class="exam-section">
+  <div class="section-kicker reveal">05 / plan</div>
+  <h2 class="section-title reveal">Study Plan</h2>
+  
+<div class="reveal">
+    <div class="section-head"><div><span class="mini-label">42-day route</span><h2>Six weeks from concepts to mocks</h2><p>Designed for 2½–3 hours daily. If you have less time, preserve the order and halve the question counts—not the review.</p></div></div>
+    <div class="plan-grid">
+      <article class="week"><h3>Week 1 · Baseline</h3><ul><li>Diagnostic test</li><li>Percentages, ratio, averages</li><li>Series, analogy, coding</li><li>Motion, force, cells</li><li>300 static GK facts</li></ul></article>
+      <article class="week"><h3>Week 2 · Arithmetic</h3><ul><li>Profit/loss, SI/CI</li><li>Time & work</li><li>Speed, distance, trains</li><li>Directions, ranking</li><li>2 sectional tests</li></ul></article>
+      <article class="week"><h3>Week 3 · Core science</h3><ul><li>Electricity, light, sound</li><li>Acids, bases, metals</li><li>Human systems</li><li>Syllogism, statements</li><li>1 mixed mock</li></ul></article>
+      <article class="week"><h3>Week 4 · Coverage</h3><ul><li>Algebra, geometry</li><li>Data interpretation</li><li>History, polity, geography</li><li>Railway awareness</li><li>2 mixed mocks</li></ul></article>
+      <article class="week"><h3>Week 5 · Speed</h3><ul><li>30 maths questions/day</li><li>30 reasoning questions/day</li><li>Science error log</li><li>Current-affairs revision</li><li>3 full mocks</li></ul></article>
+      <article class="week"><h3>Week 6 · Exam mode</h3><ul><li>Alternate full mocks</li><li>Deep error analysis</li><li>Formula recall sheets</li><li>No new sources</li><li>Sleep at exam timing</li></ul></article>
+    </div>
+    <article class="card" style="margin-top:18px"><span class="mini-label">Daily timetable</span><div class="day"><b>45 min</b><span>Weakest subject concept</span><span>10 worked problems</span><span>Write one-page notes</span></div><div class="day"><b>40 min</b><span>Second subject drill</span><span>25 timed questions</span><span>Mark doubtful items</span></div><div class="day"><b>30 min</b><span>Science / static GK</span><span>Active recall only</span><span>No passive rereading</span></div><div class="day"><b>25 min</b><span>Current affairs / Railway GK</span><span>Question-answer format</span><span>Date every current fact</span></div><div class="day"><b>20 min</b><span>Mistake log revision</span><span>Re-solve without answer</span><span>Count repeated errors</span></div></article>
+    <div class="notice"><strong>Final 7 days:</strong> do not chase new books or channels. Revise formulas, error logs and current notes; simulate the exam at the same time of day when possible.</div>
+  </div>
+
+</section><section id="resources" class="exam-section">
+  <div class="section-kicker reveal">06 / resources</div>
+  <h2 class="section-title reveal">Telegram & Resources</h2>
+  <h3>Free Telegram Channels</h3>
+<div class="resource-list"><div class="resource reveal"><b><a href="https://t.me/railway_kgs" target="_blank" rel="noopener">Railway KGS</a></b> <span class="tag">Free to join &middot; also promotes paid batches</span><small>Railway-focused free PDFs, quiz series and class links.</small></div><div class="resource reveal"><b><a href="https://t.me/adda247railway" target="_blank" rel="noopener">Adda247 Railway Exams</a></b> <span class="tag">Free to join &middot; also promotes paid batches</span><small>Adda247's railway-exam channel: PDFs, quizzes, vacancy and result alerts.</small></div><div class="resource reveal"><b><a href="https://t.me/ssc_railways_testbook" target="_blank" rel="noopener">Testbook SSC Railways</a></b> <span class="tag">Free to join &middot; also promotes paid batches</span><small>Railway exam notifications, strategy and class links.</small></div><div class="resource reveal"><b><a href="https://t.me/railway_rrb_ntpc_je_alp_group_d" target="_blank" rel="noopener">Railway Exams Discussion</a></b> <span class="tag">Genuinely free</span><small>Large independent community for RRB NTPC/JE/ALP/Group D: free PDFs, study materials, mocks.</small></div><div class="resource reveal"><b><a href="https://t.me/exampurofficialtelegram" target="_blank" rel="noopener">Exampur Official</a></b> <span class="tag">Free to join &middot; also promotes paid batches</span><small>Free exam-prep PDFs, quizzes and live-class alerts.</small></div><div class="resource reveal"><b><a href="https://t.me/drvipangoyal" target="_blank" rel="noopener">Dr. Vipan Goyal</a></b> <span class="tag">Free to join &middot; also promotes paid batches</span><small>Railway-focused free content and classes.</small></div></div>
+<h3>Official links</h3>
+<div class="resource-list"><div class="resource reveal"><b><a href="https://www.rrbcdg.gov.in" target="_blank" rel="noopener">RRB official site (Chandigarh — example)</a></b><small>An official Regional Railway Recruitment Board site. Use the RRB of your region for your CEN, admit card and results.</small></div></div>
+<div class="callout-warn reveal"><b>Trust, but verify.</b> Telegram channels are useful for updates and free PDFs, but eligibility, dates, vacancies and pattern changes are official only when published on the exam body's own website.</div>
+<div class="callout reveal"><b>Current affairs &amp; static facts:</b> railway history, zone counts and office-holders change over time. Treat every static fact on this page as a starting point and verify against the latest official material.</div>
+
+</section>
+</main>
+<footer class="site-footer">
+  <p><a href="index.html">Exam Prep Hub</a> &middot; free study material for Indian competitive exams.<br>
+  Patterns, dates and vacancies change by recruitment cycle &mdash; always confirm with the current official notice.</p>
+</footer>
+<script src="assets/shell.js"></script>
+<script>
+(function(){
+  var tabs=[].slice.call(document.querySelectorAll('.tab'));
+  var panels=[].slice.call(document.querySelectorAll('.panel'));
+  tabs.forEach(function(tab){tab.addEventListener('click',function(){
+    tabs.forEach(function(t){t.classList.remove('active')});panels.forEach(function(p){p.classList.remove('active')});
+    tab.classList.add('active');document.getElementById(tab.getAttribute('data-panel')).classList.add('active');window.scrollTo({top:document.querySelector('.tabs-wrap').offsetTop,behavior:'smooth'});
+  })});
+  [].slice.call(document.querySelectorAll('.search')).forEach(function(input){input.addEventListener('input',function(){var term=input.value.toLowerCase().trim();var target=document.getElementById(input.getAttribute('data-search'));[].slice.call(target.querySelectorAll('.topic')).forEach(function(item){item.classList.toggle('hide',term && (item.textContent+' '+(item.getAttribute('data-keywords')||'')).toLowerCase().indexOf(term)===-1)})})});
+  var quiz=[
+    {q:'A ₹800 item is sold at 15% profit. What is the selling price?',o:['₹880','₹900','₹920','₹940'],a:2,e:'Profit = 15% of 800 = 120; selling price = ₹920.'},
+    {q:'A train 150 m long moves at 72 km/h. Time to cross a pole?',o:['5 s','7.5 s','10 s','12.5 s'],a:1,e:'72 km/h = 20 m/s. Time = 150 ÷ 20 = 7.5 s.'},
+    {q:'A can finish work in 10 days and B in 15 days. Together they need:',o:['5 days','6 days','8 days','12 days'],a:1,e:'Combined rate = 1/10 + 1/15 = 1/6, so 6 days.'},
+    {q:'Find the next term: 2, 6, 12, 20, 30, ?',o:['36','40','42','44'],a:2,e:'Differences are 4, 6, 8, 10; next difference 12 gives 42.'},
+    {q:'All rails are metal. Some metal objects rust. Which conclusion must follow?',o:['All rails rust','Some rails rust','No rail rust','None of these'],a:3,e:'The “some metal objects” are not necessarily rails, so no listed definite conclusion follows.'},
+    {q:'Ravi is 8th from top and 17th from bottom. How many people are there?',o:['23','24','25','26'],a:1,e:'Total = 8 + 17 − 1 = 24.'},
+    {q:'The SI unit of electric power is:',o:['Volt','Ampere','Watt','Ohm'],a:2,e:'Power is measured in watt (W).'},
+    {q:'Which cell organelle is the main site of aerobic respiration?',o:['Ribosome','Mitochondrion','Golgi body','Nucleus'],a:1,e:'Mitochondria release usable energy through aerobic respiration.'},
+    {q:'A solution with pH 3 is:',o:['Neutral','Basic','Acidic','A salt only'],a:2,e:'pH below 7 is acidic.'},
+    {q:'The Directive Principles of State Policy are in:',o:['Part II','Part III','Part IV','Part V'],a:2,e:'Directive Principles are in Part IV of the Constitution.'},
+    {q:'Indian Standard Time is based on:',o:['68°7′E','75°E','82°30′E','90°E'],a:2,e:'IST uses the standard meridian 82°30′E.'},
+    {q:'India’s first passenger train in 1853 ran between:',o:['Howrah and Hooghly','Bombay and Thane','Delhi and Agra','Madras and Arcot'],a:1,e:'It ran from Bombay (Bori Bunder) to Thane on 16 April 1853.'},
+    {q:'Broad gauge in India measures:',o:['1,000 mm','1,435 mm','1,676 mm','762 mm'],a:2,e:'Indian broad gauge is 1,676 mm between the inner faces of the rails.'},
+    {q:'A 72° sector of a pie chart with total 500 represents:',o:['80','90','100','120'],a:2,e:'72/360 × 500 = 100.'},
+    {q:'At 3:20, the smaller angle between clock hands is:',o:['10°','20°','30°','40°'],a:1,e:'|30×3 − 5.5×20| = |90 − 110| = 20°.'}
+  ];
+  var holder=document.getElementById('questions');
+  quiz.forEach(function(item,i){var box=document.createElement('article');box.className='q';box.setAttribute('data-answer',item.a);box.innerHTML='<h3>'+(i+1)+'. '+item.q+'</h3><div class="opts">'+item.o.map(function(opt,j){return '<label class="opt"><input type="radio" name="q'+i+'" value="'+j+'"><span>'+opt+'</span></label>'}).join('')+'</div><div class="explain"><strong>Answer:</strong> '+item.e+'</div>';holder.appendChild(box)});
+  document.getElementById('scoreBtn').addEventListener('click',function(){var raw=0,correct=0,wrong=0,blank=0;[].slice.call(holder.querySelectorAll('.q')).forEach(function(box){box.classList.remove('right','wrong');box.classList.add('checked');var pick=box.querySelector('input:checked');if(!pick){blank++;return}if(Number(pick.value)===Number(box.getAttribute('data-answer'))){correct++;raw+=1;box.classList.add('right')}else{wrong++;raw-=1/3;box.classList.add('wrong')}});document.getElementById('score').textContent=raw.toFixed(2)+' / 15';document.getElementById('scoreText').textContent=correct+' correct · '+wrong+' wrong · '+blank+' unanswered';document.querySelector('.quiz-side').scrollIntoView({behavior:'smooth',block:'center'})});
+  document.getElementById('resetBtn').addEventListener('click',function(){[].slice.call(holder.querySelectorAll('input')).forEach(function(x){x.checked=false});[].slice.call(holder.querySelectorAll('.q')).forEach(function(x){x.classList.remove('checked','right','wrong')});document.getElementById('score').textContent='— / 15';document.getElementById('scoreText').textContent='No answers scored yet.'});
+})();
+</script>
+</body>
+</html>
