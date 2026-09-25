@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Banking Exam Prep (IBPS / SBI / RBI) — Exam Prep Hub</title>
+<link rel="stylesheet" href="assets/theme.css">
+<style>
+:root{--accent:#84CC16;--bg:#0b0f14;--bg2:#111722;--card:#141c29;--line:rgba(255,255,255,.09);--ink:#e8eef6;--muted:#9aa7b8}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Segoe UI',system-ui,-apple-system,Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.65;margin:0}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.glass-nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:1rem;padding:.7rem 1.2rem;background:rgba(11,15,20,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.brand{font-weight:800;font-size:1.05rem;color:var(--ink);white-space:nowrap}
+.brand span{color:var(--accent)}
+.nav-links{display:flex;flex-wrap:wrap;gap:.15rem;margin-left:auto}
+.nav-links a{color:var(--muted);font-size:.85rem;padding:.4rem .6rem;border-radius:.5rem}
+.nav-links a:hover{color:var(--ink);background:rgba(255,255,255,.06);text-decoration:none}
+.nav-links a[aria-current="page"]{color:var(--accent);font-weight:700}
+.nav-btns{display:flex;gap:.4rem;align-items:center}
+#theme-toggle,.nav-toggle{background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--ink);border-radius:.55rem;padding:.4rem .7rem;cursor:pointer;font-size:.95rem}
+.nav-toggle{display:none}
+.breadcrumb{max-width:1120px;margin:0 auto;padding:1rem 1.2rem .2rem;color:var(--muted);font-size:.88rem}
+.breadcrumb a{color:var(--muted)}
+.hero{max-width:1120px;margin:0 auto;padding:1.6rem 1.2rem 1.2rem}
+.hero h1{font-size:clamp(1.7rem,4vw,2.6rem);margin:.2rem 0 .6rem;line-height:1.15}
+.hero h1 .ac{color:var(--accent)}
+.tagline{color:var(--muted);font-size:1.05rem;max-width:62ch;margin:0 0 1.1rem}
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.7rem}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:.8rem 1rem}
+.stat b{display:block;font-size:1.05rem;color:var(--accent)}
+.stat small{color:var(--muted)}
+.section-nav{position:sticky;top:58px;z-index:40;background:rgba(11,15,20,.85);backdrop-filter:blur(10px);border-block:1px solid var(--line);display:flex;gap:.2rem;overflow-x:auto;padding:.45rem 1rem}
+.section-nav a{color:var(--muted);font-size:.88rem;padding:.45rem .75rem;border-radius:2rem;white-space:nowrap}
+.section-nav a:hover{color:var(--ink);background:rgba(255,255,255,.06);text-decoration:none}
+.page-wrap{max-width:1120px;margin:0 auto;padding:1rem 1.2rem 3rem}
+.exam-section{margin:2.2rem 0;scroll-margin-top:120px}
+.section-title{font-size:1.45rem;margin:0 0 .4rem;padding-bottom:.5rem;border-bottom:2px solid var(--accent);display:inline-block}
+.section-kicker{color:var(--accent);font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.section-sub{color:var(--muted);margin:.3rem 0 1.2rem;max-width:70ch}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem;margin:1rem 0}
+.note-card{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1rem 1.1rem}
+.note-card h3{margin:.1rem 0 .5rem;font-size:1.02rem;color:var(--accent)}
+.note-card p,.note-card li{font-size:.93rem;color:#cdd6e2}
+.note-card ul{margin:.4rem 0;padding-left:1.1rem}
+table.data-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.92rem;background:var(--card);border-radius:.8rem;overflow:hidden}
+table.data-table th{background:rgba(255,255,255,.05);text-align:left;padding:.65rem .8rem;color:var(--accent)}
+table.data-table td{padding:.6rem .8rem;border-top:1px solid var(--line);vertical-align:top}
+table.data-table tr.total td{font-weight:700}
+.callout{border-left:4px solid var(--accent);background:rgba(255,255,255,.04);border-radius:0 .7rem .7rem 0;padding:.85rem 1.1rem;margin:1rem 0;font-size:.94rem}
+.callout-warn{border-left:4px solid #f59e0b;background:rgba(245,158,11,.08);border-radius:0 .7rem .7rem 0;padding:.85rem 1.1rem;margin:1rem 0;font-size:.94rem}
+.btn{display:inline-block;border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--ink);padding:.6rem 1.1rem;border-radius:.7rem;cursor:pointer;font-size:.95rem;font-weight:600}
+.btn:hover{background:rgba(255,255,255,.12);text-decoration:none}
+.btn-accent,.btn.primary{background:var(--accent);border-color:var(--accent);color:#0b0f14}
+.btn-accent:hover,.btn.primary:hover{filter:brightness(1.08);text-decoration:none}
+.btn.secondary{background:transparent}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.tag{display:inline-block;font-size:.75rem;font-weight:700;color:var(--accent);border:1px solid var(--accent);border-radius:2rem;padding:.1rem .6rem;margin:.1rem .15rem .1rem 0}
+.quiz-block{background:var(--card);border:1px solid var(--line);border-radius:1rem;padding:1.2rem;margin:1rem 0}
+.site-footer{border-top:1px solid var(--line);padding:1.6rem 1.2rem 2.5rem;text-align:center;color:var(--muted);font-size:.88rem}
+.reveal{}
+.exam-tabs,.subject-tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.exam-tab,.subject-tab,.tab,.nav button{border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--ink);padding:.55rem 1rem;border-radius:2rem;cursor:pointer;font-size:.9rem;font-weight:600}
+.exam-tab.active,.subject-tab.active,.tab.active,.nav button.active{background:var(--accent);border-color:var(--accent);color:#0b0f14}
+.study-panel.hidden,.hide{display:none!important}
+.panel{display:none}
+.panel.active{display:block}
+.pattern-row{display:grid;grid-template-columns:2fr 1fr 1fr;gap:.5rem;padding:.5rem .2rem;border-bottom:1px dashed var(--line);font-size:.93rem}
+.exam-route{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin:.6rem 0;font-weight:600}
+.exam-route i{color:var(--accent);font-style:normal}
+.search{width:100%;max-width:420px;background:var(--bg2);border:1px solid var(--line);color:var(--ink);border-radius:.6rem;padding:.6rem .9rem;font-size:.92rem;margin:.6rem 0}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:.8rem;margin:1rem 0}
+.topic,.module{background:var(--card);border:1px solid var(--line);border-radius:.85rem;padding:.9rem 1rem}
+details.topic summary{cursor:pointer;font-weight:700;color:var(--accent);font-size:.98rem}
+details.topic .body{padding-top:.6rem;font-size:.92rem;color:#cdd6e2}
+details.topic .body strong{color:var(--ink)}
+span.formula,code.formula{display:block;background:var(--bg2);border:1px solid var(--line);border-radius:.5rem;padding:.45rem .7rem;margin:.45rem 0;font-family:ui-monospace,Consolas,monospace;font-size:.88rem;color:var(--ink)}
+.worked{background:rgba(255,255,255,.04);border-left:3px solid var(--accent);padding:.5rem .8rem;margin:.6rem 0;font-size:.9rem;border-radius:0 .5rem .5rem 0}
+.note{border:1px solid var(--line);border-radius:.8rem;margin:.6rem 0;background:var(--card);overflow:hidden}
+.note>button{width:100%;display:flex;justify-content:space-between;align-items:center;background:none;border:0;color:var(--ink);padding:.85rem 1rem;cursor:pointer;font-size:.95rem;font-weight:600;text-align:left}
+.note>button span:last-child{color:var(--accent);font-size:1.1rem}
+.note-body{display:none;padding:0 1rem 1rem;font-size:.92rem;color:#cdd6e2}
+.note.open .note-body{display:block}
+.note-body ul{margin:.4rem 0;padding-left:1.1rem}
+.empty{color:var(--muted);padding:1rem}
+.question,.q{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:.85rem;padding:1rem 1.1rem;margin:.8rem 0}
+.qnum{font-size:.75rem;font-weight:700;letter-spacing:.08em;color:var(--accent);margin-bottom:.3rem}
+.question h3,.q h3{margin:.2rem 0 .7rem;font-size:1rem}
+.options,.opts{display:grid;gap:.45rem}
+.option,.opt{display:block;text-align:left;background:var(--bg2);border:1px solid var(--line);color:var(--ink);border-radius:.6rem;padding:.6rem .9rem;cursor:pointer;font-size:.93rem;width:100%}
+.option:hover,.opt:hover{border-color:var(--accent)}
+.option.selected{outline:2px solid var(--accent)}
+.question.revealed .option.correct,.q.checked.right{outline:2px solid #22c55e;background:rgba(34,197,94,.1)}
+.question.revealed .option.wrong,.q.checked.wrong{outline:2px solid #ef4444;background:rgba(239,68,68,.1)}
+.explain{display:none;margin-top:.7rem;font-size:.92rem;color:#cdd6e2}
+.question.revealed .explain{display:block}
+.explain.show{display:block}
+.score-line{display:flex;align-items:center;gap:1rem;margin:1rem 0;flex-wrap:wrap}
+#score{font-size:1.5rem;font-weight:800;color:var(--accent)}
+#toast{display:none;background:var(--accent);color:#0b0f14;font-weight:700;border-radius:.6rem;padding:.55rem 1rem;margin:.6rem 0}
+.qmeta{display:flex;justify-content:space-between;color:var(--muted);font-size:.82rem;margin-bottom:.5rem}
+.answers{display:grid;gap:.45rem}
+.answer{background:var(--bg2);border:1px solid var(--line);color:var(--ink);border-radius:.6rem;padding:.6rem .9rem;cursor:pointer;text-align:left;font-size:.93rem;width:100%}
+.answer.selected{outline:2px solid var(--accent)}
+.answer.correct{outline:2px solid #22c55e;background:rgba(34,197,94,.1)}
+.answer.wrong{outline:2px solid #ef4444;background:rgba(239,68,68,.1)}
+.controls{display:flex;gap:.6rem;margin-top:1rem}
+.dots{display:flex;flex-wrap:wrap;gap:.35rem;margin:.8rem 0}
+.dot{width:2rem;height:2rem;border-radius:50%;border:1px solid var(--line);background:var(--bg2);color:var(--ink);cursor:pointer;font-size:.8rem}
+.dot.done{background:var(--accent);border-color:var(--accent);color:#0b0f14;font-weight:700}
+.timer-btn{background:rgba(255,255,255,.06);border:1px solid var(--accent);color:var(--accent);border-radius:.7rem;padding:.6rem 1.2rem;font-weight:800;letter-spacing:.06em;cursor:pointer;font-size:.95rem}
+.week{background:var(--card);border:1px solid var(--line);border-radius:.85rem;padding:.9rem 1rem}
+.week .num,.mini-label{color:var(--accent);font-weight:800;font-size:.8rem;letter-spacing:.1em}
+.week h3{margin:.2rem 0 .4rem;font-size:1.02rem}
+.week p{font-size:.9rem;color:#cdd6e2;margin:0}
+.plan-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.8rem;margin:1rem 0}
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.8rem;margin:1rem 0}
+.tip,.formula{background:var(--card);border:1px solid var(--line);border-radius:.85rem;padding:.9rem 1rem}
+.tip h3,.formula h3{margin:.1rem 0 .4rem;font-size:.98rem;color:var(--accent)}
+.tip p,.formula p{font-size:.9rem;color:#cdd6e2;margin:.3rem 0}
+.formula code{display:block;background:var(--bg2);border:1px solid var(--line);border-radius:.5rem;padding:.45rem .7rem;margin:.45rem 0;font-size:.88rem}
+.day-table td:first-child{font-weight:700;color:var(--accent);white-space:nowrap}
+.resource-list{display:grid;gap:.7rem;margin:1rem 0}
+.resource{background:var(--card);border:1px solid var(--line);border-radius:.85rem;padding:.85rem 1rem}
+.resource b{color:var(--ink)}
+.resource small{color:var(--muted);display:block;margin-top:.25rem}
+.module h3{color:var(--accent);font-size:1rem;margin:.2rem 0 .5rem}
+.module ul{margin:.4rem 0;padding-left:1.1rem;font-size:.92rem;color:#cdd6e2}
+.module li{margin:.25rem 0}
+.section-head h2{margin:.2rem 0}
+.section-head p{color:var(--muted)}
+.quiz-layout{display:grid;grid-template-columns:1.6fr 1fr;gap:1rem;margin:1rem 0}
+.question-card{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:.9rem;padding:1.1rem;min-height:320px}
+.score-card{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1rem;align-self:start}
+.score-card .score{font-size:1.6rem;font-weight:800;color:var(--accent)}
+.roadmap{display:grid;gap:.7rem;margin:1rem 0}
+.route{display:flex;gap:.8rem;align-items:flex-start}
+.route-num{background:var(--accent);color:#0b0f14;font-weight:800;border-radius:50%;width:1.8rem;height:1.8rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.footer-note{color:var(--muted);font-size:.88rem;margin-top:1.5rem}
+@media(max-width:760px){.quiz-layout{grid-template-columns:1fr}}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:.8rem;margin:1rem 0}
+.col-4{grid-column:span 4}.col-6{grid-column:span 6}.col-7{grid-column:span 7}
+.card{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1rem}
+.kpi{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.card h3{margin:.3rem 0 .4rem;font-size:1rem}
+.card p{color:#cdd6e2;font-size:.92rem}
+.rail{display:flex;gap:0;margin:.6rem 0}
+.station{background:var(--accent);color:#0b0f14;font-weight:800;border-radius:.5rem;padding:.3rem .6rem;font-size:.85rem;flex-shrink:0;align-self:flex-start}
+.track{border-left:2px solid var(--accent);margin-left:1rem;padding:.2rem 0 .2rem 1rem}
+.track p{margin:.15rem 0}
+.topic-grid{display:grid;gap:.6rem;margin:1rem 0}
+.topic{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:.7rem}
+.topic summary{padding:.7rem 1rem;cursor:pointer;font-weight:600}
+.topic .body{padding:0 1rem .9rem;font-size:.92rem;color:#cdd6e2}
+.formula{display:block;background:rgba(255,255,255,.04);border:1px dashed var(--accent);border-radius:.5rem;padding:.5rem .7rem;margin:.4rem 0;font-size:.9rem}
+.worked{background:rgba(255,255,255,.03);border-radius:.5rem;padding:.5rem .7rem;margin-top:.4rem}
+table.pattern{width:100%;border-collapse:collapse;margin:.8rem 0;font-size:.9rem}
+table.pattern th,table.pattern td{border:1px solid var(--line);padding:.5rem .6rem;text-align:left}
+table.pattern thead{background:rgba(255,255,255,.04)}
+.tabs-wrap .tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0}
+.tabs-wrap .tab{background:var(--card);border:1px solid var(--line);color:var(--text);padding:.5rem 1rem;border-radius:2rem;cursor:pointer;font-size:.9rem}
+.tabs-wrap .tab.active{background:var(--accent);border-color:var(--accent);color:#0b0f14;font-weight:700}
+@media(max-width:760px){.col-4,.col-6,.col-7{grid-column:span 12}}
+.hidden{display:none!important}
+.study-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.8rem;margin:1rem 0}
+/* banking generated components */
+.formula{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:.9rem}
+.formula h3{font-size:.95rem;margin:.1rem 0 .4rem;color:var(--accent)}
+.formula code{display:block;background:rgba(14,165,233,.1);border:1px dashed var(--accent);border-radius:.5rem;padding:.45rem .6rem;margin:.35rem 0;font-size:.88rem}
+.formula p{font-size:.88rem;color:#cdd6e2;margin:.3rem 0 0}
+.note{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:.8rem;margin-bottom:.6rem}
+.note button{width:100%;background:none;border:0;color:var(--text);padding:.8rem 1rem;display:flex;justify-content:space-between;cursor:pointer;font-size:.95rem;font-weight:600;text-align:left}
+.note .note-body{display:none;padding:0 1rem .9rem;font-size:.9rem;color:#cdd6e2}
+.note.open .note-body{display:block}
+.note .note-body ul{padding-left:1.1rem;margin:.4rem 0}
+.note .note-body li{margin:.2rem 0}
+.empty{color:var(--muted);padding:1rem;text-align:center}
+.qmeta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);margin-bottom:.6rem}
+.question-card h3{font-size:1.05rem;line-height:1.45;margin:.2rem 0 .8rem}
+.answers{display:grid;gap:.5rem;margin:.8rem 0}
+.answer{background:rgba(255,255,255,.03);border:1px solid var(--line);color:var(--text);border-radius:.6rem;padding:.65rem .9rem;text-align:left;cursor:pointer;font-size:.95rem}
+.answer:hover{border-color:var(--accent)}
+.answer.selected{border-color:var(--accent);background:rgba(14,165,233,.12)}
+.answer.correct{border-color:#22c55e;background:rgba(34,197,94,.12)}
+.answer.wrong{border-color:#ef4444;background:rgba(239,68,68,.12)}
+.explain{display:none;background:rgba(255,255,255,.03);border-left:3px solid var(--accent);border-radius:0 .5rem .5rem 0;padding:.7rem .9rem;margin:.8rem 0;font-size:.92rem;color:#cdd6e2}
+.explain.show{display:block}
+.controls{display:flex;gap:.6rem;margin-top:.8rem}
+.btn.primary{background:var(--accent);color:#0b0f14}
+.btn.secondary{background:rgba(255,255,255,.06)}
+.dots{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.8rem}
+.dot{width:2rem;height:2rem;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.8rem}
+.dot.done{background:var(--accent);color:#0b0f14;border-color:var(--accent);font-weight:700}
+/* ssc quiz */
+.question{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:1.1rem;margin-bottom:.8rem}
+.question h3{font-size:1.02rem;margin:.3rem 0 .8rem}
+.qnum{font-size:.75rem;letter-spacing:.08em;color:var(--accent);font-weight:700}
+.options{display:grid;gap:.5rem}
+.option{background:rgba(255,255,255,.03);border:1px solid var(--line);color:var(--text);border-radius:.55rem;padding:.6rem .9rem;text-align:left;cursor:pointer;font-size:.93rem}
+.option:hover{border-color:var(--accent)}
+.option.selected{border-color:var(--accent);background:rgba(255,255,255,.07)}
+.option.correct{border-color:#22c55e;background:rgba(34,197,94,.12)}
+.option.wrong{border-color:#ef4444;background:rgba(239,68,68,.12)}
+.question.revealed .explain{display:block}
+.pattern-row{display:grid;grid-template-columns:1.5fr .65fr .65fr;gap:.6rem;padding:.6rem 0;border-bottom:1px solid var(--line)}
+/* railways quiz */
+.q{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:1.1rem;margin-bottom:.8rem}
+.q h3{font-size:1rem;margin-bottom:.8rem}
+.q.right{border-color:#22c55e}
+.q.wrong{border-color:#ef4444}
+.q.checked .explain{display:block}
+.opts{display:grid;gap:.5rem}
+.opt{display:flex;align-items:flex-start;gap:.6rem;border:1px solid var(--line);padding:.6rem .8rem;border-radius:.55rem;cursor:pointer;font-size:.93rem}
+.opt:hover{border-color:var(--accent)}
+.opt input{margin-top:.25rem;accent-color:var(--accent)}
+.hide{display:none!important}
+@media(max-width:760px){.nav-links{display:none}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);padding:.5rem 1rem}.nav-toggle{display:inline-block}}
+</style>
+</head>
+<body style="--accent:#0EA5E9">
+<header class="glass-nav">
+  <a class="brand" href="index.html">Exam <span>Prep Hub</span></a>
+  <nav class="nav-links" aria-label="Exam pages"><a href="index.html">Home</a><a href="upsc.html">UPSC</a><a href="bpsc.html">BPSC</a><a href="neet.html">NEET</a><a href="law.html">Law</a><a href="tech.html">Tech</a><a href="ca.html">CA</a><a href="jee.html">JEE</a><a href="ssc.html">SSC</a><a href="banking.html" aria-current="page">Banking</a><a href="railways.html">Railways</a><a href="teaching.html">Teaching</a><a href="defence.html">Defence</a></nav>
+  <div class="nav-btns">
+    <button id="theme-toggle" aria-label="Toggle theme">&#127769;</button>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / Banking</nav>
+<div class="hero reveal">
+  <h1>Banking &amp; Insurance <span class="ac">Exam Prep</span></h1>
+  <p class="tagline">One focused library for IBPS, SBI, RRB and insurance exams: concepts, shortcuts, banking awareness, revision structure and an explained practice set.</p>
+  <div class="stat-row"><div class="stat reveal"><b>20-question diagnostic</b><small>Scored, with explanations</small></div><div class="stat reveal"><b>5 subjects</b><small>Quant · Reasoning · English · Banking · GA</small></div><div class="stat reveal"><b>12-week plan</b><small>Accuracy → speed → mocks</small></div><div class="stat reveal"><b>4 routes</b><small>IBPS · SBI · RRB · Insurance</small></div></div>
+</div>
+<nav class="section-nav" aria-label="On this page"><a href="#overview">Overview & Dates</a><a href="#syllabus">Syllabus</a><a href="#study-material">Study Material</a><a href="#practice">Practice</a><a href="#study-plan">Study Plan</a><a href="#resources">Telegram & Resources</a></nav>
+<main class="page-wrap">
+<section id="overview" class="exam-section">
+  <div class="section-kicker reveal">01 / route</div>
+  <h2 class="section-title reveal">Overview & Dates</h2>
+  
+<div class="reveal"><p class="section-sub"><b>A practical route to selection.</b> Most bank recruitment tests move from speed-heavy prelims to broader mains and then, for officer posts, an interview or language/proficiency stage. Always match the latest notice for your exact post.</p></div>
+<div class="card-grid">
+<div class="note-card reveal"><h3>IBPS</h3><p>PO/MT · Clerk (Customer Service Associate) · RRB PO &amp; Clerk · Specialist Officer</p></div>
+<div class="note-card reveal"><h3>SBI</h3><p>Probationary Officer · Junior Associate (Clerk)</p></div>
+<div class="note-card reveal"><h3>Insurance &amp; RBI</h3><p>AO &amp; Assistant (LIC, NIACL, UIIC) · RBI Assistant foundation</p></div>
+</div>
+<h3 class="reveal">IBPS PO paper map (2026, revised)</h3>
+<table class="data-table reveal">
+<thead><tr><th>Stage</th><th>Section</th><th>Questions</th><th>Marks</th><th>Time</th></tr></thead>
+<tbody>
+<tr><td rowspan="3"><b>Prelims</b><br>(qualifying)</td><td>English Language</td><td>30</td><td>30</td><td>20 min</td></tr>
+<tr><td>Quantitative Aptitude</td><td>35</td><td>30</td><td>20 min</td></tr>
+<tr><td>Reasoning Ability</td><td>35</td><td>40</td><td>20 min</td></tr>
+<tr class="total"><td colspan="2">Prelims total</td><td>100</td><td>100</td><td>60 min</td></tr>
+<tr><td rowspan="4"><b>Mains</b><br>(objective)</td><td>Reasoning</td><td>40</td><td>60</td><td>45 min</td></tr>
+<tr><td>General / Economy / Banking / Digital &amp; Financial Awareness</td><td>50</td><td>60</td><td>35 min</td></tr>
+<tr><td>English Language</td><td>40</td><td>20</td><td>35 min</td></tr>
+<tr><td>Data Analysis &amp; Interpretation</td><td>40</td><td>60</td><td>45 min</td></tr>
+<tr class="total"><td colspan="2">Mains objective total</td><td>170</td><td>200</td><td>160 min</td></tr>
+<tr><td><b>Mains</b> (descriptive)</td><td>Essay &amp; Comprehension</td><td>2</td><td>25</td><td>30 min</td></tr>
+</tbody></table>
+<div class="callout reveal"><b>IBPS PO 2026 rules:</b> 0.25 marks deducted per wrong answer in both prelims and mains. Final merit = <b>80% mains + 20% interview</b>. A personality test is mandatory but non-qualifying. Prelims marks are not counted in the final merit.</div>
+<h3 class="reveal">IBPS RRB PO paper map (2026)</h3>
+<table class="data-table reveal">
+<thead><tr><th>Stage</th><th>Section</th><th>Questions</th><th>Marks</th><th>Time</th></tr></thead>
+<tbody>
+<tr><td rowspan="2"><b>Prelims</b></td><td>Reasoning</td><td>40</td><td>40</td><td>25 min</td></tr>
+<tr><td>Numerical Ability</td><td>40</td><td>40</td><td>20 min</td></tr>
+<tr class="total"><td colspan="2">Prelims total</td><td>80</td><td>80</td><td>45 min</td></tr>
+<tr><td rowspan="5"><b>Mains</b></td><td>Reasoning</td><td>40</td><td>50</td><td>30 min</td></tr>
+<tr><td>General Awareness</td><td>40</td><td>40</td><td>15 min</td></tr>
+<tr><td>Numerical Ability</td><td>40</td><td>50</td><td>30 min</td></tr>
+<tr><td>English / Hindi Language</td><td>40</td><td>40</td><td>30 min</td></tr>
+<tr><td>Computer Knowledge</td><td>40</td><td>20</td><td>15 min</td></tr>
+<tr class="total"><td colspan="2">Mains total</td><td>200</td><td>200</td><td>2 hr</td></tr>
+</tbody></table>
+<div class="callout reveal"><b>SBI PO</b> follows a similar three-stage route &mdash; prelims, mains, then interview/psychometric &mdash; but the exact section mix and marks change by notification. Always read the SBI advertisement for your cycle.</div>
+<div class="callout-warn reveal"><b>Cycle dates (verified for 2026):</b> IBPS PO prelims were held 22&ndash;23 August 2026; mains scheduled 4 October 2026. IBPS RRB PO prelims: 21&ndash;22 November 2026; mains: 20 December 2026. Dates shift every cycle &mdash; confirm in the current official notification before planning mocks.</div>
+
+</section><section id="syllabus" class="exam-section">
+  <div class="section-kicker reveal">02 / syllabus</div>
+  <h2 class="section-title reveal">Syllabus</h2>
+  
+<p class="section-sub reveal">The topic map behind the material library. Anything marked &sect;Mains is weighted toward the mains stage.</p>
+<div class="card-grid">
+<div class="note-card reveal"><h3>Quantitative Aptitude</h3><ul><li>Simplification &amp; approximation</li><li>Number series; quadratic equations</li><li>Data interpretation: tables, bar/line/pie charts, caselets &sect;Mains</li><li>Percentage, ratio &amp; proportion, average, ages</li><li>Profit &amp; loss, simple &amp; compound interest</li><li>Time &amp; work, pipes &amp; cisterns</li><li>Time, speed &amp; distance; trains; boats &amp; streams</li><li>Mixture &amp; alligation, partnership</li><li>Probability, mensuration &sect;Mains</li></ul></div>
+<div class="note-card reveal"><h3>Reasoning Ability</h3><ul><li>Puzzles: seating, floor, box, day/month &sect;Mains</li><li>Syllogism; inequalities (coded &amp; direct)</li><li>Coding&ndash;decoding; blood relations</li><li>Direction sense; ranking &amp; order</li><li>Input&ndash;output &sect;Mains</li><li>Data sufficiency &sect;Mains</li><li>Critical reasoning: assumptions, strengthening/weakening &sect;Mains</li><li>Alphanumeric series; logical reasoning</li></ul></div>
+<div class="note-card reveal"><h3>English Language</h3><ul><li>Reading comprehension &sect;Mains</li><li>Cloze test; para jumbles</li><li>Error detection; sentence improvement</li><li>Fillers (single/double); word usage</li><li>Vocabulary: synonyms, antonyms, idioms &amp; phrases</li><li>Subject&ndash;verb agreement, tenses, articles, prepositions, parallelism</li></ul></div>
+<div class="note-card reveal"><h3>Banking &amp; General Awareness &sect;Mains</h3><ul><li>Current affairs: last 6 months before the exam</li><li>RBI &amp; monetary policy: repo, reverse repo, CRR, SLR, OMO</li><li>Banking terms: NPA, CASA, MCLR, KYC, Basel norms</li><li>Budget &amp; Economic Survey highlights</li><li>Financial institutions: RBI, NABARD, SIDBI, SEBI, IRDAI, PFRDA</li><li>Government schemes; static GK</li></ul></div>
+</div>
+<div class="card-grid">
+<div class="note-card reveal"><h3>Computer Knowledge (RRB mains)</h3><ul><li>Computer fundamentals; hardware &amp; software</li><li>Input/output devices; memory &amp; storage</li><li>MS Office basics; internet &amp; email</li><li>Networking basics; cyber security awareness</li></ul></div>
+<div class="note-card reveal"><h3>Descriptive English (IBPS PO mains)</h3><ul><li>Essay + comprehension: 25 marks, 30 minutes, typed</li><li>Structure: clear opening, 2&ndash;3 developed points, balanced conclusion</li><li>Practise typing within a timer; bank-topic essays are common</li></ul></div>
+</div>
+
+</section><section id="study-material" class="exam-section">
+  <div class="section-kicker reveal">03 / library</div>
+  <h2 class="section-title reveal">Study Material</h2>
+  
+<div class="reveal"><p class="section-sub"><b>Use the tabs.</b> Quant cards are quick-fire formulas; Reasoning and English notes are searchable accordions; Banking &amp; GA is the awareness foundation; Strategy holds the exam-room playbook.</p></div>
+<div class="nav-wrap reveal">
+<div class="nav" role="tablist" aria-label="Study sections">
+  <button class="active" data-tab="quant">Quant</button><button data-tab="reasoning">Reasoning</button><button data-tab="english">English</button><button data-tab="banking">Banking &amp; GA</button><button data-tab="bank-strategy">Strategy</button>
+</div>
+<div class="panel active" id="quant"><div class="section-head"><div><h2>Quantitative aptitude</h2></div><p>Use formulas as compressed reasoning. First understand the relationship, then train mental calculation.</p></div><div class="formula-grid" id="quantGrid"></div></div>
+<div class="panel" id="reasoning"><div class="section-head"><div><h2>Reasoning library</h2></div><p>Break every puzzle into facts, slots and constraints. Never keep the full arrangement in your head.</p></div><div class="study-toolbar"><input type="search" id="reasonSearch" class="search" placeholder="Search reasoning notes…" aria-label="Search reasoning notes" /></div><div class="notes-grid" id="reasonGrid"></div></div>
+<div class="panel" id="english"><div class="section-head"><div><h2>English language</h2></div><p>Bank exams reward precise reading and sentence logic more than ornamental vocabulary.</p></div><div class="study-toolbar"><input type="search" id="englishSearch" class="search" placeholder="Search English notes…" aria-label="Search English notes" /></div><div class="notes-grid" id="englishGrid"></div></div>
+<div class="panel" id="banking">
+      <div class="section-head"><div><h2>Banking & general awareness</h2></div><p>A compact foundation in institutions, monetary policy, payments, accounts and common financial terms. Pair it with recent monthly current affairs for the actual exam window.</p></div>
+      <div class="banking-layout">
+        <article class="ledger"><h3>Core banking concepts</h3><dl>
+          <div class="row"><dt>Repo rate</dt><dd>Rate at which RBI lends short-term funds to banks against eligible collateral. A higher rate generally makes borrowing costlier.</dd></div>
+          <div class="row"><dt>SDF</dt><dd>Standing Deposit Facility: RBI absorbs liquidity from banks without providing collateral.</dd></div>
+          <div class="row"><dt>CRR</dt><dd>Cash Reserve Ratio: share of a bank’s net demand and time liabilities kept as cash with RBI.</dd></div>
+          <div class="row"><dt>SLR</dt><dd>Statutory Liquidity Ratio: share maintained in liquid assets such as cash, gold and approved securities.</dd></div>
+          <div class="row"><dt>NPA</dt><dd>A loan asset where interest or principal remains overdue beyond the regulatory threshold; for standard term loans, the commonly tested threshold is more than 90 days.</dd></div>
+          <div class="row"><dt>Priority sector</dt><dd>Directed lending categories such as agriculture, MSMEs, education, housing and weaker sections, under RBI norms.</dd></div>
+        </dl></article>
+        <article class="ledger"><h3>Payments & inclusion</h3><dl>
+          <div class="row"><dt>UPI</dt><dd>Instant account-to-account payments using a virtual payment address, mobile number or QR, operated by NPCI.</dd></div>
+          <div class="row"><dt>IMPS</dt><dd>Immediate interbank electronic transfer available round the clock.</dd></div>
+          <div class="row"><dt>NEFT</dt><dd>Electronic funds transfer settled in half-hourly batches and available 24×7.</dd></div>
+          <div class="row"><dt>RTGS</dt><dd>Real-time, transaction-by-transaction gross settlement, mainly for high-value transfers.</dd></div>
+          <div class="row"><dt>AEPS</dt><dd>Aadhaar Enabled Payment System supports basic banking through Aadhaar authentication and business correspondents.</dd></div>
+          <div class="row"><dt>DICGC</dt><dd>Deposit insurance corporation covering eligible deposits in insured banks, subject to the prevailing statutory limit and conditions.</dd></div>
+        </dl></article>
+        <article class="ledger"><h3>Institutions</h3><dl>
+          <div class="row"><dt>RBI</dt><dd>India’s central bank: monetary policy, currency issuance, reserves, payment systems and bank regulation.</dd></div>
+          <div class="row"><dt>NABARD</dt><dd>Apex development financial institution focused on agriculture and rural development.</dd></div>
+          <div class="row"><dt>SIDBI</dt><dd>Principal financial institution for promotion, financing and development of the MSME sector.</dd></div>
+          <div class="row"><dt>SEBI</dt><dd>Regulates India’s securities market and protects investor interests.</dd></div>
+          <div class="row"><dt>IRDAI</dt><dd>Regulates and develops the insurance sector in India.</dd></div>
+          <div class="row"><dt>PFRDA</dt><dd>Regulates and develops the pension sector, including the National Pension System.</dd></div>
+        </dl></article>
+        <article class="ledger"><h3>Accounts, credit & risk</h3><dl>
+          <div class="row"><dt>CASA</dt><dd>Current Account Savings Account deposits; usually a lower-cost funding source for banks than term deposits.</dd></div>
+          <div class="row"><dt>MCLR</dt><dd>Marginal Cost of Funds based Lending Rate, an internal benchmark for certain floating-rate loans.</dd></div>
+          <div class="row"><dt>Credit score</dt><dd>A summary indicator of credit behaviour; lenders also use income, obligations and their own underwriting rules.</dd></div>
+          <div class="row"><dt>Basel norms</dt><dd>Global standards covering bank capital, risk and liquidity. Capital buffers absorb unexpected losses.</dd></div>
+          <div class="row"><dt>KYC</dt><dd>Customer-identification and due-diligence process used to reduce fraud, money laundering and misuse.</dd></div>
+          <div class="row"><dt>Phishing</dt><dd>Fraudulent attempt to obtain credentials through deceptive messages or sites. Banks do not need your PIN or OTP to receive money.</dd></div>
+        </dl></article>
+      </div>
+    </div>
+<div class="panel" id="bank-strategy"><section class="panel" id="strategy"><div class="section-head"><div><h2>Exam-room strategy</h2></div><p>The most useful plan is one you have already rehearsed in full mocks.</p></div><div class="tips">
+      <article class="tip"><h3>Use a two-pass method</h3><p>First solve direct questions. Mark lengthy but solvable items for a second pass. Do not let one puzzle consume a section.</p></article>
+      <article class="tip"><h3>Protect accuracy</h3><p>If two options remain and you cannot prove one, move on. Negative marking changes the value of a doubtful attempt.</p></article>
+      <article class="tip"><h3>Read the stem twice</h3><p>Words such as “not”, “except”, “least” and “incorrect” reverse the task. Circle them mentally before calculating.</p></article>
+      <article class="tip"><h3>Analyze every mock</h3><p>Classify errors as concept, calculation, reading, selection or time. The repair depends on the category.</p></article>
+      <article class="tip"><h3>Build current affairs by theme</h3><p>Group facts under banking, economy, national, international, appointments, awards and reports. Revise through questions.</p></article>
+      <article class="tip"><h3>For descriptive papers</h3><p>Use a clear opening, two or three developed points, and a balanced conclusion. Practice typing within a timer.</p></article>
+    </section>
+    <p class="footer-note">Patterns, eligibility, vacancies, cut-offs and current-affairs windows can change by recruitment cycle. Use this page for concepts and practice; check the current official notification before applying or fixing a mock strategy.</p>
+  </main></div>
+</div>
+
+</section><section id="practice" class="exam-section">
+  <div class="section-kicker reveal">04 / practice</div>
+  <h2 class="section-title reveal">Practice</h2>
+  
+<div class="reveal">
+      <div class="section-head"><div><h2>Mixed diagnostic</h2></div><p>Twenty questions across the core sections. Choose one answer, reveal the explanation, then move on.</p></div>
+      <div class="quiz-layout"><div class="question-card" id="questionCard"></div><aside class="score-card"><div class="score"><span id="score">0</span>/20</div><p id="scoreText">Start with Question 1</p><div class="dots" id="dots"></div><button class="btn secondary" id="resetBtn" style="width:100%;margin-top:16px">Reset test</button></aside></div>
+    </div>
+<div class="callout-warn reveal"><b>Honest limitation:</b> 20 questions cannot carry a full bank syllabus. Take the diagnostic, find your weak sections, then drill those with sectional tests and previous-year papers.</div>
+
+</section><section id="study-plan" class="exam-section">
+  <div class="section-kicker reveal">05 / plan</div>
+  <h2 class="section-title reveal">Study Plan</h2>
+  
+<div class="reveal">
+      <div class="section-head"><div><h2>A practical route to selection</h2></div><p>Most bank recruitment tests move from speed-heavy prelims to broader mains and then, for officer posts, an interview or language/proficiency stage. Always match the latest notice for your exact post.</p></div>
+      <div class="roadmap plan-grid">
+        <article class="card">
+          <h3>12-week build</h3>
+          <div class="route"><span class="route-num">1</span><div><strong>Weeks 1–3 · Accuracy</strong><p>Learn arithmetic, core grammar and basic puzzle types. Solve untimed, write the reason behind every error.</p></div></div>
+          <div class="route"><span class="route-num">2</span><div><strong>Weeks 4–7 · Speed</strong><p>Add approximation, calculation drills, timed sets and daily reading. Start banking terms and current-affairs notes.</p></div></div>
+          <div class="route"><span class="route-num">3</span><div><strong>Weeks 8–10 · Sectionals</strong><p>Alternate sectional tests with repair sessions. Measure attempts, accuracy and time lost—not only score.</p></div></div>
+          <div class="route"><span class="route-num">4</span><div><strong>Weeks 11–12 · Full mocks</strong><p>Rehearse the exact order and time limits in the current notification. Keep the day before a mock for revision, not new topics.</p></div></div>
+        </article>
+        <article class="card">
+          <h3>Repeatable study week</h3>
+          <p style="color:var(--muted);margin:0">A balanced template for someone studying 2–3 hours daily.</p>
+          <div class="week">
+            <div class="day"><b>MON</b>Quant + vocab</div><div class="day"><b>TUE</b>Puzzles + GA</div><div class="day"><b>WED</b>DI + grammar</div><div class="day"><b>THU</b>Reasoning + GA</div><div class="day"><b>FRI</b>Arithmetic + RC</div><div class="day"><b>SAT</b>Sectional tests</div><div class="day"><b>SUN</b>Mock + analysis</div>
+          </div>
+          <div class="warn"><b>The score rule:</b> In negative-marking tests, a blind attempt can erase a correct answer. Build attempts through certainty, not guessing. Read the official notice for the exact penalty.</div>
+        </article>
+      </div>
+    </div>
+<div class="callout reveal"><b>The score rule:</b> in negative-marking tests, a blind attempt can erase a correct answer. Build attempts through certainty, not guessing. Read the official notice for the exact penalty.</div>
+
+</section><section id="resources" class="exam-section">
+  <div class="section-kicker reveal">06 / resources</div>
+  <h2 class="section-title reveal">Telegram & Resources</h2>
+  <h3>Free Telegram Channels</h3>
+<div class="resource-list"><div class="resource reveal"><b><a href="https://t.me/adda247live" target="_blank" rel="noopener">Adda247 | Govt Exam Ka #1 Hub</a></b> <span class="tag">Free to join &middot; also promotes paid batches</span><small>Daily current affairs + free PDFs, job/notification alerts for bank/SSC/all govt exams.</small></div><div class="resource reveal"><b><a href="https://t.me/OliveboardApp" target="_blank" rel="noopener">Oliveboard Official</a></b> <span class="tag">Free to join &middot; also promotes paid batches</span><small>~74.3K subscribers. Daily Vocab Booster, current affairs, free YouTube class schedules, free weekly live mock links.</small></div><div class="resource reveal"><b><a href="https://t.me/Practice_Mock" target="_blank" rel="noopener">PracticeMock</a></b> <span class="tag">Free to join &middot; also promotes paid batches</span><small>10,585 subscribers. Free mock test links, quizzes, editorial breakdowns, daily current affairs for SBI PO, IBPS PO, RRB and Clerk exams.</small></div><div class="resource reveal"><b><a href="https://t.me/guidelylearn" target="_blank" rel="noopener">Guidely Official</a></b> <span class="tag">Free to join &middot; also promotes paid batches</span><small>Mock/sectional test activations, vocab series, current affairs, free live-mock links, interview prep content.</small></div><div class="resource reveal"><b><a href="https://t.me/AffairsCloudOfficial" target="_blank" rel="noopener">AffairsCloud Official</a></b> <span class="tag">Free to join &middot; also promotes paid batches</span><small>Daily current affairs articles + latest bank-job vacancy alerts; companion feed @CurrentAffairs_Cloud.</small></div><div class="resource reveal"><b><a href="https://t.me/bankersaddaofficialgroup" target="_blank" rel="noopener">Bankersadda Official Group</a></b> <span class="tag">Genuinely free</span><small>Adda247's official discussion community; aspirants post doubts/questions.</small></div></div>
+<h3>Official links</h3>
+<div class="resource-list"><div class="resource reveal"><b><a href="https://ibps.in" target="_blank" rel="noopener">IBPS official website</a></b><small>Notifications, syllabus, admit cards and results for IBPS PO, Clerk, RRB and Specialist Officer exams.</small></div><div class="resource reveal"><b><a href="https://sbi.co.in/web/careers" target="_blank" rel="noopener">SBI careers</a></b><small>SBI's official careers page — PO and Clerk recruitment notices, schedules and results.</small></div></div>
+<div class="callout-warn reveal"><b>Trust, but verify.</b> Telegram channels are useful for updates and free PDFs, but eligibility, dates, vacancies and pattern changes are official only when published on the exam body's own website.</div>
+</section>
+</main>
+<footer class="site-footer">
+  <p><a href="index.html">Exam Prep Hub</a> &middot; free study material for Indian competitive exams.<br>
+  Patterns, dates and vacancies change by recruitment cycle &mdash; always confirm with the current official notice.</p>
+</footer>
+<script src="assets/shell.js"></script>
+<script>
+(function(){
+  var quant=[
+    ['Percentage','x% of y = (x/100) × y','Successive changes a% and b% combine to a + b + ab/100. Treat a decrease as negative.'],
+    ['Profit & loss','Profit% = Profit / Cost Price × 100','If marked price is M and discount is d%, selling price = M(1 − d/100). Profit is always compared with cost price.'],
+    ['Simple interest','SI = P × R × T / 100','Amount under simple interest is P + SI. Keep rate and time in matching annual units.'],
+    ['Compound interest','A = P(1 + R/100)ᵀ','For half-yearly compounding, halve the annual rate and double the number of periods. CI = A − P.'],
+    ['Average','Average = Sum of observations / Count','When one value is replaced, change in total = new − old; divide by count for change in average.'],
+    ['Ratio','a:b = ka:kb','If a total S is divided in m:n, shares are Sm/(m+n) and Sn/(m+n). Ratios compare quantities in the same units.'],
+    ['Time & work','One-day work = 1 / days required','Add rates when people work together. If A takes a days and B takes b days, together they take ab/(a+b) days.'],
+    ['Pipes & cisterns','Net rate = inlet rates − outlet rates','Treat filling as positive and emptying as negative; time is reciprocal of the net one-hour work.'],
+    ['Speed, time, distance','Distance = Speed × Time','Convert km/h to m/s by multiplying 5/18. Relative speed adds in opposite directions and subtracts in the same direction.'],
+    ['Trains','Time = Total length / Relative speed','For a pole, total length is train length. For a platform, add train and platform lengths. Use metres and m/s.'],
+    ['Boats & streams','Downstream = boat + stream; upstream = boat − stream','Still-water speed is half the sum; stream speed is half the difference.'],
+    ['Mixture','Mean price = Total cost / Total quantity','Alligation gives cheaper:dearer quantities = (dearer−mean):(mean−cheaper).'],
+    ['Data interpretation','Required value = Read → normalize units → compute','Before calculating, note scale, units, base year and whether the question asks value, difference or percentage change.'],
+    ['Number series','Check differences, ratios, squares and alternating terms','Do not force a pattern from two gaps; verify it across every available term.'],
+    ['Quadratic equations','ax² + bx + c = 0','Factor when possible. For comparison questions, find both root sets and compare ranges carefully.']
+  ];
+  var reasoning=[
+    {t:'Seating arrangements',b:'Draw fixed slots before placing people. In a row, facing north means left/right follow the page; facing south reverses them. In a circle, inward-facing left is clockwise and right is anticlockwise; outward-facing reverses that.',k:['Place absolute clues first: ends, exact positions, immediate neighbours.','Make separate cases only when a clue truly permits alternatives.','Use every clue once, then verify every clue at the end.']},
+    {t:'Syllogism',b:'Translate statements into set relationships. “All A are B” puts A inside B; it does not mean all B are A. “Some A are B” guarantees an overlap. “No A is B” separates the sets.',k:['A universal statement alone does not prove existence.','Possibility conclusions ask whether a relation can exist without violating statements.','Test conclusions against all valid diagrams, not one convenient drawing.']},
+    {t:'Inequality',b:'Join symbols only when the direction is compatible. From A > B ≥ C, conclude A > C. From A > B < C, no definite relation follows between A and C.',k:['Equality can pass through ≥ or ≤ chains.','For coded inequalities, decode every symbol before solving.','A definite conclusion must hold in every value assignment.']},
+    {t:'Coding–decoding',b:'Look for letter positions, reversals, shifts, word rearrangement or substitution. In sentence coding, repeated words reveal repeated codes through intersection.',k:['Write A=1 to Z=26 when arithmetic is involved.','Check whether the rule applies independently to each letter.','Never assume the same code type continues across a new question set.']},
+    {t:'Blood relations',b:'Create a small family tree with generations on separate levels. Mark gender only when stated. “A is the brother of B” fixes A’s gender, not B’s.',k:['Start from the person in the question and work backward.','Distinguish maternal and paternal links only when information permits.','Spouse relations do not by themselves establish sibling gender.']},
+    {t:'Direction sense',b:'Use a coordinate grid: north +y, east +x, south −y, west −x. Final straight-line distance follows √(x²+y²); direction comes from the signs of x and y.',k:['Update facing direction after every turn.','Right/left are relative to current facing, not the page.','Cancel opposite movements before calculating distance.']},
+    {t:'Ranking & order',b:'If a person is r-th from the top in a group of n, rank from bottom is n−r+1. If ranks from both ends are given for the same person, total = left rank + right rank − 1.',k:['For people between two positions, subtract ranks and then subtract one.','Do not combine ranks from different lists without a linking fact.','Make a number line for swapping-position problems.']},
+    {t:'Input–output',b:'Compare consecutive steps to identify what moves and where. Common rules arrange words alphabetically, numbers ascending/descending, or alternate smallest and largest.',k:['Track only the changed element in each step.','Confirm the rule on at least two transitions.','To find a later step, reproduce the process—not the visible pattern alone.']},
+    {t:'Data sufficiency',b:'Judge whether information is enough, not whether you can calculate quickly. Test Statement I alone, Statement II alone, then both together according to the option scheme.',k:['Do not import unstated assumptions.','A unique value or relation is sufficient.','Different exams use different answer-code conventions—read them first.']},
+    {t:'Critical reasoning',b:'An assumption is an unstated bridge required by the argument. A strengthening fact makes the conclusion more likely; a weakening fact attacks the link, evidence or alternative causes.',k:['Separate evidence from conclusion.','Extreme options are often irrelevant, but reject by logic, not tone.','A fact can be true yet fail to address the argument.']}
+  ];
+  var english=[
+    {t:'Subject–verb agreement',b:'The verb agrees with the grammatical subject, not the nearest noun. “The quality of the loans is…” Singular indefinite pronouns such as each, either and neither usually take singular verbs.',k:['With either…or / neither…nor, agreement usually follows the nearer subject.','Amounts treated as one unit take a singular verb.','“A number of” is plural; “the number of” is singular.']},
+    {t:'Tense & sequence',b:'Use present perfect for an action linked to the present; simple past for a finished time. In reported speech, a past reporting verb often shifts the original tense back, unless the statement remains universally true.',k:['Since marks a starting point; for marks a duration.','After “did”, use the base verb.','Keep a narrative’s time frame consistent.']},
+    {t:'Articles',b:'Use “a/an” by sound, not spelling: an hour, a university. Use “the” for something specific, already identified, unique in context, or superlative.',k:['Plural and uncountable nouns can appear without an article when general.','Job titles after appoint/elect often take no article.','Acronyms take a/an based on pronunciation.']},
+    {t:'Prepositions',b:'Prepositions express relationships and are learned through usage: responsible for, comply with, differ from, interested in, capable of.',k:['Between is standard for distinct individual items; among for a group.','Use by for a deadline, until for continuation up to a time.','Avoid adding a preposition where the verb does not require one.']},
+    {t:'Modifiers',b:'Place a modifier beside the word it describes. A dangling opening phrase has no logical subject: “After reviewing the file, the officer approved it,” not “the approval was given.”',k:['Only changes meaning depending on placement.','A participial phrase should logically modify the subject that follows.','Parallel comparisons must compare like with like.']},
+    {t:'Parallelism',b:'Items joined by and/or or listed together should share grammatical form: “to assess, verify and report,” or “assessing, verifying and reporting.”',k:['Correlative pairs should join equivalent structures.','Do not mix a noun, gerund and clause in one list.','Comparison markers such as than should connect comparable forms.']},
+    {t:'Reading comprehension',b:'Read for structure: issue, evidence, contrast, author’s stance, conclusion. Answer from the passage, not outside knowledge. For inference, choose what must or most reasonably follows.',k:['Broad options overreach; narrow options may miss the main idea.','Tone comes from word choice and treatment of opposing views.','Return to the exact lines for factual questions.']},
+    {t:'Cloze test',b:'Use grammar first, then meaning and collocation. Read the full paragraph before filling blanks so that tone and logical flow guide each choice.',k:['Check pronoun reference and tense consistency.','Transition words reveal contrast, cause and continuation.','Re-read the completed paragraph for coherence.']},
+    {t:'Para jumbles',b:'Find an independent opening sentence, then mandatory pairs: pronoun after its noun, example after claim, contrast after position, chronology in order.',k:['A sentence beginning with “however” rarely opens the paragraph.','Repeated keywords and synonyms create links.','Confirm the final order as one coherent argument.']},
+    {t:'Vocabulary in context',b:'Meaning depends on the sentence. Replace the word with each option and check both dictionary sense and tone. Learn word families and common collocations, not isolated lists.',k:['Use roots and affixes as clues, not proof.','A synonym may have the wrong register or preposition.','Record new words with one original sentence.']}
+  ];
+  var quiz=[
+    {s:'Quant',q:'A salary rises by 20% and then falls by 10%. What is the net change?',o:['10% increase','8% increase','8% decrease','No change'],a:1,e:'Use successive change: 20 + (−10) + (20×−10)/100 = 8. The final salary is 1.2 × 0.9 = 1.08 times the original.'},
+    {s:'Quant',q:'A can finish work in 12 days and B in 18 days. Together, how long do they take?',o:['6.2 days','7.2 days','8 days','15 days'],a:1,e:'Combined daily rate = 1/12 + 1/18 = 5/36. Time = 36/5 = 7.2 days.'},
+    {s:'Reasoning',q:'All clerks are graduates. Some graduates are athletes. Which conclusion definitely follows?',o:['Some clerks are athletes','All athletes are clerks','Some graduates are athletes','No clerk is an athlete'],a:2,e:'The second statement directly guarantees that some graduates are athletes. It does not connect those athletes to clerks.'},
+    {s:'English',q:'Choose the correct sentence.',o:['Each of the reports have an error.','Each of the reports has an error.','Each of the report have errors.','Each reports has an error.'],a:1,e:'“Each” is singular, so it takes “has”. The plural noun appears inside the “of” phrase and does not control the verb.'},
+    {s:'Banking',q:'Which institution operates UPI in India?',o:['SEBI','NPCI','NABARD','IRDAI'],a:1,e:'The National Payments Corporation of India (NPCI) operates UPI.'},
+    {s:'Quant',q:'The average of five numbers is 24. If one number 18 is replaced by 28, what is the new average?',o:['25','26','27','28'],a:1,e:'The total rises by 10. Spread across five values, the average rises by 2, from 24 to 26.'},
+    {s:'Reasoning',q:'Ravi faces north, turns right, walks 4 m, turns right and walks 3 m. Which direction is he from the start?',o:['North-east','South-east','South-west','East'],a:1,e:'He moves 4 m east and then 3 m south, placing him south-east of the start.'},
+    {s:'English',q:'Fill the blank: The committee has complied ___ the regulator’s direction.',o:['to','for','with','at'],a:2,e:'The standard collocation is “comply with”.'},
+    {s:'Banking',q:'Which ratio requires banks to keep a prescribed share of liabilities as cash with RBI?',o:['SLR','CRR','CASA','MCLR'],a:1,e:'CRR is held as cash with RBI. SLR is maintained in specified liquid assets by the bank.'},
+    {s:'Quant',q:'A train 180 m long passes a pole in 12 seconds. Its speed is:',o:['45 km/h','54 km/h','60 km/h','72 km/h'],a:1,e:'Speed = 180/12 = 15 m/s. Multiply by 18/5 to get 54 km/h.'},
+    {s:'Reasoning',q:'If P > Q ≥ R = S, which relation is definitely true?',o:['P = S','P > S','Q < S','R > P'],a:1,e:'Q is at least R, and P is greater than Q, so P must be greater than R and S.'},
+    {s:'English',q:'Choose the best correction: “The number of digital transactions have increased.”',o:['has increased','have been increase','are increased','No correction'],a:0,e:'The subject is “the number”, which is singular, so the verb is “has”.'},
+    {s:'Banking',q:'What does RTGS settle?',o:['Only card transactions','Transactions individually in real time','Transactions once per day','Only international remittances'],a:1,e:'RTGS stands for Real Time Gross Settlement: transactions are settled individually and in real time.'},
+    {s:'Quant',q:'An item costing ₹800 is sold at a 15% profit. What is the selling price?',o:['₹880','₹900','₹920','₹940'],a:2,e:'Profit = 15% of 800 = 120. Selling price = 800 + 120 = ₹920.'},
+    {s:'Reasoning',q:'M is 12th from the top and 19th from the bottom. How many people are in the line?',o:['29','30','31','32'],a:1,e:'Total = top rank + bottom rank − 1 = 12 + 19 − 1 = 30.'},
+    {s:'English',q:'Which is the most logical opening for a paragraph?',o:['However, this was not the only problem.','This policy changed how small firms obtained credit.','They therefore rejected it.','Such a result surprised them.'],a:1,e:'Option B is self-contained. The other options depend on prior context through “however”, “they”, or “such”.'},
+    {s:'Banking',q:'Which institution primarily focuses on agriculture and rural development?',o:['NABARD','SEBI','PFRDA','DICGC'],a:0,e:'NABARD is the apex development financial institution for agriculture and rural development.'},
+    {s:'Quant',q:'In a 2:3 mixture of milk and water totaling 25 litres, how much water is present?',o:['10 L','12 L','15 L','18 L'],a:2,e:'Water is 3 out of 5 total parts: 25 × 3/5 = 15 litres.'},
+    {s:'Reasoning',q:'Statement: No loan is a grant. Some grants are subsidies. What follows?',o:['Some subsidies are not loans','All subsidies are loans','Some loans are subsidies','No subsidy is a loan'],a:0,e:'The grants that are subsidies cannot be loans because no grant is a loan. Therefore some subsidies are not loans.'},
+    {s:'English',q:'Choose the correctly modified sentence.',o:['Walking into the branch, the notice caught Priya’s attention.','Walking into the branch, Priya noticed the notice.','The notice, walking into the branch, caught Priya.','Priya’s attention walked into the branch.'],a:1,e:'The opening phrase “walking into the branch” must modify the person who walked—Priya.'}
+  ];
+  function el(tag,cls,html){var n=document.createElement(tag);if(cls)n.className=cls;if(html!==undefined)n.innerHTML=html;return n}
+  var qg=document.getElementById('quantGrid');quant.forEach(function(x){var n=el('article','formula');n.innerHTML='<h3>'+x[0]+'</h3><code>'+x[1]+'</code><p>'+x[2]+'</p>';qg.appendChild(n)});
+  function renderNotes(data,target,term){target.innerHTML='';var f=data.filter(function(x){return (x.t+' '+x.b+' '+x.k.join(' ')).toLowerCase().indexOf(term.toLowerCase())>-1});if(!f.length){target.innerHTML='<div class="empty">No matching note. Try a broader term.</div>';return}f.forEach(function(x){var n=el('article','note');n.innerHTML='<button aria-expanded="false"><span>'+x.t+'</span><span>＋</span></button><div class="note-body"><p>'+x.b+'</p><ul>'+x.k.map(function(v){return '<li>'+v+'</li>'}).join('')+'</ul></div>';n.querySelector('button').addEventListener('click',function(){n.classList.toggle('open');var open=n.classList.contains('open');this.setAttribute('aria-expanded',open);this.lastElementChild.textContent=open?'−':'＋'});target.appendChild(n)})}
+  var rg=document.getElementById('reasonGrid'),eg=document.getElementById('englishGrid');renderNotes(reasoning,rg,'');renderNotes(english,eg,'');document.getElementById('reasonSearch').addEventListener('input',function(){renderNotes(reasoning,rg,this.value)});document.getElementById('englishSearch').addEventListener('input',function(){renderNotes(english,eg,this.value)});
+  document.querySelectorAll('.nav button').forEach(function(b){b.addEventListener('click',function(){document.querySelectorAll('.nav button').forEach(function(x){x.classList.remove('active')});document.querySelectorAll('.panel').forEach(function(x){x.classList.remove('active')});b.classList.add('active');document.getElementById(b.dataset.tab).classList.add('active');window.scrollTo({top:document.querySelector('.nav-wrap').offsetTop,behavior:'smooth'})})});
+  var idx=0,answers=new Array(quiz.length).fill(null),revealed=new Array(quiz.length).fill(false);var card=document.getElementById('questionCard'),dots=document.getElementById('dots');
+  function score(){var s=0;answers.forEach(function(v,i){if(v===quiz[i].a)s++});document.getElementById('score').textContent=s;var done=answers.filter(function(v){return v!==null}).length;document.getElementById('scoreText').textContent=done===quiz.length?(s>=16?'Strong foundation':s>=11?'Good start—repair weak areas':'Rebuild concepts, then retry'):(done+' of '+quiz.length+' answered')}
+  function renderDots(){dots.innerHTML='';quiz.forEach(function(_,i){var d=el('button','dot'+(answers[i]!==null?' done':''),String(i+1));d.setAttribute('aria-label','Go to question '+(i+1));d.addEventListener('click',function(){idx=i;renderQ()});dots.appendChild(d)})}
+  function renderQ(){var q=quiz[idx];card.innerHTML='<div class="qmeta"><span>'+q.s+'</span><span>Question '+(idx+1)+' of '+quiz.length+'</span></div><h3>'+q.q+'</h3><div class="answers">'+q.o.map(function(o,i){var c='answer';if(answers[idx]===i)c+=' selected';if(revealed[idx]&&i===q.a)c+=' correct';if(revealed[idx]&&answers[idx]===i&&i!==q.a)c+=' wrong';return '<button class="'+c+'" data-a="'+i+'">'+String.fromCharCode(65+i)+'. '+o+'</button>'}).join('')+'</div><div class="explain '+(revealed[idx]?'show':'')+'"><strong>'+(answers[idx]===q.a?'Correct.':'Answer: '+String.fromCharCode(65+q.a)+'.')+'</strong> '+q.e+'</div><div class="controls"><button class="btn secondary" id="prev" '+(idx===0?'disabled':'')+'>Previous</button><button class="btn primary" id="next">'+(revealed[idx]?(idx===quiz.length-1?'Review from start':'Next question'):'Check answer')+'</button></div>';
+    card.querySelectorAll('.answer').forEach(function(b){b.addEventListener('click',function(){if(revealed[idx])return;answers[idx]=Number(this.dataset.a);renderQ();score();renderDots()})});
+    document.getElementById('prev').addEventListener('click',function(){if(idx>0){idx--;renderQ()}});document.getElementById('next').addEventListener('click',function(){if(!revealed[idx]){if(answers[idx]===null)return;revealed[idx]=true;renderQ()}else{idx=idx===quiz.length-1?0:idx+1;renderQ()}})
+  }
+  document.getElementById('resetBtn').addEventListener('click',function(){idx=0;answers.fill(null);revealed.fill(false);score();renderDots();renderQ()});renderDots();renderQ();
+})();
+</script>
+</body>
+</html>
