@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="assets/theme.css">
+<link rel="stylesheet" href="assets/topics.css">
 <script>(function(){try{var t=localStorage.getItem('eph-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <style>
 /* Legacy v1 content, scoped so it never collides with the v2 design system */
@@ -284,6 +285,17 @@
 </main>
 <!-- ==================== #comments — visitor suggestions (giscus) ==================== -->
 <div class="page-wrap">
+<!-- ==================== #topics — topic library (study material) ==================== -->
+<section class="topic-lib-sec" id="topics" aria-label="Study material by topic">
+<div style="max-width:1180px;margin:0 auto;padding:0 20px">
+<p class="tl-kicker">Study material</p>
+<h2 class="tl-h2">Learn it topic by topic</h2>
+<p class="tl-sub">Every card below opens a full study page for that topic — a plain-language explanation, key facts and tables, diagrams, and quick-revision questions with answers. The practice papers at the end are full timed mocks with instant scores and complete answer keys. Everything runs in your browser; nothing is sent anywhere.</p>
+<div id="topic-lib"></div>
+</div>
+</section>
+<script src="assets/topics-neet.js"></script>
+<script src="assets/topics.js"></script>
 <section class="exam-section" id="comments" aria-label="Comments and suggestions">
   <h2 class="section-title">Comments &amp; suggestions</h2>
   <p class="section-sub">Spotted a mistake, an outdated date, or a missing topic? Leave a comment below &mdash; every suggestion helps improve this page for all aspirants.</p>
