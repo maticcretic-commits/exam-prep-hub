@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SSC Exam Prep (CGL / CHSL / MTS / GD) — Exam Prep Hub</title>
+<link rel="stylesheet" href="assets/theme.css">
+<link rel="stylesheet" href="assets/topics.css">
+<style>
+:root{--accent:#84CC16;--bg:#0b0f14;--bg2:#111722;--card:#141c29;--line:rgba(255,255,255,.09);--ink:#e8eef6;--muted:#9aa7b8}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:'Segoe UI',system-ui,-apple-system,Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.65;margin:0}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.glass-nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:1rem;padding:.7rem 1.2rem;background:rgba(11,15,20,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.brand{font-weight:800;font-size:1.05rem;color:var(--ink);white-space:nowrap}
+.brand span{color:var(--accent)}
+.nav-links{display:flex;flex-wrap:wrap;gap:.15rem;margin-left:auto}
+.nav-links a{color:var(--muted);font-size:.85rem;padding:.4rem .6rem;border-radius:.5rem}
+.nav-links a:hover{color:var(--ink);background:rgba(255,255,255,.06);text-decoration:none}
+.nav-links a[aria-current="page"]{color:var(--accent);font-weight:700}
+.nav-btns{display:flex;gap:.4rem;align-items:center}
+#theme-toggle,.nav-toggle{background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--ink);border-radius:.55rem;padding:.4rem .7rem;cursor:pointer;font-size:.95rem}
+.nav-toggle{display:none}
+.breadcrumb{max-width:1120px;margin:0 auto;padding:1rem 1.2rem .2rem;color:var(--muted);font-size:.88rem}
+.breadcrumb a{color:var(--muted)}
+.hero{max-width:1120px;margin:0 auto;padding:1.6rem 1.2rem 1.2rem}
+.hero h1{font-size:clamp(1.7rem,4vw,2.6rem);margin:.2rem 0 .6rem;line-height:1.15}
+.hero h1 .ac{color:var(--accent)}
+.tagline{color:var(--muted);font-size:1.05rem;max-width:62ch;margin:0 0 1.1rem}
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.7rem}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:.8rem 1rem}
+.stat b{display:block;font-size:1.05rem;color:var(--accent)}
+.stat small{color:var(--muted)}
+.section-nav{position:sticky;top:58px;z-index:40;background:rgba(11,15,20,.85);backdrop-filter:blur(10px);border-block:1px solid var(--line);display:flex;gap:.2rem;overflow-x:auto;padding:.45rem 1rem}
+.section-nav a{color:var(--muted);font-size:.88rem;padding:.45rem .75rem;border-radius:2rem;white-space:nowrap}
+.section-nav a:hover{color:var(--ink);background:rgba(255,255,255,.06);text-decoration:none}
+.page-wrap{max-width:1120px;margin:0 auto;padding:1rem 1.2rem 3rem}
+.exam-section{margin:2.2rem 0;scroll-margin-top:120px}
+.section-title{font-size:1.45rem;margin:0 0 .4rem;padding-bottom:.5rem;border-bottom:2px solid var(--accent);display:inline-block}
+.section-kicker{color:var(--accent);font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.section-sub{color:var(--muted);margin:.3rem 0 1.2rem;max-width:70ch}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:.9rem;margin:1rem 0}
+.note-card{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1rem 1.1rem}
+.note-card h3{margin:.1rem 0 .5rem;font-size:1.02rem;color:var(--accent)}
+.note-card p,.note-card li{font-size:.93rem;color:#cdd6e2}
+.note-card ul{margin:.4rem 0;padding-left:1.1rem}
+table.data-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.92rem;background:var(--card);border-radius:.8rem;overflow:hidden}
+table.data-table th{background:rgba(255,255,255,.05);text-align:left;padding:.65rem .8rem;color:var(--accent)}
+table.data-table td{padding:.6rem .8rem;border-top:1px solid var(--line);vertical-align:top}
+table.data-table tr.total td{font-weight:700}
+.callout{border-left:4px solid var(--accent);background:rgba(255,255,255,.04);border-radius:0 .7rem .7rem 0;padding:.85rem 1.1rem;margin:1rem 0;font-size:.94rem}
+.callout-warn{border-left:4px solid #f59e0b;background:rgba(245,158,11,.08);border-radius:0 .7rem .7rem 0;padding:.85rem 1.1rem;margin:1rem 0;font-size:.94rem}
+.btn{display:inline-block;border:1px solid var(--line);background:rgba(255,255,255,.06);color:var(--ink);padding:.6rem 1.1rem;border-radius:.7rem;cursor:pointer;font-size:.95rem;font-weight:600}
+.btn:hover{background:rgba(255,255,255,.12);text-decoration:none}
+.btn-accent,.btn.primary{background:var(--accent);border-color:var(--accent);color:#0b0f14}
+.btn-accent:hover,.btn.primary:hover{filter:brightness(1.08);text-decoration:none}
+.btn.secondary{background:transparent}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.tag{display:inline-block;font-size:.75rem;font-weight:700;color:var(--accent);border:1px solid var(--accent);border-radius:2rem;padding:.1rem .6rem;margin:.1rem .15rem .1rem 0}
+.quiz-block{background:var(--card);border:1px solid var(--line);border-radius:1rem;padding:1.2rem;margin:1rem 0}
+.site-footer{border-top:1px solid var(--line);padding:1.6rem 1.2rem 2.5rem;text-align:center;color:var(--muted);font-size:.88rem}
+.reveal{}
+.exam-tabs,.subject-tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.exam-tab,.subject-tab,.tab,.nav button{border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--ink);padding:.55rem 1rem;border-radius:2rem;cursor:pointer;font-size:.9rem;font-weight:600}
+.exam-tab.active,.subject-tab.active,.tab.active,.nav button.active{background:var(--accent);border-color:var(--accent);color:#0b0f14}
+.study-panel.hidden,.hide{display:none!important}
+.panel{display:none}
+.panel.active{display:block}
+.pattern-row{display:grid;grid-template-columns:2fr 1fr 1fr;gap:.5rem;padding:.5rem .2rem;border-bottom:1px dashed var(--line);font-size:.93rem}
+.exam-route{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;margin:.6rem 0;font-weight:600}
+.exam-route i{color:var(--accent);font-style:normal}
+.search{width:100%;max-width:420px;background:var(--bg2);border:1px solid var(--line);color:var(--ink);border-radius:.6rem;padding:.6rem .9rem;font-size:.92rem;margin:.6rem 0}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:.8rem;margin:1rem 0}
+.topic,.module{background:var(--card);border:1px solid var(--line);border-radius:.85rem;padding:.9rem 1rem}
+details.topic summary{cursor:pointer;font-weight:700;color:var(--accent);font-size:.98rem}
+details.topic .body{padding-top:.6rem;font-size:.92rem;color:#cdd6e2}
+details.topic .body strong{color:var(--ink)}
+span.formula,code.formula{display:block;background:var(--bg2);border:1px solid var(--line);border-radius:.5rem;padding:.45rem .7rem;margin:.45rem 0;font-family:ui-monospace,Consolas,monospace;font-size:.88rem;color:var(--ink)}
+.worked{background:rgba(255,255,255,.04);border-left:3px solid var(--accent);padding:.5rem .8rem;margin:.6rem 0;font-size:.9rem;border-radius:0 .5rem .5rem 0}
+.note{border:1px solid var(--line);border-radius:.8rem;margin:.6rem 0;background:var(--card);overflow:hidden}
+.note>button{width:100%;display:flex;justify-content:space-between;align-items:center;background:none;border:0;color:var(--ink);padding:.85rem 1rem;cursor:pointer;font-size:.95rem;font-weight:600;text-align:left}
+.note>button span:last-child{color:var(--accent);font-size:1.1rem}
+.note-body{display:none;padding:0 1rem 1rem;font-size:.92rem;color:#cdd6e2}
+.note.open .note-body{display:block}
+.note-body ul{margin:.4rem 0;padding-left:1.1rem}
+.empty{color:var(--muted);padding:1rem}
+.question,.q{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:.85rem;padding:1rem 1.1rem;margin:.8rem 0}
+.qnum{font-size:.75rem;font-weight:700;letter-spacing:.08em;color:var(--accent);margin-bottom:.3rem}
+.question h3,.q h3{margin:.2rem 0 .7rem;font-size:1rem}
+.options,.opts{display:grid;gap:.45rem}
+.option,.opt{display:block;text-align:left;background:var(--bg2);border:1px solid var(--line);color:var(--ink);border-radius:.6rem;padding:.6rem .9rem;cursor:pointer;font-size:.93rem;width:100%}
+.option:hover,.opt:hover{border-color:var(--accent)}
+.option.selected{outline:2px solid var(--accent)}
+.question.revealed .option.correct,.q.checked.right{outline:2px solid #22c55e;background:rgba(34,197,94,.1)}
+.question.revealed .option.wrong,.q.checked.wrong{outline:2px solid #ef4444;background:rgba(239,68,68,.1)}
+.explain{display:none;margin-top:.7rem;font-size:.92rem;color:#cdd6e2}
+.question.revealed .explain{display:block}
+.explain.show{display:block}
+.score-line{display:flex;align-items:center;gap:1rem;margin:1rem 0;flex-wrap:wrap}
+#score{font-size:1.5rem;font-weight:800;color:var(--accent)}
+#toast{display:none;background:var(--accent);color:#0b0f14;font-weight:700;border-radius:.6rem;padding:.55rem 1rem;margin:.6rem 0}
+.qmeta{display:flex;justify-content:space-between;color:var(--muted);font-size:.82rem;margin-bottom:.5rem}
+.answers{display:grid;gap:.45rem}
+.answer{background:var(--bg2);border:1px solid var(--line);color:var(--ink);border-radius:.6rem;padding:.6rem .9rem;cursor:pointer;text-align:left;font-size:.93rem;width:100%}
+.answer.selected{outline:2px solid var(--accent)}
+.answer.correct{outline:2px solid #22c55e;background:rgba(34,197,94,.1)}
+.answer.wrong{outline:2px solid #ef4444;background:rgba(239,68,68,.1)}
+.controls{display:flex;gap:.6rem;margin-top:1rem}
+.dots{display:flex;flex-wrap:wrap;gap:.35rem;margin:.8rem 0}
+.dot{width:2rem;height:2rem;border-radius:50%;border:1px solid var(--line);background:var(--bg2);color:var(--ink);cursor:pointer;font-size:.8rem}
+.dot.done{background:var(--accent);border-color:var(--accent);color:#0b0f14;font-weight:700}
+.timer-btn{background:rgba(255,255,255,.06);border:1px solid var(--accent);color:var(--accent);border-radius:.7rem;padding:.6rem 1.2rem;font-weight:800;letter-spacing:.06em;cursor:pointer;font-size:.95rem}
+.week{background:var(--card);border:1px solid var(--line);border-radius:.85rem;padding:.9rem 1rem}
+.week .num,.mini-label{color:var(--accent);font-weight:800;font-size:.8rem;letter-spacing:.1em}
+.week h3{margin:.2rem 0 .4rem;font-size:1.02rem}
+.week p{font-size:.9rem;color:#cdd6e2;margin:0}
+.plan-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:.8rem;margin:1rem 0}
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:.8rem;margin:1rem 0}
+.tip,.formula{background:var(--card);border:1px solid var(--line);border-radius:.85rem;padding:.9rem 1rem}
+.tip h3,.formula h3{margin:.1rem 0 .4rem;font-size:.98rem;color:var(--accent)}
+.tip p,.formula p{font-size:.9rem;color:#cdd6e2;margin:.3rem 0}
+.formula code{display:block;background:var(--bg2);border:1px solid var(--line);border-radius:.5rem;padding:.45rem .7rem;margin:.45rem 0;font-size:.88rem}
+.day-table td:first-child{font-weight:700;color:var(--accent);white-space:nowrap}
+.resource-list{display:grid;gap:.7rem;margin:1rem 0}
+.resource{background:var(--card);border:1px solid var(--line);border-radius:.85rem;padding:.85rem 1rem}
+.resource b{color:var(--ink)}
+.resource small{color:var(--muted);display:block;margin-top:.25rem}
+.module h3{color:var(--accent);font-size:1rem;margin:.2rem 0 .5rem}
+.module ul{margin:.4rem 0;padding-left:1.1rem;font-size:.92rem;color:#cdd6e2}
+.module li{margin:.25rem 0}
+.section-head h2{margin:.2rem 0}
+.section-head p{color:var(--muted)}
+.quiz-layout{display:grid;grid-template-columns:1.6fr 1fr;gap:1rem;margin:1rem 0}
+.question-card{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:.9rem;padding:1.1rem;min-height:320px}
+.score-card{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1rem;align-self:start}
+.score-card .score{font-size:1.6rem;font-weight:800;color:var(--accent)}
+.roadmap{display:grid;gap:.7rem;margin:1rem 0}
+.route{display:flex;gap:.8rem;align-items:flex-start}
+.route-num{background:var(--accent);color:#0b0f14;font-weight:800;border-radius:50%;width:1.8rem;height:1.8rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.footer-note{color:var(--muted);font-size:.88rem;margin-top:1.5rem}
+@media(max-width:760px){.quiz-layout{grid-template-columns:1fr}}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:.8rem;margin:1rem 0}
+.col-4{grid-column:span 4}.col-6{grid-column:span 6}.col-7{grid-column:span 7}
+.card{background:var(--card);border:1px solid var(--line);border-radius:.9rem;padding:1rem}
+.kpi{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:700}
+.card h3{margin:.3rem 0 .4rem;font-size:1rem}
+.card p{color:#cdd6e2;font-size:.92rem}
+.rail{display:flex;gap:0;margin:.6rem 0}
+.station{background:var(--accent);color:#0b0f14;font-weight:800;border-radius:.5rem;padding:.3rem .6rem;font-size:.85rem;flex-shrink:0;align-self:flex-start}
+.track{border-left:2px solid var(--accent);margin-left:1rem;padding:.2rem 0 .2rem 1rem}
+.track p{margin:.15rem 0}
+.topic-grid{display:grid;gap:.6rem;margin:1rem 0}
+.topic{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:.7rem}
+.topic summary{padding:.7rem 1rem;cursor:pointer;font-weight:600}
+.topic .body{padding:0 1rem .9rem;font-size:.92rem;color:#cdd6e2}
+.formula{display:block;background:rgba(255,255,255,.04);border:1px dashed var(--accent);border-radius:.5rem;padding:.5rem .7rem;margin:.4rem 0;font-size:.9rem}
+.worked{background:rgba(255,255,255,.03);border-radius:.5rem;padding:.5rem .7rem;margin-top:.4rem}
+table.pattern{width:100%;border-collapse:collapse;margin:.8rem 0;font-size:.9rem}
+table.pattern th,table.pattern td{border:1px solid var(--line);padding:.5rem .6rem;text-align:left}
+table.pattern thead{background:rgba(255,255,255,.04)}
+.tabs-wrap .tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:1rem 0}
+.tabs-wrap .tab{background:var(--card);border:1px solid var(--line);color:var(--text);padding:.5rem 1rem;border-radius:2rem;cursor:pointer;font-size:.9rem}
+.tabs-wrap .tab.active{background:var(--accent);border-color:var(--accent);color:#0b0f14;font-weight:700}
+@media(max-width:760px){.col-4,.col-6,.col-7{grid-column:span 12}}
+.hidden{display:none!important}
+.study-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.8rem;margin:1rem 0}
+/* banking generated components */
+.formula{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:.9rem}
+.formula h3{font-size:.95rem;margin:.1rem 0 .4rem;color:var(--accent)}
+.formula code{display:block;background:rgba(14,165,233,.1);border:1px dashed var(--accent);border-radius:.5rem;padding:.45rem .6rem;margin:.35rem 0;font-size:.88rem}
+.formula p{font-size:.88rem;color:#cdd6e2;margin:.3rem 0 0}
+.note{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:.8rem;margin-bottom:.6rem}
+.note button{width:100%;background:none;border:0;color:var(--text);padding:.8rem 1rem;display:flex;justify-content:space-between;cursor:pointer;font-size:.95rem;font-weight:600;text-align:left}
+.note .note-body{display:none;padding:0 1rem .9rem;font-size:.9rem;color:#cdd6e2}
+.note.open .note-body{display:block}
+.note .note-body ul{padding-left:1.1rem;margin:.4rem 0}
+.note .note-body li{margin:.2rem 0}
+.empty{color:var(--muted);padding:1rem;text-align:center}
+.qmeta{display:flex;justify-content:space-between;font-size:.82rem;color:var(--muted);margin-bottom:.6rem}
+.question-card h3{font-size:1.05rem;line-height:1.45;margin:.2rem 0 .8rem}
+.answers{display:grid;gap:.5rem;margin:.8rem 0}
+.answer{background:rgba(255,255,255,.03);border:1px solid var(--line);color:var(--text);border-radius:.6rem;padding:.65rem .9rem;text-align:left;cursor:pointer;font-size:.95rem}
+.answer:hover{border-color:var(--accent)}
+.answer.selected{border-color:var(--accent);background:rgba(14,165,233,.12)}
+.answer.correct{border-color:#22c55e;background:rgba(34,197,94,.12)}
+.answer.wrong{border-color:#ef4444;background:rgba(239,68,68,.12)}
+.explain{display:none;background:rgba(255,255,255,.03);border-left:3px solid var(--accent);border-radius:0 .5rem .5rem 0;padding:.7rem .9rem;margin:.8rem 0;font-size:.92rem;color:#cdd6e2}
+.explain.show{display:block}
+.controls{display:flex;gap:.6rem;margin-top:.8rem}
+.btn.primary{background:var(--accent);color:#0b0f14}
+.btn.secondary{background:rgba(255,255,255,.06)}
+.dots{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.8rem}
+.dot{width:2rem;height:2rem;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--text);cursor:pointer;font-size:.8rem}
+.dot.done{background:var(--accent);color:#0b0f14;border-color:var(--accent);font-weight:700}
+/* ssc quiz */
+.question{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:1.1rem;margin-bottom:.8rem}
+.question h3{font-size:1.02rem;margin:.3rem 0 .8rem}
+.qnum{font-size:.75rem;letter-spacing:.08em;color:var(--accent);font-weight:700}
+.options{display:grid;gap:.5rem}
+.option{background:rgba(255,255,255,.03);border:1px solid var(--line);color:var(--text);border-radius:.55rem;padding:.6rem .9rem;text-align:left;cursor:pointer;font-size:.93rem}
+.option:hover{border-color:var(--accent)}
+.option.selected{border-color:var(--accent);background:rgba(255,255,255,.07)}
+.option.correct{border-color:#22c55e;background:rgba(34,197,94,.12)}
+.option.wrong{border-color:#ef4444;background:rgba(239,68,68,.12)}
+.question.revealed .explain{display:block}
+.pattern-row{display:grid;grid-template-columns:1.5fr .65fr .65fr;gap:.6rem;padding:.6rem 0;border-bottom:1px solid var(--line)}
+/* railways quiz */
+.q{background:var(--card);border:1px solid var(--line);border-radius:.8rem;padding:1.1rem;margin-bottom:.8rem}
+.q h3{font-size:1rem;margin-bottom:.8rem}
+.q.right{border-color:#22c55e}
+.q.wrong{border-color:#ef4444}
+.q.checked .explain{display:block}
+.opts{display:grid;gap:.5rem}
+.opt{display:flex;align-items:flex-start;gap:.6rem;border:1px solid var(--line);padding:.6rem .8rem;border-radius:.55rem;cursor:pointer;font-size:.93rem}
+.opt:hover{border-color:var(--accent)}
+.opt input{margin-top:.25rem;accent-color:var(--accent)}
+.hide{display:none!important}
+@media(max-width:760px){.nav-links{display:none}.nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);padding:.5rem 1rem}.nav-toggle{display:inline-block}}
+</style>
+</head>
+<body style="--accent:#84CC16">
+<header class="glass-nav">
+  <a class="brand" href="index.html">Exam <span>Prep Hub</span></a>
+  <nav class="nav-links" aria-label="Exam pages"><a href="index.html">Home</a><a href="upsc.html">UPSC</a><a href="bpsc.html">BPSC</a><a href="neet.html">NEET</a><a href="law.html">Law</a><a href="tech.html">Tech</a><a href="ca.html">CA</a><a href="jee.html">JEE</a><a href="ssc.html" aria-current="page">SSC</a><a href="banking.html">Banking</a><a href="railways.html">Railways</a><a href="teaching.html">Teaching</a><a href="defence.html">Defence</a></nav>
+  <div class="nav-btns">
+    <button id="theme-toggle" aria-label="Toggle theme">&#127769;</button>
+    <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+  </div>
+</header>
+<nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a> / SSC</nav>
+<div class="hero reveal">
+  <h1>SSC <span class="ac">Study Desk</span></h1>
+  <p class="tagline">A compact, exam-first study system: pattern, high-yield notes, a six-week plan and scored practice in one place.</p>
+  <div class="stat-row"><div class="stat reveal"><b>4 routes</b><small>CGL · CHSL · MTS · GD</small></div><div class="stat reveal"><b>4 subjects</b><small>Maths, reasoning, English, GA</small></div><div class="stat reveal"><b>20-question drill</b><small>Instant score + explanations</small></div><div class="stat reveal"><b>6-week plan</b><small>Concept → timed set → review</small></div></div>
+</div>
+<nav class="section-nav" aria-label="On this page"><a href="#overview">Overview & Dates</a><a href="#syllabus">Syllabus</a><a href="#study-material">Study Material</a><a href="#practice">Practice</a><a href="#study-plan">Study Plan</a><a href="#resources">Telegram & Resources</a></nav>
+<main class="page-wrap">
+<section id="overview" class="exam-section">
+  <div class="section-kicker reveal">01 / route</div>
+  <h2 class="section-title reveal">Overview & Dates</h2>
+  
+<div class="reveal"><p class="section-sub"><b>Know the paper before you train.</b> Select your target. The map below changes to show the paper structure and what should dominate your preparation.</p></div>
+<div class="exam-tabs reveal" role="tablist" aria-label="SSC exam routes">
+  <button class="exam-tab active" data-exam="cgl">CGL</button>
+  <button class="exam-tab" data-exam="chsl">CHSL</button>
+  <button class="exam-tab" data-exam="mts">MTS</button>
+  <button class="exam-tab" data-exam="gd">GD Constable</button>
+</div>
+<div class="note-card reveal">
+  <div class="mini-label" id="examLabel">Graduate route</div>
+  <h3 id="examName">Combined Graduate Level</h3>
+  <p id="examCopy"></p>
+  <div class="exam-route" id="examRoute"></div>
+  <div id="pattern"></div>
+</div>
+<div class="quiz-block reveal">
+  <b>20-minute focus timer</b>
+  <p class="section-sub">One tap starts a 20-minute focus block. Tap again to pause or reset.</p>
+  <button class="timer-btn" id="timerBtn">FOCUS 20:00</button>
+</div>
+<h3 class="reveal" style="margin-top:1.6rem">SSC CGL Tier-I paper map (2026)</h3>
+<table class="data-table reveal">
+<thead><tr><th>Section</th><th>Questions</th><th>Marks</th><th>Sectional time</th></tr></thead>
+<tbody>
+<tr><td>General Intelligence &amp; Reasoning</td><td>25</td><td>50</td><td>15 min</td></tr>
+<tr><td>General Awareness</td><td>25</td><td>50</td><td>15 min</td></tr>
+<tr><td>Quantitative Aptitude</td><td>25</td><td>50</td><td>15 min</td></tr>
+<tr><td>English Comprehension</td><td>25</td><td>50</td><td>15 min</td></tr>
+<tr class="total"><td>Total</td><td>100</td><td>200</td><td>60 min</td></tr>
+</tbody></table>
+<div class="callout reveal"><b>New in 2026:</b> each Tier-I section now has its own 15-minute timer &mdash; you cannot carry leftover time across sections. Negative marking is 0.50 per wrong answer; each correct answer is worth 2 marks. The paper is bilingual (English &amp; Hindi) except the English section.</div>
+<h3 class="reveal">SSC CGL Tier-II paper map</h3>
+<table class="data-table reveal">
+<thead><tr><th>Paper</th><th>Module</th><th>Questions</th><th>Marks</th><th>Time</th></tr></thead>
+<tbody>
+<tr><td rowspan="3">Paper I (compulsory)</td><td>Section I: Maths + Reasoning</td><td>30 + 30</td><td>90 + 90</td><td>1 hr</td></tr>
+<tr><td>Section II: English + General Awareness</td><td>45 + 25</td><td>135 + 75</td><td>1 hr</td></tr>
+<tr><td>Section III: Computer Knowledge (qualifying)</td><td>20</td><td>60</td><td>15 min</td></tr>
+<tr><td>Paper I, Session II</td><td>Data Entry Speed Test (qualifying)</td><td>1 task</td><td>&mdash;</td><td>15 min</td></tr>
+<tr><td>Paper II (JSO only)</td><td>Statistics</td><td>100</td><td>200</td><td>2 hr</td></tr>
+<tr><td>Paper III (AAO only)</td><td>General Studies: Finance &amp; Economics</td><td>100</td><td>200</td><td>2 hr</td></tr>
+</tbody></table>
+<div class="callout reveal"><b>Tier-II marking:</b> 1 mark is deducted per wrong answer in Paper I Sections I, II and the Computer module; 0.50 per wrong answer in Papers II and III. Paper II applies only to Junior Statistical Officer posts, Paper III only to Assistant Audit/Accounts Officer posts.</div>
+<div class="callout-warn reveal"><b>Cycle dates:</b> SSC CGL 2026 Tier-I was scheduled 30 September &ndash; 30 October 2026 on ssc.gov.in. Dates, vacancies and eligibility are re-announced every cycle &mdash; confirm in the official notice for the year you are applying to.</div>
+
+</section><section id="syllabus" class="exam-section">
+  <div class="section-kicker reveal">02 / syllabus</div>
+  <h2 class="section-title reveal">Syllabus</h2>
+  
+<p class="section-sub reveal">The official topic map, condensed. Use it to check your coverage &mdash; the study material in the next section revises the highest-yield rules from each list.</p>
+<div class="card-grid">
+<div class="note-card reveal"><h3>Quantitative Aptitude</h3><ul><li>Number systems, BODMAS, decimals &amp; fractions</li><li>LCM &amp; HCF</li><li>Ratio &amp; proportion, percentages</li><li>Mensuration (2D &amp; 3D shapes)</li><li>Time &amp; work, pipes &amp; cisterns</li><li>Time, speed &amp; distance (trains, boats)</li><li>Simple &amp; compound interest</li><li>Profit &amp; loss, discount</li><li>Algebra, geometry, <b>trigonometry</b></li><li><b>Elementary statistics</b> (mean, median, mode)</li><li>Age calculations, calendar &amp; clock</li><li>Mixture &amp; alligation, data interpretation</li></ul></div>
+<div class="note-card reveal"><h3>General Intelligence &amp; Reasoning</h3><ul><li>Analogies; alphabetical &amp; number series</li><li>Coding &amp; decoding</li><li>Mathematical operations</li><li>Relationships, blood relations</li><li>Syllogism, jumbling</li><li>Venn diagrams</li><li>Data interpretation &amp; sufficiency</li><li>Conclusions &amp; decision making</li><li>Similarities &amp; differences</li><li>Analytical reasoning, classification</li><li>Directions</li><li>Statement &ndash; arguments &amp; assumptions</li></ul></div>
+<div class="note-card reveal"><h3>English Comprehension</h3><ul><li>Spot the error</li><li>Fill in the blanks</li><li>Synonyms &amp; antonyms</li><li>Spelling / mis-spelt words</li><li>Idioms &amp; phrases</li><li>One-word substitution</li><li>Improvement of sentences</li><li>Active / passive voice</li><li>Direct / indirect narration</li><li>Shuffling of sentences in a passage</li><li>Cloze passage</li><li>Comprehension passage</li></ul></div>
+<div class="note-card reveal"><h3>General Awareness</h3><ul><li>History &amp; culture</li><li>Geography</li><li>Economic scene</li><li>General polity &amp; Indian Constitution</li><li>Scientific research</li><li>Books &amp; authors, awards, sports (static GK)</li><li>Important schemes &amp; current events</li></ul></div>
+</div>
+<h3 class="reveal">Tier-II: Computer Knowledge module topics</h3>
+<div class="note-card reveal"><ul><li>Computer basics &amp; organisation; hardware &amp; software; input/output devices</li><li>Memory: primary vs secondary; volatile vs non-volatile</li><li>Operating systems; MS Word, Excel &amp; PowerPoint basics</li><li>Networking basics: LAN, WAN; internet, email, search</li><li>Data communication; cyber security &amp; phishing awareness</li></ul></div>
+<div class="callout reveal"><b>Other routes:</b> CHSL Tier-II adds a Computer Knowledge test (qualifying) plus a skill/typing test for LDC, JSA and DEO posts. MTS runs two mandatory CBE sessions (Maths + Reasoning, then GA + English), with PET/PST for Havaldar posts. GD Constable's CBE is followed by physical and medical stages.</div>
+
+</section><section id="study-material" class="exam-section">
+  <div class="section-kicker reveal">03 / library</div>
+  <h2 class="section-title reveal">Study Material</h2>
+  
+<div class="reveal"><div class="wrap"><div class="section-head"><div class="section-no">02 / LIBRARY</div><div><h2>The revision material that earns marks.</h2><p>Use these as compact recall sheets. Read one module, cover it, reproduce the rules, then solve questions without looking back.</p></div></div>
+<div class="subject-tabs" role="tablist" aria-label="Study subjects"><button class="subject-tab active" data-subject="maths">Quantitative aptitude</button><button class="subject-tab" data-subject="reasoning">Reasoning</button><button class="subject-tab" data-subject="english">English</button><button class="subject-tab" data-subject="ga">General awareness</button></div>
+<div id="maths" class="study-panel study-grid">
+ <article class="module"><h3>Arithmetic core</h3><ul><li><b>Percentage:</b> x% of y = y% of x. Successive changes a%, b% give net a + b + ab/100.</li><li><b>Profit & loss:</b> Profit% = profit ÷ cost price × 100. Discount always applies to marked price.</li><li><b>Ratio:</b> if A:B = m:n, write A=mk and B=nk before using the total.</li><li><b>Average:</b> total = average × count. Replacement changes total by new − old.</li><li><b>Mixture:</b> allegation ratio = (dearer − mean):(mean − cheaper).</li></ul><div class="tip"><b>Speed rule:</b> memorise fractions 1/2 to 1/20 as percentages; they appear inside almost every arithmetic shortcut.</div></article>
+ <article class="module"><h3>Formula strip</h3><div class="formula"><div><code>SI = PRT/100</code><br>Simple interest</div><div><code>CI₂ = P[(1+r/100)²−1]</code><br>Two-year compound interest</div><div><code>Work = rate × time</code><br>Rates add when working together</div><div><code>Speed = distance/time</code><br>Use relative speed for trains</div><div><code>a²−b²=(a−b)(a+b)</code><br>Fast factorisation</div><div><code>Area △ = ½bh</code><br>Triangle area</div></div><h4>Time & work shortcut</h4><p>If A finishes in 12 days and B in 18, take total work as LCM 36 units. Rates are 3 and 2 units/day; together they need 36/5 = 7.2 days.</p></article>
+ <article class="module wide"><h3>Geometry, algebra & data interpretation</h3><div class="study-grid"><div><h4>Geometry essentials</h4><ul><li>Triangle angles sum to 180°. Exterior angle = sum of opposite interior angles.</li><li>Pythagoras: a²+b²=c². Memorise 3-4-5, 5-12-13, 8-15-17.</li><li>Circle: circumference 2πr; area πr²; angle in a semicircle is 90°.</li><li>Cylinder volume πr²h; cone volume ⅓πr²h; sphere volume 4/3πr³.</li></ul></div><div><h4>DI discipline</h4><ul><li>Read units and base year before calculating.</li><li>Approximate only after checking answer-option gaps.</li><li>Percentage change = difference ÷ original, not new value.</li><li>For pie charts, 1% = 3.6° and 25% = 90°.</li></ul></div></div></article>
+</div>
+<div id="reasoning" class="study-panel study-grid hidden">
+ <article class="module"><h3>Series & analogy</h3><ul><li>For number series, inspect first differences, then second differences, ratios, alternating terms and squares/cubes.</li><li>For letter series, map A=1…Z=26 and test constant or alternating shifts.</li><li>In analogy, state the relation in words before checking options: “tool → function”, “part → whole”, “cause → effect”.</li></ul><div class="tip"><b>Do not overfit.</b> SSC series usually use the simplest rule that explains every term.</div></article>
+ <article class="module"><h3>Logic toolkit</h3><ul><li><b>Syllogism:</b> draw minimum-valid Venn diagrams; never assume converse.</li><li><b>Venn counting:</b> A∪B = A+B−A∩B.</li><li><b>Coding:</b> check reversal, alphabet position, pair sums (A+Z=27) and word-length first.</li><li><b>Direction:</b> draw north upward and track net horizontal/vertical displacement.</li><li><b>Blood relation:</b> assign generation levels (+1 parent, 0 peer, −1 child).</li></ul></article>
+ <article class="module wide"><h3>Fast visual reasoning</h3><p>For mirror images, left and right reverse but top and bottom stay. For water images, top and bottom reverse. In paper folding, mentally unfold in exact reverse order; every fold mirrors existing holes. In embedded figures, trace angles and line lengths rather than the whole outline.</p></article>
+</div>
+<div id="english" class="study-panel study-grid hidden">
+ <article class="module"><h3>Grammar rules that repeat</h3><ul><li>A singular subject takes a singular verb; phrases between subject and verb do not change agreement.</li><li>“Each/every/either/neither” takes a singular verb.</li><li>With “not only…but also” and “either…or”, the verb agrees with the nearer subject.</li><li>Use <b>fewer</b> for countable nouns and <b>less</b> for uncountable quantities.</li><li>Parallel ideas need parallel forms: “reading, writing and revising”.</li></ul></article>
+ <article class="module"><h3>Vocabulary engine</h3><ul><li><b>bene-</b> good: benefit, benevolent</li><li><b>mal-</b> bad: malfunction, malevolent</li><li><b>cred-</b> believe: credible, incredulous</li><li><b>loqu-</b> speak: eloquent, soliloquy</li><li><b>chrono-</b> time: chronology, synchronize</li></ul><div class="tip">Learn every word as: meaning + one collocation + one opposite. Isolated word lists decay quickly.</div></article>
+ <article class="module wide"><h3>Comprehension method</h3><ol><li>Read the question stem first; mark whether it asks fact, inference, tone or vocabulary.</li><li>For factual questions, choose only what the passage states.</li><li>For inference, reject options that add a new claim or use absolute words such as “always”.</li><li>For cloze tests, check grammar, meaning and collocation—in that order.</li></ol></article>
+</div>
+<div id="ga" class="study-panel study-grid hidden">
+ <article class="module"><h3>Polity & history spine</h3><ul><li>The Constitution was adopted on 26 Nov 1949 and came into force on 26 Jan 1950.</li><li>Fundamental Rights are in Part III; Directive Principles in Part IV; Fundamental Duties in Part IVA.</li><li>Money Bills can be introduced only in Lok Sabha; the Speaker certifies them.</li><li>1857: major uprising; 1885: INC founded; 1919: Jallianwala Bagh; 1930: Dandi March; 1942: Quit India.</li></ul></article>
+ <article class="module"><h3>Science & geography spine</h3><ul><li>SI units: force—newton; power—watt; pressure—pascal; charge—coulomb.</li><li>Vitamin C deficiency: scurvy; D: rickets; iron deficiency: anaemia.</li><li>Tropic of Cancer passes through eight Indian states.</li><li>Western Ghats intercept the southwest monsoon; rain-shadow lies east of the range.</li><li>Earth rotates west to east, causing sunrise to appear in the east.</li></ul></article>
+ <article class="module"><h3>Economy basics</h3><ul><li>Repo rate: rate at which RBI lends short-term funds to banks against securities.</li><li>Inflation: sustained rise in the general price level; CPI tracks retail inflation.</li><li>Fiscal deficit: total expenditure minus total non-debt receipts.</li><li>GDP measures final goods and services produced within a country in a period.</li></ul></article>
+ <article class="module"><h3>Computer basics</h3><ul><li>CPU includes control unit and arithmetic logic unit; RAM is volatile memory.</li><li>1 byte = 8 bits. An operating system manages hardware and software resources.</li><li>HTTPS encrypts browser–server traffic; phishing impersonates a trusted source.</li><li>Spreadsheet formulas begin with =; absolute cell references use $ signs.</li></ul></article>
+</div></div></div>
+<h3 class="reveal" style="margin-top:1.6rem">Syllabus extras</h3>
+<p class="section-sub reveal">Two official-syllabus topics that need their own cards: trigonometry and elementary statistics.</p>
+<div class="card-grid">
+<div class="note-card reveal"><h3>Trigonometry quick reference</h3><ul><li>sin&sup2;&theta; + cos&sup2;&theta; = 1; 1 + tan&sup2;&theta; = sec&sup2;&theta;; 1 + cot&sup2;&theta; = cosec&sup2;&theta;</li><li>sin 30&deg;=1/2, sin 45&deg;=1/&radic;2, sin 60&deg;=&radic;3/2; cos mirrors sin; tan 45&deg;=1</li><li>sin(A+B)=sinA cosB + cosA sinB; cos(A&minus;B)=cosA cosB + sinA sinB</li><li>For right triangles: opposite/hypotenuse = sin, adjacent/hypotenuse = cos, opposite/adjacent = tan</li></ul></div>
+<div class="note-card reveal"><h3>Elementary statistics</h3><ul><li>Mean = sum of observations &divide; count; median = middle value of ordered data</li><li>Mode = most frequent value; range = max &minus; min</li><li>Adding a constant k to every value shifts mean and median by k, leaves range unchanged</li><li>Multiplying every value by k multiplies mean, median and range by k</li></ul></div>
+</div>
+
+</section><section id="practice" class="exam-section">
+  <div class="section-kicker reveal">04 / practice</div>
+  <h2 class="section-title reveal">Practice</h2>
+  
+<p class="section-sub reveal"><b>A quick diagnostic, not a confidence trick.</b> Choose one answer per question. Score it when ready; explanations reveal only after submission.</p>
+<div class="quiz-block reveal" id="quiz">
+  <div class="score-line"><span class="tag">DIAGNOSTIC</span><span id="score">&mdash;/20</span><span id="scoreText">Answer all questions, then check your score.</span></div>
+  <div id="questions"></div>
+  <button class="btn btn-accent" id="submitQuiz">Check answers</button>
+  <button class="btn" id="resetQuiz">Reset drill</button>
+  <div id="toast" role="status"></div>
+</div>
+<div class="callout-warn reveal"><b>Honest limitation:</b> 20 questions can only sample the syllabus. Use this drill for a baseline, then practise previous-year papers from ssc.gov.in for volume &mdash; no page can replace them.</div>
+
+</section><section id="study-plan" class="exam-section">
+  <div class="section-kicker reveal">05 / plan</div>
+  <h2 class="section-title reveal">Study Plan</h2>
+  
+<div class="reveal"><div class="wrap"><div class="section-head"><div class="section-no">03 / PLAN</div><div><h2>Six weeks. One repeatable rhythm.</h2><p>Each week follows the same loop: concept → timed set → error log → spaced revision. Allocate more time to the two weakest subjects after the diagnostic.</p></div></div><div class="plan-grid">
+<article class="week"><div class="num">WEEK 01</div><h3>Baseline</h3><p>One full diagnostic. Arithmetic fundamentals, grammar agreement, basic series and static-GK map.</p></article>
+<article class="week"><div class="num">WEEK 02</div><h3>Core build</h3><p>Percentage/ratio, coding/syllogism, parts of speech, polity and modern history.</p></article>
+<article class="week"><div class="num">WEEK 03</div><h3>Expand</h3><p>Time-work/speed, visual reasoning, vocabulary roots, geography and science.</p></article>
+<article class="week"><div class="num">WEEK 04</div><h3>Exam mode</h3><p>Algebra/geometry, mixed reasoning, comprehension, economy and computer basics.</p></article>
+<article class="week"><div class="num">WEEK 05</div><h3>Pressure</h3><p>Three sectional tests and two full mocks. Re-solve every wrong and guessed answer.</p></article>
+<article class="week"><div class="num">WEEK 06</div><h3>Convert</h3><p>Five full mocks, formula/vocabulary recall, current-affairs revision and sleep discipline.</p></article>
+</div></div></div>
+
+</section><section id="resources" class="exam-section">
+  <div class="section-kicker reveal">06 / resources</div>
+  <h2 class="section-title reveal">Telegram & Resources</h2>
+  <h3>Free Telegram Channels</h3>
+<div class="resource-list"><div class="resource reveal"><b><a href="https://t.me/sscadda_official" target="_blank" rel="noopener">SSC Adda247</a></b> <span class="tag">Free to join &middot; also promotes paid batches</span><small>~378K subscribers. Daily Reasoning/Maths MCQ quizzes, GK/GS practice sets, live-class links, exam notifications, free All-India live-test alerts.</small></div><div class="resource reveal"><b><a href="https://t.me/SSC_Testbook" target="_blank" rel="noopener">Testbook SSC Exams</a></b> <span class="tag">Free to join &middot; also promotes paid batches</span><small>25,804 subscribers. SSC vacancy/calendar updates, exam strategy, toppers' interviews, class links.</small></div><div class="resource reveal"><b><a href="https://t.me/oliveboardssc" target="_blank" rel="noopener">SSC Exams Prep ~ Oliveboard Official</a></b> <span class="tag">Free to join &middot; also promotes paid batches</span><small>12,637 subscribers. Daily Vocabulary Booster, free weekly live tests with All-India rank, exam updates.</small></div><div class="resource reveal"><b><a href="https://t.me/ssc_cgl_cpo_chsl_mts_si_je" target="_blank" rel="noopener">SSC CGL CPO CHSL MTS JE</a></b> <span class="tag">Genuinely free</span><small>~135K subscribers. Large independent community: free PDFs, study materials, mock tests for CGL, CHSL, MTS, CPO/SI, JE.</small></div><div class="resource reveal"><b><a href="https://t.me/Studyiqeducation" target="_blank" rel="noopener">StudyIQ Education</a></b> <span class="tag">Free to join &middot; also promotes paid batches</span><small>361,445 subscribers. Daily current-affairs videos, The Hindu editorial analysis, GS MCQ marathons — strong for SSC GS.</small></div><div class="resource reveal"><b><a href="https://t.me/kdlive" target="_blank" rel="noopener">KD LIVE</a></b> <span class="tag">Free to join &middot; also promotes paid batches</span><small>Live-class announcements, PYQ/paper-discussion series, PDF notes; strong for SSC English and Maths/Reasoning.</small></div></div>
+<h3>Official links</h3>
+<div class="resource-list"><div class="resource reveal"><b><a href="https://ssc.gov.in" target="_blank" rel="noopener">SSC official portal</a></b><small>Notices, syllabus PDFs, admit cards and results — the single source of truth for SSC exams.</small></div><div class="resource reveal"><b><a href="https://ssc.gov.in/api/attachment/uploads/masterData/Syllabus/CGL-syllabus-169635-.pdf" target="_blank" rel="noopener">Official SSC CGL syllabus PDF</a></b><small>The official examination scheme, subjects and topics for SSC CGL.</small></div><div class="resource reveal"><b><a href="https://www.youtube.com/watch?v=Dy8ipeNDvKA" target="_blank" rel="noopener">SSC Adda247 — strategy session</a></b><small>A current CGL strategy session; useful for schedule framing and guided classes.</small></div></div>
+<div class="callout-warn reveal"><b>Trust, but verify.</b> Telegram channels are useful for updates and free PDFs, but eligibility, dates, vacancies and pattern changes are official only when published on the exam body's own website.</div>
+<div class="callout reveal"><b>Accuracy before attempts.</b> Pattern details are a preparation baseline drawn from the SSC CGL syllabus and recent exam notices. Always confirm eligibility, dates and any pattern changes in the notice for your exact examination year.</div>
+
+</section>
+</main>
+<!-- ==================== #comments — visitor suggestions (giscus) ==================== -->
+<div class="page-wrap">
+<!-- ==================== #topics — topic library (study material) ==================== -->
+<section class="topic-lib-sec" id="topics" aria-label="Study material by topic">
+<div style="max-width:1180px;margin:0 auto;padding:0 20px">
+<p class="tl-kicker">Study material</p>
+<h2 class="tl-h2">Learn it topic by topic</h2>
+<p class="tl-sub">Every card below opens a full study page for that topic — a plain-language explanation, key facts and tables, diagrams, and quick-revision questions with answers. The practice papers at the end are full timed mocks with instant scores and complete answer keys. Everything runs in your browser; nothing is sent anywhere.</p>
+<div id="topic-lib"></div>
+</div>
+</section>
+<script src="assets/topics-ssc.js"></script>
+<script src="assets/topics.js"></script>
+<section class="exam-section" id="comments" aria-label="Comments and suggestions">
+  <h2 class="section-title">Comments &amp; suggestions</h2>
+  <p class="section-sub">Spotted a mistake, an outdated date, or a missing topic? Leave a comment below &mdash; every suggestion helps improve this page for all aspirants.</p>
+  <div class="giscus-wrap">
+    <div class="giscus" id="giscus-comments"></div>
+  </div>
+  <p class="comments-note">Comments are powered by GitHub Discussions and load as you scroll here. Sign in with GitHub to join the discussion.</p>
+</section>
+</div>
+<script>
+/* Giscus comments — lazy-loaded; theme follows the site theme toggle. */
+(function () {
+  var mount = document.getElementById('giscus-comments');
+  if (!mount) return;
+  function siteTheme() {
+    return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+  }
+  function load() {
+    if (mount.getAttribute('data-loaded')) return;
+    mount.setAttribute('data-loaded', '1');
+    var s = document.createElement('script');
+    s.src = 'https://giscus.app/client.js';
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    var attrs = {
+      'data-repo': 'maticcretic-commits/exam-prep-hub',
+      'data-repo-id': 'R_kgDOUr1J_g',
+      'data-category': 'Ideas',
+      'data-category-id': 'DIC_kwDOUr1J_s4DGal1',
+      'data-mapping': 'pathname',
+      'data-strict': '0',
+      'data-reactions-enabled': '1',
+      'data-emit-metadata': '0',
+      'data-input-position': 'bottom',
+      'data-theme': siteTheme(),
+      'data-lang': 'en',
+      'data-loading': 'lazy'
+    };
+    for (var k in attrs) { s.setAttribute(k, attrs[k]); }
+    mount.appendChild(s);
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { load(); io.disconnect(); }
+      });
+    }, { rootMargin: '500px 0px' });
+    io.observe(mount);
+  } else {
+    load();
+  }
+  /* Called by assets/shell.js whenever the visitor toggles the site theme. */
+  window.__ephGiscusTheme = function (t) {
+    var f = mount.querySelector('iframe.giscus-frame');
+    if (f && f.contentWindow) {
+      try { f.contentWindow.postMessage({ giscus: { setConfig: { theme: t } } }, 'https://giscus.app'); } catch (e) {}
+    }
+  };
+})();
+</script>
+<footer class="site-footer">
+  <p><a href="index.html">Exam Prep Hub</a> &middot; free study material for Indian competitive exams.<br>
+  Patterns, dates and vacancies change by recruitment cycle &mdash; always confirm with the current official notice.</p>
+</footer>
+<script src="assets/shell.js"></script>
+<script>
+(function(){
+ const exams={
+  cgl:{label:'Graduate route',name:'Combined Graduate Level',copy:'Tier I tests four common subjects. Tier II adds deeper maths, reasoning, English, general awareness, computer knowledge and a data-entry module; specialist posts can require additional papers.',route:['Tier I','Tier II','Document verification'],rows:[['Reasoning','25','50'],['General awareness','25','50'],['Quantitative aptitude','25','50'],['English comprehension','25','50']]},
+  chsl:{label:'10+2 route',name:'Combined Higher Secondary Level',copy:'A clerical and data-entry route for eligible Class 12 candidates. Tier I covers the common four subjects; Tier II adds computer knowledge and a qualifying skill or typing test.',route:['Tier I','Tier II','Typing / skill test'],rows:[['General intelligence','25','50'],['General awareness','25','50'],['Quantitative aptitude','25','50'],['English language','25','50']]},
+  mts:{label:'Matriculation route',name:'Multi-Tasking Staff',copy:'The computer-based examination runs in two mandatory sessions. Session I has maths and reasoning; Session II has general awareness and English. Havaldar also includes physical tests.',route:['Session I','Session II','PET/PST for Havaldar'],rows:[['Maths — Session I','20','60'],['Reasoning — Session I','20','60'],['GA — Session II','25','75'],['English — Session II','25','75']]},
+  gd:{label:'Uniformed route',name:'GD Constable',copy:'The computer-based paper balances reasoning, general knowledge, elementary maths and English/Hindi, followed by physical and medical stages.',route:['Computer test','PET / PST','Medical + documents'],rows:[['Reasoning','20','40'],['GK & awareness','20','40'],['Elementary maths','20','40'],['English / Hindi','20','40']]}
+ };
+ function renderExam(key){const e=exams[key];document.getElementById('examLabel').textContent=e.label;document.getElementById('examName').textContent=e.name;document.getElementById('examCopy').textContent=e.copy;document.getElementById('examRoute').innerHTML=e.route.map((x,i)=>'<span>'+x+'</span>'+(i<e.route.length-1?'<i>→</i>':'')).join('');document.getElementById('pattern').innerHTML='<div class="pattern-row"><strong>Tier I / CBE subject</strong><strong>Questions</strong><strong>Marks</strong></div>'+e.rows.map(r=>'<div class="pattern-row"><span>'+r[0]+'</span><strong>'+r[1]+'</strong><strong>'+r[2]+'</strong></div>').join('');}
+ document.querySelectorAll('.exam-tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.exam-tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderExam(b.dataset.exam)}));renderExam('cgl');
+ document.querySelectorAll('.subject-tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.subject-tab').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.study-panel').forEach(x=>x.classList.add('hidden'));b.classList.add('active');document.getElementById(b.dataset.subject).classList.remove('hidden')}));
+ const quiz=[
+  {s:'MATHS',q:'A price rises by 20% and then falls by 20%. What is the net change?',o:['No change','4% decrease','4% increase','8% decrease'],a:1,e:'Use a+b+ab/100 with +20 and −20: 0−4 = −4%.'},
+  {s:'MATHS',q:'A can finish work in 12 days and B in 18 days. Together, how long?',o:['6 days','7.2 days','8 days','9 days'],a:1,e:'LCM work = 36 units; rates are 3 and 2, so time = 36/5 = 7.2 days.'},
+  {s:'MATHS',q:'If the average of 8 numbers is 14, what is their total?',o:['22','64','112','196'],a:2,e:'Total = average × count = 14 × 8 = 112.'},
+  {s:'REASONING',q:'Complete the series: 2, 6, 12, 20, 30, ?',o:['36','40','42','44'],a:2,e:'Differences are 4, 6, 8, 10, so next difference is 12; 30+12=42.'},
+  {s:'REASONING',q:'All pens are tools. Some tools are costly. Which conclusion must follow?',o:['Some pens are costly','No pens are costly','All costly things are pens','None of these'],a:3,e:'The costly tools need not overlap with pens, so no listed relation must follow.'},
+  {s:'REASONING',q:'Facing north, Ravi turns right, walks, then turns right again. Which direction is he facing?',o:['North','East','South','West'],a:2,e:'North → right is east → right again is south.'},
+  {s:'ENGLISH',q:'Choose the correct sentence.',o:['Each of the players are ready.','Each of the players is ready.','Each of the player are ready.','Each players is ready.'],a:1,e:'“Each” is singular, so it takes “is”; “of the players” is the correct phrase.'},
+  {s:'ENGLISH',q:'The closest meaning of “credible” is:',o:['Believable','Secret','Noisy','Ancient'],a:0,e:'The root cred means believe; credible means capable of being believed.'},
+  {s:'ENGLISH',q:'Fill in: She is good ___ mathematics.',o:['in','at','on','with'],a:1,e:'The fixed collocation is “good at” a subject or activity.'},
+  {s:'GA',q:'Fundamental Rights appear in which part of the Indian Constitution?',o:['Part II','Part III','Part IV','Part IVA'],a:1,e:'Fundamental Rights are in Part III; Directive Principles are in Part IV.'},
+  {s:'GA',q:'The SI unit of power is:',o:['Joule','Newton','Watt','Pascal'],a:2,e:'Power is measured in watts; energy in joules and force in newtons.'},
+  {s:'COMPUTER',q:'Which memory is volatile?',o:['ROM','SSD','RAM','DVD'],a:2,e:'RAM loses its stored data when power is removed.'},
+  {s:'MATHS',q:'What is the simple interest on \u20b910,000 at 8% per annum for 3 years?',o:['\u20b91,600','\u20b92,400','\u20b92,800','\u20b93,200'],a:1,e:'SI = PRT/100 = 10000 \u00d7 8 \u00d7 3 \u00f7 100 = \u20b92,400.'},
+  {s:'MATHS',q:'A train runs at 72 km/h. How many metres does it cover in 10 seconds?',o:['200 m','180 m','150 m','720 m'],a:0,e:'72 km/h = 20 m/s, so in 10 seconds it covers 200 m.'},
+  {s:'REASONING',q:'If A=1, B=2, \u2026, Z=26, what is the value of CAT?',o:['21','24','27','30'],a:1,e:'C + A + T = 3 + 1 + 20 = 24.'},
+  {s:'REASONING',q:'Odd one out: Apple, Banana, Potato, Orange.',o:['Apple','Banana','Potato','Orange'],a:2,e:'Potato is a vegetable; the rest are fruits.'},
+  {s:'ENGLISH',q:'Choose the word closest in meaning to \u201cbenevolent\u201d.',o:['Cruel','Kind','Wealthy','Silent'],a:1,e:'Benevolent comes from bene- (good); it means kind and generous.'},
+  {s:'ENGLISH',q:'Fill in: He ___ to school every day.',o:['go','goes','going','gone'],a:1,e:'A third-person singular subject takes \u201cgoes\u201d in the simple present.'},
+  {s:'GA',q:'The Quit India Movement was launched in which year?',o:['1920','1930','1942','1947'],a:2,e:'The Quit India Movement began in August 1942.'},
+  {s:'COMPUTER',q:'1 kilobyte equals how many bytes?',o:['100','512','1000','1024'],a:3,e:'In the usual computing convention, 1 KB = 1024 bytes.'}
+ ];
+ const box=document.getElementById('questions');quiz.forEach((q,i)=>{const el=document.createElement('article');el.className='question';el.innerHTML='<div class="qnum">'+q.s+' · '+String(i+1).padStart(2,'0')+'</div><h3>'+q.q+'</h3><div class="options">'+q.o.map((o,j)=>'<button class="option" data-i="'+i+'" data-j="'+j+'">'+String.fromCharCode(65+j)+'. '+o+'</button>').join('')+'</div><p class="explain"><b>Why:</b> '+q.e+'</p>';box.appendChild(el)});
+ const answers={};box.addEventListener('click',ev=>{const b=ev.target.closest('.option');if(!b||b.closest('.question').classList.contains('revealed'))return;const i=+b.dataset.i;answers[i]=+b.dataset.j;b.parentNode.querySelectorAll('.option').forEach(x=>x.classList.remove('selected'));b.classList.add('selected')});
+ const toast=(m)=>{const t=document.getElementById('toast');t.textContent=m;t.style.display='block';setTimeout(()=>t.style.display='none',2300)};
+ document.getElementById('submitQuiz').addEventListener('click',()=>{if(Object.keys(answers).length<quiz.length){toast('Answer all 20 questions before scoring.');return}let score=0;document.querySelectorAll('.question').forEach((el,i)=>{el.classList.add('revealed');el.querySelectorAll('.option').forEach((b,j)=>{if(j===quiz[i].a)b.classList.add('correct');else if(j===answers[i])b.classList.add('wrong')});if(answers[i]===quiz[i].a)score++});document.getElementById('score').textContent=score+'/20';document.getElementById('scoreText').textContent=score>=16?'Strong base. Shift to timed mixed sets.':score>=12?'Good start. Repair the weak subjects shown below.':'Rebuild concepts first, then retake this drill.';document.getElementById('submitQuiz').disabled=true});
+ document.getElementById('resetQuiz').addEventListener('click',()=>{Object.keys(answers).forEach(k=>delete answers[k]);document.querySelectorAll('.question').forEach(el=>{el.classList.remove('revealed');el.querySelectorAll('.option').forEach(b=>b.classList.remove('selected','correct','wrong'))});document.getElementById('score').textContent='—/20';document.getElementById('scoreText').textContent='Answer all questions, then check your score.';document.getElementById('submitQuiz').disabled=false;document.getElementById('quiz').scrollIntoView()});
+ let secs=1200,tick=null;const timer=document.getElementById('timerBtn');timer.addEventListener('click',()=>{if(tick){clearInterval(tick);tick=null;secs=1200;timer.textContent='FOCUS 20:00';toast('Focus timer reset.');return}timer.textContent='PAUSE 20:00';tick=setInterval(()=>{secs--;const m=Math.floor(secs/60),s=secs%60;timer.textContent='PAUSE '+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');if(secs<=0){clearInterval(tick);tick=null;timer.textContent='FOCUS 20:00';secs=1200;toast('Focus block complete — take a short break.')}},1000)});
+})();
+</script>
+</body>
+</html>
