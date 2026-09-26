@@ -1,0 +1,106 @@
+/* ==========================================================================
+   EPH Topic Library — shared styles for all 12 exam pages.
+   Self-contained: uses each page's own CSS variables with safe fallbacks,
+   so it works on the hub (dark-first theme) and on individual sites.
+   ========================================================================== */
+.topic-lib-sec{
+  --tl-accent: var(--accent, var(--saffron, #f19a59));
+  --tl-bg: var(--paper, #151f1c);
+  --tl-bg2: var(--paper-2, #1b2925);
+  --tl-ink: var(--ink, #eef4f0);
+  --tl-muted: var(--muted, #a7b6ae);
+  --tl-line: var(--line, #2e4039);
+  --tl-good: #34d399;
+  --tl-bad: #f87171;
+  --tl-radius: 16px;
+  padding: 56px 0;
+  scroll-margin-top: 70px;
+}
+.tl-kicker{font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--tl-accent);margin:0 0 10px}
+.tl-h2{font-size:clamp(26px,3.6vw,38px);line-height:1.15;margin:0 0 10px;color:var(--tl-ink);letter-spacing:-.02em}
+.tl-sub{color:var(--tl-muted);max-width:720px;margin:0 0 26px;font-size:15px}
+.tl-toolbar{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;align-items:center}
+.tl-search{flex:1 1 240px;max-width:420px;background:var(--tl-bg);border:1px solid var(--tl-line);color:var(--tl-ink);border-radius:12px;padding:12px 16px;font-size:15px;outline:none}
+.tl-search:focus{border-color:var(--tl-accent);box-shadow:0 0 0 3px color-mix(in srgb, var(--tl-accent) 18%, transparent)}
+.tl-filters{display:flex;flex-wrap:wrap;gap:8px}
+.tl-filter{border:1px solid var(--tl-line);background:var(--tl-bg);color:var(--tl-muted);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600;cursor:pointer}
+.tl-filter[aria-pressed="true"]{background:var(--tl-accent);border-color:var(--tl-accent);color:#fff}
+.tl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-bottom:8px}
+.tl-card{background:var(--tl-bg);border:1px solid var(--tl-line);border-radius:var(--tl-radius);padding:20px;display:flex;flex-direction:column;gap:10px;cursor:pointer;text-align:left;color:var(--tl-ink);font:inherit;transition:transform .15s ease,border-color .15s ease}
+.tl-card:hover{transform:translateY(-3px);border-color:var(--tl-accent)}
+.tl-card .tl-chip{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--tl-accent);background:color-mix(in srgb, var(--tl-accent) 12%, transparent);border-radius:999px;padding:5px 11px}
+.tl-card h3{margin:0;font-size:17px;line-height:1.35}
+.tl-card p{margin:0;color:var(--tl-muted);font-size:13.5px}
+.tl-card .tl-open{margin-top:auto;font-size:13.5px;font-weight:700;color:var(--tl-accent)}
+.tl-card[hidden]{display:none}
+.tl-view{background:var(--tl-bg);border:1px solid var(--tl-line);border-radius:20px;padding:clamp(20px,4vw,40px);margin:6px 0 34px}
+.tl-view[hidden]{display:none}
+.tl-back{display:inline-flex;align-items:center;gap:8px;background:none;border:1px solid var(--tl-line);color:var(--tl-muted);border-radius:999px;padding:8px 16px;font-size:13.5px;font-weight:600;cursor:pointer;margin-bottom:18px}
+.tl-back:hover{color:var(--tl-ink);border-color:var(--tl-accent)}
+.tl-view h2{font-size:clamp(24px,3.4vw,34px);margin:0 0 8px;color:var(--tl-ink);letter-spacing:-.02em}
+.tl-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.tl-chips span{font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--tl-accent);background:color-mix(in srgb, var(--tl-accent) 12%, transparent);padding:5px 12px;border-radius:999px}
+.tl-intro{color:var(--tl-ink);font-size:16px;line-height:1.7;margin:0 0 26px;max-width:78ch}
+.tl-sec{margin-bottom:30px}
+.tl-sec>h3{font-size:19px;margin:0 0 12px;color:var(--tl-ink);padding-bottom:8px;border-bottom:2px solid color-mix(in srgb, var(--tl-accent) 35%, transparent)}
+.tl-sec p,.tl-sec li{color:var(--tl-muted);font-size:15px;line-height:1.7}
+.tl-sec p{margin:0 0 12px;max-width:80ch}
+.tl-sec ul,.tl-sec ol{margin:0 0 12px;padding-left:22px;max-width:80ch}
+.tl-sec li{margin:6px 0}
+.tl-sec strong{color:var(--tl-ink)}
+.tl-table{width:100%;border-collapse:collapse;margin:6px 0 14px;font-size:14px;overflow-x:auto;display:block}
+.tl-table thead{display:table-header-group}
+.tl-table tr{display:table-row}
+.tl-table th,.tl-table td{display:table-cell;text-align:left;padding:10px 12px;border:1px solid var(--tl-line);vertical-align:top}
+.tl-table th{background:color-mix(in srgb, var(--tl-accent) 14%, transparent);color:var(--tl-ink);font-weight:700}
+.tl-table td{color:var(--tl-muted)}
+.tl-table td:first-child{color:var(--tl-ink);font-weight:600}
+.tl-diagram{background:var(--tl-bg2);border:1px solid var(--tl-line);border-radius:14px;padding:18px;margin:6px 0 16px;overflow-x:auto}
+.tl-diagram .tl-cap{font-size:12.5px;color:var(--tl-muted);margin:10px 0 0;text-align:center}
+.tl-svg{width:100%;height:auto;display:block;min-width:520px}
+.tl-svg .tdb{fill:color-mix(in srgb, var(--tl-accent) 10%, var(--tl-bg2));stroke:var(--tl-accent);stroke-width:1.6}
+.tl-svg .tdb2{fill:color-mix(in srgb, var(--tl-accent) 22%, var(--tl-bg2));stroke:var(--tl-accent);stroke-width:1.8}
+.tl-svg .tdl{stroke:var(--tl-accent);stroke-width:2;fill:none}
+.tl-svg .tdld{stroke:var(--tl-muted);stroke-width:1.6;fill:none;stroke-dasharray:6 5}
+.tl-svg text{fill:var(--tl-ink);font-family:inherit}
+.tl-svg .tdt{font-size:13.5px;font-weight:700}
+.tl-svg .tds{font-size:11.5px;fill:var(--tl-muted)}
+.tl-svg .tdc{font-size:12px;font-weight:700;fill:#fff}
+.tl-qblock{margin-top:8px}
+.tl-qblock>h3{font-size:19px;margin:0 0 14px;color:var(--tl-ink)}
+.tl-q{background:var(--tl-bg2);border:1px solid var(--tl-line);border-radius:14px;padding:18px;margin-bottom:12px}
+.tl-q .tl-qn{font-weight:700;color:var(--tl-ink);font-size:15px;margin:0 0 12px;line-height:1.55}
+.tl-opts{display:grid;gap:8px}
+.tl-opt{display:flex;gap:10px;align-items:flex-start;text-align:left;background:var(--tl-bg);border:1px solid var(--tl-line);color:var(--tl-ink);border-radius:10px;padding:11px 14px;font-size:14px;cursor:pointer;width:100%}
+.tl-opt:hover:not(:disabled){border-color:var(--tl-accent)}
+.tl-opt:disabled{cursor:default;opacity:.92}
+.tl-opt .tl-k{font-weight:800;color:var(--tl-accent);flex:none}
+.tl-opt.tl-right{border-color:var(--tl-good);background:color-mix(in srgb, var(--tl-good) 10%, transparent)}
+.tl-opt.tl-wrong{border-color:var(--tl-bad);background:color-mix(in srgb, var(--tl-bad) 10%, transparent)}
+.tl-expl{display:none;margin-top:12px;font-size:14px;color:var(--tl-muted);border-left:3px solid var(--tl-accent);padding:4px 0 4px 14px;line-height:1.65}
+.tl-expl.show{display:block}
+.tl-expl strong{color:var(--tl-ink)}
+.tl-papers-h{font-size:clamp(22px,3vw,30px);margin:34px 0 8px;color:var(--tl-ink)}
+.tl-paper-meta{font-size:13px;color:var(--tl-muted);margin:0 0 6px}
+.tl-timer{position:sticky;top:70px;z-index:5;display:flex;justify-content:space-between;align-items:center;background:var(--tl-bg2);border:1px solid var(--tl-accent);border-radius:12px;padding:10px 16px;margin-bottom:18px;font-weight:700;color:var(--tl-ink)}
+.tl-timer.tl-low{border-color:var(--tl-bad);color:var(--tl-bad)}
+.tl-pq{margin-bottom:16px}
+.tl-pq .tl-qn{font-size:15px}
+.tl-actions{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0}
+.tl-btn{background:var(--tl-accent);border:1px solid var(--tl-accent);color:#fff;font-weight:700;font-size:15px;border-radius:12px;padding:13px 26px;cursor:pointer}
+.tl-btn.ghost{background:none;color:var(--tl-ink);border-color:var(--tl-line)}
+.tl-result{background:var(--tl-bg2);border:1px solid var(--tl-line);border-radius:16px;padding:26px;margin:18px 0}
+.tl-result .tl-score{font-size:clamp(30px,5vw,46px);font-weight:800;color:var(--tl-ink);margin:0}
+.tl-result .tl-grade{font-size:15px;color:var(--tl-muted);margin:6px 0 0}
+.tl-review{margin-top:8px}
+.tl-review .tl-q{border-left-width:4px}
+.tl-review .tl-q.tl-r-ok{border-left-color:var(--tl-good)}
+.tl-review .tl-q.tl-r-no{border-left-color:var(--tl-bad)}
+.tl-your{font-size:13px;font-weight:700;margin:10px 0 0}
+.tl-your.ok{color:var(--tl-good)}
+.tl-your.no{color:var(--tl-bad)}
+@media(max-width:640px){
+  .tl-grid{grid-template-columns:1fr}
+  .tl-svg{min-width:460px}
+  .tl-timer{top:60px}
+}
