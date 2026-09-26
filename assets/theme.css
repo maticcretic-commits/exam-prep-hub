@@ -708,3 +708,8 @@ table.data-table {
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- Comments (giscus) ---------- */
+.giscus-wrap { margin-top: 1rem; min-height: 180px; }
+.giscus-wrap iframe.giscus-frame { width: 100%; border: 0; }
+.comments-note { color: var(--text-dim); font-size: .85rem; margin-top: .75rem; }
