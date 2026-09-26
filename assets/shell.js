@@ -19,6 +19,9 @@
   function applyTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     try { localStorage.setItem(THEME_KEY, theme); } catch (e) { /* private mode */ }
+    if (typeof window.__ephGiscusTheme === 'function') {
+      try { window.__ephGiscusTheme(theme); } catch (e) { /* giscus not loaded yet */ }
+    }
     var btn = document.getElementById('theme-toggle');
     if (btn) {
       var toLight = theme === 'dark';
