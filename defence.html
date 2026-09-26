@@ -171,6 +171,68 @@
 <div class="callout-warn"><b>SSB honesty note:</b> the SSB/AFSB assesses personality and officer-like qualities over five days — no notes page can simulate it. Use the practice room above for familiarity, then seek real group practice and feedback.</div>
 </section>
 </main>
+<!-- ==================== #comments — visitor suggestions (giscus) ==================== -->
+<div class="page-wrap">
+<section class="exam-section" id="comments" aria-label="Comments and suggestions">
+  <h2 class="section-title">Comments &amp; suggestions</h2>
+  <p class="section-sub">Spotted a mistake, an outdated date, or a missing topic? Leave a comment below &mdash; every suggestion helps improve this page for all aspirants.</p>
+  <div class="giscus-wrap">
+    <div class="giscus" id="giscus-comments"></div>
+  </div>
+  <p class="comments-note">Comments are powered by GitHub Discussions and load as you scroll here. The giscus app is being connected &mdash; commenting opens fully once that is done.</p>
+</section>
+</div>
+<script>
+/* Giscus comments — lazy-loaded; theme follows the site theme toggle. */
+(function () {
+  var mount = document.getElementById('giscus-comments');
+  if (!mount) return;
+  function siteTheme() {
+    return document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+  }
+  function load() {
+    if (mount.getAttribute('data-loaded')) return;
+    mount.setAttribute('data-loaded', '1');
+    var s = document.createElement('script');
+    s.src = 'https://giscus.app/client.js';
+    s.async = true;
+    s.crossOrigin = 'anonymous';
+    var attrs = {
+      'data-repo': 'maticcretic-commits/exam-prep-hub',
+      'data-repo-id': 'R_kgDOUr1J_g',
+      'data-category': 'Ideas',
+      'data-category-id': 'DIC_kwDOUr1J_s4DGal1',
+      'data-mapping': 'pathname',
+      'data-strict': '0',
+      'data-reactions-enabled': '1',
+      'data-emit-metadata': '0',
+      'data-input-position': 'bottom',
+      'data-theme': siteTheme(),
+      'data-lang': 'en',
+      'data-loading': 'lazy'
+    };
+    for (var k in attrs) { s.setAttribute(k, attrs[k]); }
+    mount.appendChild(s);
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { load(); io.disconnect(); }
+      });
+    }, { rootMargin: '500px 0px' });
+    io.observe(mount);
+  } else {
+    load();
+  }
+  /* Called by assets/shell.js whenever the visitor toggles the site theme. */
+  window.__ephGiscusTheme = function (t) {
+    var f = mount.querySelector('iframe.giscus-frame');
+    if (f && f.contentWindow) {
+      try { f.contentWindow.postMessage({ giscus: { setConfig: { theme: t } } }, 'https://giscus.app'); } catch (e) {}
+    }
+  };
+})();
+</script>
 <footer class="site-footer reveal">
   <p><a href="index.html">Exam Prep Hub</a> — free study notes, practice and plans. Verify dates and patterns against official notifications before applying.</p>
   <p class="fine">Content is for study guidance only and is not affiliated with any exam conducting body.</p>
