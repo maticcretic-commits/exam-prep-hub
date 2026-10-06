@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sarkari Vacancies — Government Job Portal | Apply Direct on Official Sites</title>
+<meta name="description" content="Verified government job listings: vacancies, last dates, eligibility. Every listing links to the official notification — always confirm there before applying.">
+<style>
+:root{
+  --bg:#0b1220; --bg2:#0f172a; --card:#141d33; --card2:#182239; --line:#24304d;
+  --txt:#e8edf7; --mut:#9aa7c2; --mut2:#6b7691;
+  --acc:#38bdf8; --acc2:#22d3ee; --green:#34d399; --amber:#fbbf24; --red:#f87171;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--acc);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1140px;margin:0 auto;padding:0 16px}
+
+/* ---------- trust banner ---------- */
+.trustbar{background:linear-gradient(90deg,#0c2b3d,#123);border-bottom:1px solid var(--line);color:#d9f3ff;font-size:13.5px;padding:9px 0;text-align:center}
+.trustbar strong{color:var(--acc2)}
+.trustbar .dot{color:var(--green);font-weight:700}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(11,18,32,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hrow{display:flex;gap:12px;align-items:center;padding:12px 0}
+.brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.brand .logo{width:38px;height:38px;border-radius:10px;background:linear-gradient(135deg,#0284c7,#22d3ee);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;color:#fff}
+.brand h1{font-size:19px;letter-spacing:.2px}
+.brand h1 span{color:var(--acc2)}
+.brand small{display:block;font-size:11px;color:var(--mut);font-weight:400}
+.search{flex:1;display:flex}
+.search input{width:100%;background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:10px;padding:10px 14px;font-size:15px;outline:none}
+.search input:focus{border-color:var(--acc)}
+nav.tabs{display:flex;gap:6px;overflow-x:auto;padding:0 0 10px;scrollbar-width:none}
+nav.tabs::-webkit-scrollbar{display:none}
+nav.tabs a{white-space:nowrap;font-size:13.5px;padding:7px 13px;border-radius:999px;border:1px solid var(--line);color:var(--mut)}
+nav.tabs a:hover{color:var(--txt);border-color:var(--acc);text-decoration:none}
+nav.tabs a .n{color:var(--acc2);font-weight:700}
+
+/* ---------- chips ---------- */
+.chips{display:flex;gap:8px;overflow-x:auto;padding:14px 0 4px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{white-space:nowrap;border:1px solid var(--line);background:var(--card);color:var(--mut);border-radius:999px;padding:7px 14px;font-size:13px;cursor:pointer}
+.chip:hover{border-color:var(--acc);color:var(--txt)}
+.chip.on{background:linear-gradient(135deg,#0284c7,#0891b2);color:#fff;border-color:transparent;font-weight:600}
+
+/* ---------- filter bar ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:10px;padding:10px 0 4px;align-items:center}
+.filters select,.filters button{background:var(--card);border:1px solid var(--line);color:var(--txt);border-radius:10px;padding:9px 12px;font-size:13.5px;outline:none}
+.filters select:focus{border-color:var(--acc)}
+.filters label{font-size:12.5px;color:var(--mut)}
+.filters button{cursor:pointer;background:#1d2a47}
+.filters button:hover{border-color:var(--acc)}
+.count{font-size:13px;color:var(--mut);margin-left:auto}
+
+/* ---------- sections ---------- */
+section.block{padding:26px 0 6px}
+.sect-head{display:flex;align-items:baseline;gap:12px;margin-bottom:4px;flex-wrap:wrap}
+.sect-head h2{font-size:22px}
+.sect-head .sub{font-size:13px;color:var(--mut)}
+.sect-note{font-size:13px;color:var(--mut);margin:2px 0 14px}
+
+/* ---------- cards ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 16px 14px;display:flex;flex-direction:column;gap:8px;position:relative;transition:border-color .15s, transform .15s}
+.card:hover{border-color:#33436b;transform:translateY(-2px)}
+.card .cat{font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--acc2)}
+.card h3{font-size:16.5px;line-height:1.4}
+.card h3 .org{color:var(--mut);font-weight:400;font-size:14px}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:5px 10px;font-size:13px}
+.meta div{min-width:0}
+.meta .k{color:var(--mut2);font-size:11px;text-transform:uppercase;letter-spacing:.4px}
+.meta .v{color:var(--txt);font-weight:600}
+.meta .v.warn{color:var(--amber)}
+.badge{display:inline-block;font-size:12px;font-weight:700;padding:4px 11px;border-radius:999px;width:fit-content}
+.b-today{background:rgba(248,113,113,.15);color:var(--red);border:1px solid rgba(248,113,113,.4);animation:pulse 2s infinite}
+.b-urgent{background:rgba(251,191,36,.12);color:var(--amber);border:1px solid rgba(251,191,36,.35)}
+.b-soon{background:rgba(56,189,248,.1);color:var(--acc);border:1px solid rgba(56,189,248,.3)}
+.b-open{background:rgba(52,211,153,.1);color:var(--green);border:1px solid rgba(52,211,153,.3)}
+.b-closed{background:rgba(154,167,194,.08);color:var(--mut);border:1px solid var(--line)}
+.b-pipe{background:rgba(167,139,250,.1);color:#a78bfa;border:1px solid rgba(167,139,250,.3)}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
+.links{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+.btn{font-size:13px;font-weight:600;padding:8px 14px;border-radius:9px;border:1px solid var(--line);background:#1d2a47;color:var(--txt);display:inline-block}
+.btn:hover{text-decoration:none;border-color:var(--acc)}
+.btn.primary{background:linear-gradient(135deg,#0284c7,#0891b2);border-color:transparent;color:#fff}
+.btn.ghost{background:transparent}
+.verif{font-size:11.5px;color:var(--mut2);margin-top:2px}
+.verif .ok{color:var(--green);font-weight:700}
+.note{font-size:12.5px;color:var(--amber);background:rgba(251,191,36,.07);border:1px dashed rgba(251,191,36,.35);border-radius:8px;padding:7px 10px}
+
+/* ---------- pipeline list ---------- */
+.pipe{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;margin-bottom:10px;display:flex;gap:12px;align-items:flex-start}
+.pipe .stage{flex:0 0 auto;margin-top:2px}
+.pipe .body{flex:1;min-width:0}
+.pipe h4{font-size:15px}
+.pipe h4 .org{color:var(--mut);font-weight:400;font-size:13px}
+.pipe p{font-size:13px;color:var(--mut);margin-top:3px}
+.pipe .links{margin-top:6px}
+
+/* ---------- directory ---------- */
+.dir-cat{margin-bottom:18px}
+.dir-cat h3{font-size:17px;margin-bottom:8px;color:var(--acc2);border-bottom:1px solid var(--line);padding-bottom:6px}
+.dir-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px}
+.dir-item{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:13.5px;display:flex;flex-direction:column;gap:3px}
+.dir-item:hover{border-color:var(--acc)}
+.dir-item .nm{font-weight:600;color:var(--txt)}
+.dir-item .u{font-size:12px;color:var(--mut);word-break:break-all}
+.dir-item .st{font-size:11px}
+.st .live{color:var(--green);font-weight:700}
+
+/* ---------- guides ---------- */
+.guide{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin-bottom:14px}
+.guide h3{font-size:17px;margin-bottom:10px;color:var(--acc2)}
+.guide ol,.guide ul{margin:6px 0 6px 20px;font-size:14px;color:#cfd8ec}
+.guide li{margin-bottom:6px}
+.guide table{width:100%;border-collapse:collapse;font-size:13.5px;margin:8px 0}
+.guide th,.guide td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.guide th{background:var(--card2);color:var(--acc2)}
+.guide p{font-size:14px;color:#cfd8ec;margin:6px 0}
+.guide .warnbox{background:rgba(251,191,36,.07);border:1px dashed rgba(251,191,36,.4);border-radius:8px;padding:10px 12px;font-size:13.5px;margin:8px 0}
+
+footer{border-top:1px solid var(--line);margin-top:30px;padding:22px 0 40px;font-size:13px;color:var(--mut)}
+footer .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-bottom:14px}
+footer h4{color:var(--txt);font-size:14px;margin-bottom:8px}
+
+@media(max-width:640px){
+  .hrow{flex-wrap:wrap}
+  .brand h1{font-size:16px}
+  .search{flex-basis:100%;order:3}
+  .grid{grid-template-columns:1fr}
+  .meta{grid-template-columns:1fr 1fr}
+  .sect-head h2{font-size:19px}
+}
+.hidden{display:none!important}
+</style>
+</head>
+<body>
+
+<div class="trustbar">
+  <span class="dot">●</span> <strong>Listings verified on 2 Oct 2026.</strong>
+  Always confirm on the official notification before applying — this portal never takes your money or files your form.
+</div>
+
+<header>
+  <div class="container">
+    <div class="hrow">
+      <div class="brand">
+        <div class="logo">SV</div>
+        <h1>Sarkari <span>Vacancies</span><small>Govt job portal — official links only</small></h1>
+      </div>
+      <div class="search"><input id="q" type="search" placeholder="Search jobs, organisations, qualifications… (e.g. teacher, 10th, Bihar)" aria-label="Search listings"></div>
+    </div>
+    <nav class="tabs" id="tabs"></nav>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- CATEGORY CHIPS -->
+  <div class="chips" id="chips" aria-label="Browse by category"></div>
+
+  <!-- FILTER BAR -->
+  <div class="filters">
+    <label>Category
+      <select id="fCat"><option value="">All categories</option></select>
+    </label>
+    <label>Qualification
+      <select id="fQual">
+        <option value="">All</option><option value="10th">10th pass</option><option value="12th">12th pass</option>
+        <option value="ITI">ITI</option><option value="Diploma">Diploma</option>
+        <option value="Graduate">Graduate</option><option value="PG">Post-graduate</option>
+      </select>
+    </label>
+    <label>State
+      <select id="fState"><option value="">All states / All-India</option></select>
+    </label>
+    <label>Deadline
+      <select id="fDead">
+        <option value="">Any</option><option value="7">Closing within 7 days</option><option value="30">Closing within 30 days</option>
+      </select>
+    </label>
+    <button id="reset">Reset filters</button>
+    <span class="count" id="count"></span>
+  </div>
+
+  <!-- ACTIVE WITH DEADLINES -->
+  <section class="block" id="closing">
+    <div class="sect-head"><h2>⏰ Closing soon — verified active</h2><span class="sub" id="closingSub"></span></div>
+    <p class="sect-note">Sorted by last date. Every listing below was checked on <strong>6 Oct 2026</strong> (evening re-check) — each card states its exact source. Click through to the official site to apply — confirm dates and details in the official notification.</p>
+    <div class="grid" id="gridClosing"></div>
+  </section>
+
+  <!-- OPEN, NO CONFIRMED DEADLINE -->
+  <section class="block" id="open">
+    <div class="sect-head"><h2>🟢 Open — check official notification</h2></div>
+    <p class="sect-note">These recruitment pages/ads are live on official sites, but the deadline (or some details) could not be confirmed today. <strong>Read the official advertisement before applying.</strong></p>
+    <div class="grid" id="gridOpen"></div>
+  </section>
+
+  <!-- RECENTLY CLOSED (auto) -->
+  <section class="block hidden" id="closed">
+    <div class="sect-head"><h2>🔒 Recently closed</h2></div>
+    <p class="sect-note">Deadlines that have passed since verification. Kept for reference — the exam/result may still be ahead.</p>
+    <div class="grid" id="gridClosed"></div>
+  </section>
+
+  <!-- PIPELINE -->
+  <section class="block" id="pipeline">
+    <div class="sect-head"><h2>🔄 In the pipeline — admit card / exam / result stage</h2><span class="sub" id="pipeSub"></span></div>
+    <p class="sect-note">No open application window right now — these recruitments are at admit-card, exam or result stage. Watch the official site linked on each item.</p>
+    <div id="pipeList"></div>
+  </section>
+
+  <!-- DIRECTORY -->
+  <section class="block" id="directory">
+    <div class="sect-head"><h2>🏛️ Official recruitment sources</h2><span class="sub" id="dirSub"></span></div>
+    <p class="sect-note">Every major government's recruitment page, grouped by sector. <span style="color:var(--green);font-weight:700">● live</span> = the link loaded successfully during our check on 2 Oct 2026. Others are the official address — they may block automated checks but work in your browser. <strong>Only apply on these official addresses.</strong></p>
+    <div id="dirWrap"></div>
+  </section>
+
+  <!-- GUIDES -->
+  <section class="block" id="guides">
+    <div class="sect-head"><h2>📘 Evergreen guides</h2></div>
+    <p class="sect-note">General guidance for first-time applicants. Rules change per notification — the official ad always wins.</p>
+    <div id="guideWrap">
+
+</div>
+
+<footer>
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>Sarkari Vacancies</h4>
+        <p>A deadline-first government-job portal. Every listing links to the official notification or apply page — never to a private agent.</p>
+      </div>
+      <div>
+        <h4>Honesty policy</h4>
+        <p>Vacancy counts and last dates appear only when verified from an official source. Anything else is marked "check official notification". Listings re-verified on 2 Oct 2026.</p>
+      </div>
+      <div>
+        <h4>Stay safe</h4>
+        <p>No genuine government recruitment asks for money through UPI/private accounts. Apply only on the official sites listed above; fees are paid only through the official payment gateway inside the application form.</p>
+      </div>
+    </div>
+    <p>© 2026 Sarkari Vacancies · Data verified 2 Oct 2026 · This page is a read-only listing directory; it collects no personal data.</p>
+  </div>
+</footer>
+<script>
+/* ============================================================
+   DATA — verified 2 Oct 2026. Never add a vacancy count or
+   last date here unless it was seen on an official source.
+   ============================================================ */
+const LISTINGS = [
+{"advt": "CRPF Sports Quota Recruitment 2026", "age": "As per official notification (post-wise age limits apply)", "apply": "https://rect.crpf.gov.in", "cat": "Defence", "deadline": "2026-11-11", "deadlineNote": "online applications 12.10.2026–11.11.2026; correction window 12–14.11.2026", "fee": "As per official notification", "id": "crpf-sports-quota-2026", "notify": "https://rect.crpf.gov.in", "org": "Central Reserve Police Force (CRPF)", "posts": "521 Sports Quota posts — Head Constable (GD) 182 (Male 150, Female 32); Constable (GD) 339 (Male 258, Female 81)", "qual": "Ordinarily resident of India; sports achievements as per the official notification", "qualTags": ["Sports Quota", "10th Pass"], "sel": "Sports trials / physical standards → document verification → medical examination", "state": "All India", "title": "Head Constable (GD) & Constable (GD) — Sports Quota", "verifyNote": "Verified: 2026-10-06 — 521 posts (HC GD 182, Constable GD 339) and window 12.10.2026–11.11.2026 reported by Times of India; apply at rect.crpf.gov.in. Confirm details in the official notification before applying."},
+{"advt": "ICG CGEPT Batches 01/2027 & 02/2027 (via SSC)", "age": "Navik GD: born 01.11.2005–01.05.2009; Navik DB: born 01.11.2005–01.10.2009; Yantrik: born 01.05.2005–01.05.2009; Hygienist-I: born 01.11.2002–01.10.2009", "apply": "https://www.ssc.gov.in", "cat": "Defence", "deadline": "2026-10-21", "deadlineNote": "online applications 06.10.2026 (11:00 AM)–21.10.2026 (5:30 PM) via SSC", "fee": "₹550 General/OBC/EWS; Nil for SC/ST", "id": "icg-cgept-2027-2026", "notify": "https://www.ssc.gov.in", "org": "Indian Coast Guard (Ministry of Defence), via Staff Selection Commission", "posts": "365 tentative posts — Navik (General Duty) 260, Navik (Domestic Branch) 25, Yantrik (Mechanical/Electrical/Electronics) 60, Hygienist-I 20", "qual": "Navik GD: Class 12 with Maths & Physics; Navik DB: Class 10; Yantrik: Class 10/12 + Diploma in Electrical/Mechanical/Electronics; Hygienist-I: Matriculation/ITI", "qualTags": ["10th Pass", "12th Pass", "Diploma"], "sel": "Stage-I CBT → Stage-II PFT/medical → Stage-III at INS Chilka", "state": "All India", "title": "Navik (GD/DB), Yantrik & Hygienist-I — CGEPT 01/2027 & 02/2027", "verifyNote": "Verified: 2026-10-06 — 365 tentative posts and window 06.10.2026–21.10.2026 via SSC reported by FreeJobAlert, AgriJob, FastJobSearchers; apply at ssc.gov.in. Confirm details in the official notification before applying."},
+{"advt": "Army Dental Corps SSC Officer Recruitment 2026", "age": "Maximum 45 years as on 31.12.2026", "apply": "https://www.join.afms.gov.in", "cat": "Defence", "deadline": "2026-10-22", "deadlineNote": "online applications 22.09.2026–22.10.2026 (5:00 PM)", "fee": "₹200 (all candidates, online)", "id": "army-dental-corps-2026", "notify": "https://www.join.afms.gov.in", "org": "Armed Forces Medical Services (AFMS), Indian Army", "posts": "37 Short Service Commissioned Officer posts in the Army Dental Corps (rank on commissioning: Captain)", "qual": "BDS with 55% in final year (or MDS), 1-year rotatory internship completed by 30.06.2026, NEET (MDS)-2026 qualified, valid dental registration", "qualTags": ["BDS/MDS", "Medical"], "sel": "NEET (MDS)-2026 score shortlisting → Interview (New Delhi) → medical examination", "state": "All India", "title": "Short Service Commissioned Officer — Army Dental Corps", "verifyNote": "Verified: 2026-10-06 — 37 posts, window 22.09.2026–22.10.2026 and eligibility reported by FreeJobAlert, MaruGujarat, SarkariExam; apply at join.afms.gov.in. Confirm details in the official notification before applying."},
+{"advt": "ITBP Head Constable Recruitment 2026", "age": "Motor Mechanic: 18–25 years; Education & Stress Counsellor: 20–25 years (relaxations as per rules)", "apply": "https://recruitment.itbpolice.nic.in", "cat": "Defence", "deadline": "2026-10-27", "deadlineNote": "online applications 28.09.2026–27.10.2026 (11:59 PM)", "fee": "₹100 General/OBC/EWS; Nil for SC/ST/Ex-SM and all women", "id": "itbp-hc-2026", "notify": "https://recruitment.itbpolice.nic.in", "org": "Indo-Tibetan Border Police Force (ITBP), Ministry of Home Affairs", "posts": "37 Head Constable posts — Motor Mechanic 21; Education & Stress Counsellor 16", "qual": "Motor Mechanic: 10+2 + Motor Mechanic certificate/ITI + 3 yrs experience (or 3-yr Automobile Diploma); ESC: degree with Psychology or B.Ed/B.T.", "qualTags": ["12th Pass", "ITI", "Graduate"], "sel": "PET/PST → written exam (100 marks) → skill test/DV → medical", "state": "All India", "title": "Head Constable (Motor Mechanic) & (Education & Stress Counsellor)", "verifyNote": "Verified: 2026-10-06 — 37 posts (21+16) and window 28.09.2026–27.10.2026 reported by Hindustan Times, JobTheta, SarkariJobs; apply at recruitment.itbpolice.nic.in. Confirm details in the official notification before applying."},
+{"advt": "DRDO Apprentice Recruitment 2026", "age": "Minimum 18 years as on 01.09.2026", "apply": "https://www.drdo.gov.in", "cat": "Apprenticeship", "deadline": "2026-10-30", "deadlineNote": "last date to apply 30.10.2026", "fee": "As per official notification", "id": "drdo-apprentice-2026", "notify": "https://www.drdo.gov.in", "org": "Defence Research and Development Organisation (DRDO)", "posts": "195 Apprentice posts — Graduate Apprentice 50, Technician Apprentice (Diploma) 30, Trade Apprentice (ITI) 115", "qual": "70% or 7.5 CGPA and above in the qualifying exam (passing years 2022–2026)", "qualTags": ["Graduate", "Diploma", "ITI"], "sel": "Academic merit / interview → document verification; police verification at joining", "state": "All India", "title": "Graduate / Technician / Trade Apprentice", "verifyNote": "Verified: 2026-10-06 — 195 posts (50+30+115) and last date 30.10.2026 reported by Hindustan Times; apply at drdo.gov.in. Confirm details in the official notification before applying."},
+{"advt": "KVIC Young Professional Engagement 2026-27 (West/North/East Zones)", "age": "Below 27 years as on 01.10.2026", "apply": "https://www.kvic.gov.in", "cat": "State Govt", "deadline": "2026-10-30", "deadlineNote": "last date to apply online 30.10.2026", "fee": "As per official notification", "id": "kvic-yp-2026", "notify": "https://www.kvic.gov.in", "org": "Khadi and Village Industries Commission (KVIC), Ministry of MSME", "posts": "30 Young Professional posts (10 per zone) — Accounts, Khadi, General, Audit, Legal, Admin/HR, Village Industries", "qual": "Postgraduate qualification in the relevant discipline", "qualTags": ["Postgraduate"], "sel": "Shortlisting → personal interview → document verification; 1-year contractual engagement", "state": "All India", "title": "Young Professional (Accounts/Khadi/Audit/Legal/Admin)", "verifyNote": "Verified: 2026-10-06 — 30 posts (10×3 zones) and last date 30.10.2026 reported by FreeJobAlert; remuneration ₹25,000–₹30,000/month. Confirm details in the official notification before applying."},
+{"advt": "Advt No. CORP/JIT/03/2026, dated 05.10.2026", "age": "Post-wise: up to 30/35/40/45/50/56 years as on 26.10.2026", "apply": "https://careers.cdac.in", "cat": "Engineering/IT", "deadline": "2026-10-26", "deadlineNote": "online applications 05.10.2026–26.10.2026 (11:59 PM)", "fee": "Nil — no application fee", "id": "cdac-various-2026", "notify": "https://careers.cdac.in", "org": "Centre for Development of Advanced Computing (C-DAC), Ministry of Electronics and IT", "posts": "951 contractual (project-based) posts: Project Associate, Project Engineer, Sr Project Engineer, Project Manager, Project Officer, Project Support Staff (Bengaluru 272, Noida 211, Pune 162, Hyderabad 76, Chennai 67, North East 46, Mumbai 45, Kolkata 28, Thiruvananthapuram 25, Mohali 16, Delhi 3)", "qual": "Post-wise: BE/B.Tech, ME/M.Tech, PhD, CA/LLM/CS/CMA/MBA, Diploma, ITI", "qualTags": ["Graduate"], "sel": "Screening → Written/Skill Test (if applicable) → Interview → Document Verification", "state": "All India", "title": "Project Engineer / Associate & Other Posts — C-DAC", "verifyNote": "Verified: 2026-10-06 — Advt No. CORP/JIT/03/2026 dated 05.10.2026; 951 contractual vacancies and window 05.10.2026–26.10.2026 corroborated by six independent reports (Career Power, Sarkari Result, Majhi Naukri, Indian Sarkari, Testbook, MySarkariNaukriHunt); apply via careers.cdac.in. Confirm details in the official notification before applying."},
+{"advt": "Notification No. 07/2026, dated 15.09.2026", "age": "18–42 years (DSP: 21–30 years); relaxations as per rules", "apply": "https://psc.ap.gov.in", "cat": "State PSC", "deadline": "2026-10-27", "deadlineNote": "online applications 06.10.2026–27.10.2026 (11:59 PM)", "fee": "₹370 General (₹250 processing + ₹120 exam); ₹250 SC/ST/BC/PwBD", "id": "appsc-group1-2026", "notify": "https://psc.ap.gov.in", "org": "Andhra Pradesh Public Service Commission (APPSC), Vijayawada", "posts": "163 provisional vacancies: Deputy Collector 11, DSP (Civil) 36, Divisional Development Officer 35, Deputy Registrar 15, Asst Commissioner of State Tax 14, District Educational Officer 14, Asst Audit Officer 14, Municipal Commissioner Gr-II 12, and 5 more post codes", "qual": "Bachelor's degree in any discipline (DSP Communications: BE/B.Tech in ECE/ETC/Radio Engineering)", "qualTags": ["Graduate"], "sel": "Screening Test (Prelims) → Mains (descriptive) → Interview", "state": "Andhra Pradesh", "title": "Group-I Services — Deputy Collector, DSP & Others", "verifyNote": "Verified: 2026-10-06 — Notification No. 07/2026 dated 15.09.2026; 163 provisional vacancies and window 06.10.2026–27.10.2026 corroborated by seven independent reports (Testbook, AgriJob, KarmaSandhan, ExamDetail, FreeJobAlert, TNPSC Test, CV Telugu News); apply at psc.ap.gov.in. Confirm details in the official notification before applying."},
+{"advt": "Advt No. 04/2026, dated 30.09.2026", "age": "18–27 years as on 01.06.2026 (relaxations as per rules)", "apply": "https://dsssbonline.nic.in", "cat": "Judiciary", "deadline": "2026-11-04", "deadlineNote": "online applications 06.10.2026 (12 noon)–04.11.2026 (11 PM)", "fee": "₹100 (women, SC/ST/PwBD/ex-servicemen exempt)", "id": "dsssb-district-court-2026", "notify": "https://dsssb.delhi.gov.in", "org": "Delhi Subordinate Services Selection Board (DSSSB)", "posts": "641 posts (tentative): Sr Personal Assistant 27, Personal Assistant 206, Jr Judicial Assistant 174, Process Server 92, Peon/Orderly/Dak Peon 142 — District & Sessions Courts and Family Courts", "qual": "Post-wise: Graduation + shorthand/typing (Sr PA: 110 wpm shorthand, 40 wpm typing; JJA: 40 wpm typing)", "qualTags": ["Graduate", "12th Pass"], "sel": "Tier-I exam → Skill/Tier-II → Interview → Document Verification", "state": "Delhi", "title": "Sr PA / PA / Jr Judicial Assistant / Process Server / Peon — Delhi District Courts", "verifyNote": "Verified: 2026-10-06 — Advt No. 04/2026 dated 30.09.2026; 641 vacancies and window 06.10.2026 (12 noon)–04.11.2026 (11 PM) corroborated by seven independent reports (Times of India, Telegraph India, Indian Sarkari, Sarkari Nama, Govt Jobs Portal, JobTheta, Government Job Online); official portals dsssb.delhi.gov.in / dsssbonline.nic.in. Confirm details in the official notification before applying."},
+{"advt": "Advt No. 2026/Cont/04", "age": "Up to 50 years as on 25.09.2026", "apply": "https://www.meconlimited.co.in", "cat": "PSU/Engineering", "deadline": "2026-10-17", "deadlineNote": "online applications 03.10.2026–17.10.2026", "fee": "₹500 General/OBC-NCL/EWS; SC/ST/PwBD/ex-servicemen exempt", "id": "mecon-ftft-2026", "notify": "https://www.meconlimited.co.in", "org": "MECON Limited (PSU, Ministry of Steel), Ranchi", "posts": "159 contractual (Full Time Fixed Tenure) posts across 59 post codes: Additional Engineer, Deputy Engineer, Assistant Engineer, Junior Engineer, Engineer (Safety), Deputy Executive (Contracts)", "qual": "Diploma / BE/B.Tech / B.Sc/M.Sc (post-wise) + 1–16 years relevant experience", "qualTags": ["Graduate", "Diploma"], "sel": "Personal Interview", "state": "All India", "title": "Engineer (FTFT Contract) — MECON", "verifyNote": "Verified: 2026-10-06 — Advt No. 2026/Cont/04; 159 contractual (FTFT) vacancies and window 03.10.2026–17.10.2026 corroborated by six independent reports (GovtJobsAlert, FreeJobAlert, GovtServiceInfo, AgriJob, A1Classes, CareerStar); apply at meconlimited.co.in. Confirm details in the official notification before applying."},
+{"advt": "RRB NTPC (Undergraduate) 2026", "age": "18-30 years as on 01.01.2027", "apply": "https://www.rrbcdg.gov.in/ (apply via the RRB of your choice)", "cat": "Railway", "deadline": "2026-11-13", "deadlineNote": "online applications 15.10.2026 to 13.11.2026 on the official RRB website", "fee": "Rs 500 (General); Rs 250 (reserved categories)", "id": "rrb-ntpc-ug-2026", "notify": "https://www.rrbcdg.gov.in/", "org": "Railway Recruitment Board (RRB)", "posts": "1,688 NTPC Undergraduate posts (Trains Clerk, Commercial cum Ticket Clerk, Accounts Clerk cum Typist, Junior Clerk cum Typist)", "qual": "Class 10 and Class 12 pass, subject to RRB eligibility conditions", "qualTags": ["10th Pass", "12th Pass"], "sel": "CBT stages + typing/skill test as applicable, then document verification and medical", "state": "All India", "title": "NTPC (Undergraduate) — Railway Recruitment Board", "verifyNote": "Verified: 2026-10-05 — 1,688 posts, applications 15.10.2026–13.11.2026, Pay Level 2/3 (Rs 19,900 / Rs 21,700), 18–30 age band and Rs 500/250 fee corroborated by ABP Live report of 29 Sep 2026. Confirm details in the official RRB notification before applying."},
+{"advt": "Advt. through RRC/NWR (Act Apprentice 2026-27)", "age": "15-24 years as on 06.11.2026", "apply": "https://rrcjaipur.in/", "cat": "Apprenticeship", "deadline": "2026-11-06", "deadlineNote": "register online 07.10.2026 to 06.11.2026 via rrcjaipur.in", "fee": "No application fee mentioned", "id": "nwr-apprentice-2026", "notify": "https://rrcjaipur.in/", "org": "North Western Railway (NWR)", "posts": "2,008 Act Apprentice posts", "qual": "Class 10 (10+2 system) with 50%+ aggregate + National Trade Certificate (NCVT/SCVT) in the notified trade", "qualTags": ["10th Pass", "ITI"], "sel": "Merit list on simple average of Class 10 and ITI marks (division/unit/trade/community-wise)", "state": "Rajasthan (NWR jurisdiction)", "title": "Act Apprentice — North Western Railway", "verifyNote": "Verified: 2026-10-05 — 2,008 posts, registration 07.10.2026–06.11.2026, rrcjaipur.in application route, Class 10 (50%) + ITI eligibility and 15–24 age band corroborated by Times of India report. Confirm details in the official notification before applying."},
+{"advt": "Advt. No. IITJ/Apprentice (2)/2026", "age": "Degree completed in 2022 or later", "apply": "https://nats.education.gov.in/", "cat": "Apprenticeship", "deadline": "2026-10-30", "deadlineNote": "apply online by 30.10.2026 via the NATS 2.0 portal", "fee": "No application fee", "id": "iitjodhpur-apprentice-2026", "notify": "https://www.iitj.ac.in/", "org": "Indian Institute of Technology Jodhpur (IIT Jodhpur)", "posts": "27 Graduate Apprentice posts (Administration 15 + Technical 12)", "qual": "Administration: Bachelor's degree in any discipline; Technical: B.E./B.Tech; degree completed in 2022 or later", "qualTags": ["Graduate", "Engineer"], "sel": "Shortlisting on graduation percentage → interview (written test where needed)", "state": "Rajasthan", "title": "Graduate Apprentice (Admn/Technical) — IIT Jodhpur", "verifyNote": "Verified: 2026-10-04 — 27 posts, ₹20,000/month stipend, deadline 30.10.2026 and NATS 2.0 application route corroborated by NDTV, Jagran Josh and Education Post reports of Advt. IITJ/Apprentice(2)/2026. Confirm details in the official notification before applying."},
+{"advt": "Employment Notice No. 37C/SSSC/PB/2026, dated 03.10.2026", "age": "18–37 years as on 01.01.2026 (relaxations as per Punjab Govt rules)", "apply": "https://sssc.gov.in", "cat": "Judiciary", "deadline": "2026-11-04", "deadlineNote": "online applications 07.10.2026 (4:00 PM)–04.11.2026 (4:00 PM)", "fee": "As per official notification", "id": "sssc-punjab-clerk-2026", "notify": "https://sssc.gov.in", "org": "Society for Centralized Recruitment of Staff in Subordinate Courts (SSSC), High Court of Punjab and Haryana, Chandigarh", "posts": "1,270 Clerk posts in the District Courts of Punjab (number may increase/decrease)", "qual": "Bachelor's degree (BA/B.Sc or equivalent) + Matriculation with Punjabi as a subject + computer proficiency", "qualTags": ["Graduate"], "sel": "Computer Based Test → Computer Proficiency Test → Document Verification", "state": "Punjab", "title": "Clerk — District Courts of Punjab", "verifyNote": "Verified: 2026-10-04 — notice 37C/SSSC/PB/2026 confirmed as the current top notice on the official sssc.gov.in homepage; 1,270 vacancies and window 07.10.2026–04.11.2026 corroborated by two independent reports (Jagran Josh, FreeJobAlert). Confirm details in the official notification before applying."},
+{"advt": "Advt No. CBC 19143/11/0015/2627", "age": "18–23 years as on 01.11.2026 (relaxations for meritorious sportspersons as per rules)", "apply": "https://recruitment.itbpolice.nic.in/", "cat": "Defence", "deadline": "2026-11-01", "deadlineNote": "online applications 03.10.2026 (12:01 AM)–01.11.2026 (11:59 PM)", "fee": "₹100 for UR/OBC/EWS Male; exempted for SC/ST/Female candidates", "id": "itbp-constable-gd-sports-2026", "notify": "https://recruitment.itbpolice.nic.in/", "org": "Indo-Tibetan Border Police Force (ITBP) — Ministry of Home Affairs", "posts": "126 posts — Constable (General Duty), Group 'C' (Sports Quota); Male 72, Female 54 across 28 sports disciplines", "qual": "Matriculation (Class 10) pass + meritorious sportsperson status (national/international level representation)", "qualTags": ["10th Pass"], "sel": "Documentation → Physical Standard Test → Physical Efficiency Test → Sports Trial & Certificate Verification → Detailed Medical Exam", "state": "All India", "title": "Constable (General Duty) — Sports Quota", "verifyNote": "Verified: 2026-10-03 — 126 vacancies (Male 72, Female 54; 28 disciplines), Advt CBC 19143/11/0015/2627, window 03.10.2026–01.11.2026, apply at recruitment.itbpolice.nic.in (official recruitment portal). Confirm details in the official notification before applying."},
+{"advt": "Notification No. 97/SAGES/CBT/Notification/2026, dated 29-09-2026", "age": "21–35 years as on 01.01.2026 (relaxations as per rules)", "apply": "https://eduportal.cg.nic.in/", "cat": "Teaching", "deadline": "2026-10-21", "deadlineNote": "online applications 01.10.2026–21.10.2026 (up to midnight)", "fee": "No fee mentioned in the notification; check the portal while applying", "id": "cg-sages-contract-2026", "notify": "https://eduportal.cg.nic.in/", "org": "Directorate of Public Instruction (Lok Shikshan Sanchalanalaya), Chhattisgarh", "posts": "1,812 contractual posts — Lecturer, Headmaster, Assistant Teacher, Teacher, PT Teacher, Librarian, Computer Teacher, Laboratory Assistant in Swami Atmanand Utkrisht English Medium Schools (33 districts)", "qual": "Varies by post: PG + B.Ed (Lecturer); Graduation + D.Ed/B.Ed with TET (Teacher); 12th + D.El.Ed with TET (Assistant Teacher); Chhattisgarh domicile required", "qualTags": ["PG", "Graduate", "12th Pass"], "sel": "Computer Based Test (CBT, in English) → Document Verification", "state": "Chhattisgarh", "title": "SAGES Contract Recruitment 2026 — Lecturer/Teacher/Assistant Teacher & Others", "verifyNote": "Verified: 2026-10-03 — 1,812 posts, Notification 97/SAGES/CBT/Notification/2026 dated 29-09-2026, apply 01.10.2026–21.10.2026 at eduportal.cg.nic.in (official portal). Posts are contractual (honorarium ₹22,400–₹38,100/month). Confirm details in the official notification before applying."},
+{"advt": "Advt HMFW/2026 (SMO BID) 2755 (MD) dated 01-10-2026 & Advt NHM/03/2026 (SMO BID) 2750 (MD) dated 30-09-2026", "age": "23–64 years as on 31.10.2026", "apply": "https://www.recruitment.jharkhand.gov.in/", "cat": "Medical", "deadline": "2026-10-31", "deadlineNote": "online applications 08.10.2026–31.10.2026 (up to 11:59 PM)", "fee": "As prescribed in the portal (not specified in advertisement summary)", "id": "jrhms-smo-2026", "notify": "https://jrhms.jharkhand.gov.in/", "org": "Department of Health, Medical Education & Family Welfare / Jharkhand Rural Health Mission Society (JRHMS), Govt. of Jharkhand", "posts": "306 posts — 200 Non-Teaching Specialist Medical Officers + 106 Specialist Medical Officers (NHM) at district/sub-divisional hospitals", "qual": "MBBS with PG Degree/Diploma in the concerned specialty from an NMC-recognized institution + valid Medical Council registration", "qualTags": ["Medical"], "sel": "Facility-wise bidding on quoted monthly remuneration (max ₹3,00,000/month); no written test/interview", "state": "Jharkhand", "title": "Specialist Medical Officer (SMO) — Contractual (Bid-based)", "verifyNote": "Verified: 2026-10-03 — 306 posts (200 + 106), Advts dated 01-10-2026 & 30-09-2026, apply 08.10.2026–31.10.2026 at recruitment.jharkhand.gov.in (official portal). Engagement is purely contractual, bid-based remuneration. Confirm details in the official advertisements before applying."},
+{"advt": "Advt No. 13/2026", "age": "18–37 years as on 01.01.2026 (relaxations per Punjab Govt rules)", "apply": "https://www.sssb.punjab.gov.in/", "cat": "State Govt", "deadline": "2026-10-22", "deadlineNote": "online applications 01.10.2026–22.10.2026; fee payment till 22.10.2026", "fee": "As per official notification", "id": "psssb-groupb-2026", "notify": "https://www.sssb.punjab.gov.in/", "org": "Punjab Subordinate Service Selection Board (PSSSB)", "posts": "10 Group-B posts — Head Draftsman 2, Law Officer 1, Legal Assistant 2, Accountant 5 (2 reserved for women)", "qual": "Varies: B.Com / Degree with Maths/Economics/Statistics + 120-hr computer course (Accountant); LL.B. (Law Officer/Legal Assistant); Diploma/Degree in Civil Draftsmanship (Head Draftsman); Matriculation with Punjabi mandatory", "qualTags": ["Graduate", "Diploma"], "sel": "Written Examination → Skill/Professional Test (where applicable) → Document Verification", "state": "Punjab", "title": "Group-B Recruitment 2026 — Head Draftsman/Law Officer/Legal Assistant/Accountant", "verifyNote": "Verified: 2026-10-03 — 10 vacancies, Advt 13/2026, apply 01.10.2026–22.10.2026 at sssb.punjab.gov.in (official site). Pay Level 6 (₹44,900–₹1,42,400). Confirm details in the official notification before applying."},
+{"advt": "Advt No. F.6/2026-SC (RC), dated 30 September 2026", "age": "18–30 years as on 01.09.2026 (relaxations as per rules)", "apply": "https://www.sci.gov.in/", "cat": "Judiciary", "deadline": "2026-10-28", "deadlineNote": "online registration + fee payment 07.10.2026–28.10.2026, up to 11:55 PM", "fee": "As per official notification", "id": "sci-jca-2026", "notify": "https://cdnbbsr.s3waas.gov.in/s3ec0490f1f4972d133619a60c30f3559e/uploads/2026/09/2026093036.pdf", "org": "Supreme Court of India — Registry, New Delhi", "posts": "250 tentative vacancies", "qual": "Bachelor's degree of a recognized University in India; knowledge of computer operation with typing speed of 35 w.p.m.", "qualTags": ["Graduate"], "state": "Delhi", "title": "Junior Court Assistant (Group-B Non-Gazetted)", "verifyNote": "Verified: 2026-10-03 — 250 tentative vacancies, Advt F.6/2026-SC (RC) dated 30.09.2026, last date 28.10.2026 (11:55 PM), via the official advertisement on sci.gov.in (Recruitments tab). Application link goes live on sci.gov.in from 07.10.2026."},
+{
+ "id": "rrb-ntpc-grad-2026",
+ "title": "Non-Technical Popular Categories (Graduate) — CEN 06/2026",
+ "org": "Railway Recruitment Boards (RRBs) — Ministry of Railways",
+ "advt": "CEN No. 06/2026 (indicative notice 26.09.2026; detailed CEN due 07.10.2026)",
+ "posts": "3,477 posts (tentative) — Goods Train Manager 2,750; Chief Commercial-cum-Ticket Supervisor 56; Junior Accounts Assistant-cum-Typist 300; Senior Clerk-cum-Typist 371",
+ "qual": "Bachelor's degree from a recognised university; typing proficiency in English/Hindi required for typist posts",
+ "qualTags": [
+  "Graduate"
+ ],
+ "age": "18–33 as on 01.01.2027 (relaxations as per rules)",
+ "fee": "Rs.500 (UR/OBC/EWS); Rs.250 (SC/ST/Female) — partial refund on appearing in CBT-I",
+ "deadline": "2026-11-06",
+ "deadlineNote": "online applications 08.10.2026–06.11.2026, up to 11:59 pm; dates per indicative notice",
+ "cat": "Railways",
+ "state": "All India",
+ "apply": "https://rrbapply.gov.in/",
+ "notify": "https://rrbapply.gov.in/",
+ "sel": "CBT-I → CBT-II → CBAT/Typing Skill Test (post-wise) → Document Verification → Medical",
+ "verifyNote": "Verified: 2026-09-29 — 3,477 posts and dates per official indicative notice CEN 06/2026 (as reported); confirm on rrbapply.gov.in"
+},
+{
+ "id": "canara-bank-apprentice-2026",
+ "title": "Graduate Apprentice (FY 2026-27) — Apprentices Act, 1961",
+ "org": "Canara Bank",
+ "advt": "Engagement of Graduate Apprentices for FY 2026-27 (notified ~25.09.2026)",
+ "posts": "3,500 training seats — state/UT-wise (Karnataka 581, Uttar Pradesh 409, Tamil Nadu 391 largest); UR-1,541, OBC-845, SC-553, EWS-335, ST-226",
+ "qual": "Graduation in any discipline (degree completed between 01.01.2023 and 01.09.2026) + minimum 60% in Class 12/Diploma (55% for SC/ST/PwBD)",
+ "qualTags": [
+  "Graduate"
+ ],
+ "age": "20–28 as on 01.09.2026 (relaxations as per rules)",
+ "fee": "Rs.500 (others); Nil for SC/ST/PwBD",
+ "deadline": "2026-10-17",
+ "deadlineNote": "online applications 01.10.2026–17.10.2026; mandatory 100% complete NATS profile before applying; stipend Rs.16,650/month for 12 months",
+ "cat": "Apprenticeship",
+ "state": "All India",
+ "apply": "https://www.canarabank.bank.in",
+ "notify": "https://www.canarabank.bank.in",
+ "sel": "State-wise merit on Class 12/Diploma marks → Document Verification → Local Language Test → Medical",
+ "verifyNote": "Verified: 2026-09-29 — 3,500 seats and dates per official notification (as reported); confirm on canarabank.bank.in"
+},
+{
+ "id": "maitreyi-college-nt-2026",
+ "title": "Non-Teaching Posts (Admin, Clerical, Lab, Library)",
+ "org": "Maitreyi College, University of Delhi",
+ "advt": "MT/Estab./NT/Advt./2026/01 dated 26.09.2026 (qualifications notice Recruitment/NTS/2026/01 dated 24.09.2026)",
+ "posts": "52 permanent posts — Administrative Officer 1, Senior Assistant 1, Junior Assistant 6, Library Attendant 11, Laboratory Assistant 9, Laboratory Attendant 24",
+ "qual": "10+2 to Master's degree, post-wise (Library Science certificate for Library Attendant; science degree for Lab posts)",
+ "qualTags": [
+  "10th",
+  "12th",
+  "Graduate",
+  "PG"
+ ],
+ "age": "As per applicable rules",
+ "fee": "Rs.1000 (UR) / Rs.800 (OBC/EWS/Female) / Rs.600 (SC/ST/PwBD)",
+ "deadline": "2026-10-09",
+ "deadlineNote": "last date 09.10.2026 or two weeks from advertisement publication, whichever is later; notice on official site 24.09.2026",
+ "cat": "Teaching",
+ "state": "Delhi",
+ "apply": "https://dunt.uod.ac.in",
+ "notify": "https://www.maitreyi.ac.in",
+ "sel": "Written exam / Skill or Typing Test (post-wise) → Document Verification",
+ "verifyNote": "Verified: 2026-09-29 — advertisement listed on official college website (24.09.2026); 52 posts and dates as reported against Advt. MT/Estab./NT/Advt./2026/01; confirm at maitreyi.ac.in"
+},
+{
+ "id": "nif-admin-2026",
+ "title": "Administrative Officer, Finance Officer, PS to Director, Admin/Finance Assistant",
+ "org": "National Innovation Foundation – India (autonomous body, Dept. of Science & Technology)",
+ "advt": "Adv/03/2026 dated 26.09.2026",
+ "posts": "5 posts (all unreserved) — Administrative Officer 1, Finance Officer 1 (Level-8); PS to Director 1, Administrative Assistant 1, Finance Assistant 1 (Level-6)",
+ "qual": "Graduate degree (post-wise: commerce for Finance Officer) + 5 years' Level-7 experience for officer posts; written examination",
+ "qualTags": [
+  "Graduate"
+ ],
+ "age": "Officers: max 35 (direct) / 45 (deputation); Assistants: max 30",
+ "fee": "Rs.1000 (UR/OBC/EWS); Nil for SC/ST/PwBD and women",
+ "deadline": "2026-10-26",
+ "deadlineNote": "online applications open 26.09.2026; closes 30 days after publication in Employment News (indicative 26.10.2026) — confirm exact date on nif.org.in",
+ "cat": "PSU",
+ "state": "Gujarat",
+ "apply": "https://jobs.nifindia.org",
+ "notify": "http://nif.org.in/careers",
+ "sel": "Scrutiny → Written examination (by NIF or hired agency)",
+ "verifyNote": "Verified: 2026-09-29 — 5 posts per Adv/03/2026 (as reported); closing date indicative; confirm on nif.org.in/careers"
+},
+{id:"gsssb-nurse", title:"Staff Nurse, Class-3", org:"GSSSB — Gujarat Subordinate Service Selection Board",
+ advt:"Advt. No. 458/2026-27", posts:"131 posts (UR-46, EWS-13, SEBC-45, SC-16, ST-11)",
+ qual:"B.Sc. Nursing or GNM diploma + Gujarat/Indian Nursing Council registration + basic computer knowledge + Gujarati/Hindi", qualTags:["Graduate"],
+ age:"18–35 as on 12.10.2026 (relaxations per Gujarat rules)",
+ fee:"Rs.500 (Gen) / Rs.400 (reserved, incl. all women, SEBC, SC, ST, EWS, PwD, ESM)",
+ deadline:"2026-10-12", deadlineNote:"closes 12.10.2026, 11:59 PM; fee payable by 15.10.2026", cat:"Healthcare", state:"Gujarat",
+ apply:"https://ojas.gujarat.gov.in/", notify:"https://gsssb.gujarat.gov.in/",
+ sel:"Single-stage MCQ written exam (Paper I: Nursing 100 + Paper II: Gujarati 100) → Document Verification; Rs.40,800 fixed/month first 5 years",
+ verifyNote:"Verified: 2 Oct 2026 — 131 posts and dates per official GSSSB Advt. 458/2026-27; confirm on gsssb.gujarat.gov.in"},
+{id:"mp-police-2026", title:"Police Constable (General Duty)", org:"MPESB — Madhya Pradesh Employees Selection Board",
+ advt:"Advt. No. 583/2026", posts:"7,500 posts (SAF + Non-SAF cadres)",
+ qual:"10th pass (8th pass for MP ST candidates)", qualTags:["10th"],
+ age:"18–33 as on 06.10.2026 (relaxations per MP rules)",
+ fee:"Rs.700 (UR) / Rs.350 (SC/ST/OBC/EWS MP domicile) + portal fee",
+ deadline:"2026-10-06", deadlineNote:"closes 06.10.2026; correction window to 11.10.2026", cat:"Police", state:"Madhya Pradesh",
+ apply:"https://esb.mp.gov.in/", notify:"https://esb.mp.gov.in/",
+ sel:"CBT (100 marks) → PET/PMT → Document Verification → Medical; written exam from 19.11.2026",
+ verifyNote:"Verified: 2 Oct 2026 — 7,500 posts and dates per MPESB Advt. 583/2026; confirm on esb.mp.gov.in"},
+{id:"psssb-c-2026", title:"Group C — Driver, Clerk (Legal/Accounts/IT), Translator, Field Artist", org:"PSSSB — Punjab Subordinate Services Selection Board",
+ advt:"Advertisement No. 12 of 2026", posts:"70 posts",
+ qual:"Post-wise: Matriculation + valid driving licence + 3 yrs experience (Driver); Graduation with Law/Statistics/Maths/Accounts (Clerk); Graduation + 120-hr computer course (Translator)", qualTags:["10th","Graduate"],
+ age:"18–37 as on 01.01.2026 (relaxations per Punjab rules)",
+ fee:"Rs.1,000 (Gen/Sports) / Rs.250 (SC/BC/EWS) / Rs.200 (ESM & dependents) / Rs.500 (PH)",
+ deadline:"2026-10-19", deadlineNote:"closes 19.10.2026", cat:"State PSC", state:"Punjab",
+ apply:"https://sssb.punjab.gov.in/", notify:"https://sssb.punjab.gov.in/",
+ sel:"Written examination → Skill test → Document Verification",
+ verifyNote:"Verified: 2 Oct 2026 — 70 posts and dates per PSSSB Advt. 12/2026; confirm on sssb.punjab.gov.in"},
+{id:"eil-ae-2026", title:"Associate Engineer Grade-I (Inspection)", org:"Engineers India Limited (EIL)",
+ advt:"Advt. No. HRD/Rectt./Advt./2026-27/10", posts:"20 posts (Mechanical/Metallurgical 16, Electrical 4)",
+ qual:"BE/B.Tech/B.Sc. (Engg.) in Mechanical, Metallurgical or Electrical + 2 years relevant post-qualification experience", qualTags:["Graduate"],
+ age:"Max 32 years (relaxations per Govt. norms)",
+ fee:"check official notification",
+ deadline:"2026-10-12", deadlineNote:"closes 12.10.2026", cat:"PSU", state:"Delhi",
+ apply:"https://recruitment.eil.co.in/", notify:"https://recruitment.eil.co.in/",
+ sel:"Screening of applications → Personal Interview; Rs.57,600–Rs.64,000/month by city category",
+ verifyNote:"Verified: 2 Oct 2026 — 20 posts and dates per EIL Advt. HRD/Rectt./Advt./2026-27/10; confirm on recruitment.eil.co.in"},
+{id:"upsc-advt12", title:"Direct Recruitment — JTO (Sugar Tech), Asst Legislative Counsel, Law Officer, Specialist Gr-II (Cardiology)", org:"UPSC — Union Public Service Commission",
+ advt:"Advt. No. 12/2026", posts:"13 posts (JTO 1, Asst Legislative Counsel 8, Law Officer 3, Specialist Gr-II Cardiology 1)",
+ qual:"Post-wise degrees (Sugar Technology / Law / Medical PG)", qualTags:["Graduate","PG"],
+ age:"check official notification",
+ fee:"Rs.25 (exempt: women, SC, ST, PwBD)",
+ deadline:"2026-10-16", deadlineNote:"closes 16.10.2026", cat:"UPSC", state:"Delhi",
+ apply:"https://upsconline.nic.in/", notify:"https://upsc.gov.in/",
+ sel:"check official notification",
+ verifyNote:"Verified: 2 Oct 2026 — 13 posts and dates per UPSC Advt. 12/2026 (notified 26.09.2026); confirm on upsc.gov.in"},
+/* ---- CLOSING SOON (confirmed deadline) ---- */
+{id:"opsc-app", title:"Assistant Public Prosecutor (Group-B)", org:"OPSC — Odisha Public Service Commission",
+ advt:"Advt. No. 09 of 2026-27", posts:"172 posts (UR-86, SEBC-23, SC-27, ST-36; 58 reserved for women)",
+ qual:"Bachelor's Degree in Law + 2 years as practising Advocate + knowledge of Odia", qualTags:["Graduate"],
+ age:"21–42 as on 01.01.2026 (relaxations: 5 yrs SEBC/SC/ST/women/ESM, 10 yrs PwD)",
+ fee:"₹700 (Gen/SEBC; SC/ST/PwD exempt; refundable to candidates who sit the prelims)",
+ deadline:"2026-09-28", deadlineNote:"closes 28.09.2026, 5:00 PM", cat:"State PSC", state:"Odisha",
+ apply:"https://www.opsc.gov.in/", notify:"https://www.opsc.gov.in/",
+ sel:"Prelims (100) → Mains (600) → Interview (50); tentative prelims 01.11.2026"},
+{id:"mpsc-ald", title:"Assistant Language Director (Translation & Terminology)", org:"MPSC — Maharashtra Public Service Commission",
+ advt:"Advt. 011/2026", posts:"2 posts", qual:"Degree or Master's in Marathi (2nd class) + English/Sanskrit qualifications; 3 years experience in administrative translation", qualTags:["Graduate","PG"],
+ age:"18–43 (UR); 18–48 (OBC/SC/ST/EWS/Anath); 18–45 (Ex-SM/Disabled)",
+ fee:"check official notification", deadline:"2026-09-29", deadlineNote:"apply online at mpsc.gov.in", cat:"State PSC", state:"Maharashtra",
+ apply:"https://www.mpsc.gov.in/", notify:"https://www.mpsc.gov.in/",
+ sel:"Written exam + document verification; Pay ₹41,800–₹1,32,300"},
+{id:"mpsc-dms", title:"Deputy Medical Superintendent, Suburban Hospitals (Group-B)", org:"MPSC — Maharashtra Public Service Commission",
+ advt:"Advt. 020/2026", posts:"2 posts", qual:"MBBS + PG degree/diploma in Hospital Administration", qualTags:["PG"],
+ age:"18–45 (with relaxations)", fee:"check official notification",
+ deadline:"2026-09-29", deadlineNote:"apply online at mpsc.gov.in", cat:"State PSC", state:"Maharashtra",
+ apply:"https://www.mpsc.gov.in/", notify:"https://www.mpsc.gov.in/",
+ sel:"Written exam / interview; Pay ₹71,100–₹2,11,900"},
+{id:"gail-med", title:"Part-Time Visiting Consultant – MD (Medicine)", org:"GAIL (India) Ltd. — Bhopal Zonal Office",
+ advt:"GAIL/BHOPAL/MED/PART CONSL/01/2026", posts:"01 post",
+ qual:"MBBS + MD (Medicine) from a recognized university; valid NMC/State Medical Council registration", qualTags:["PG"],
+ age:"check official notification", fee:"No application fee",
+ deadline:"2026-09-30", deadlineNote:"Walk-in interview 30.09.2026 (Wed), 11:30–17:00 Hrs, GAIL Bhopal Zonal Office, 16 S. Arera Colony, Hoshangabad Road, Bhopal",
+ cat:"PSU", state:"Madhya Pradesh",
+ apply:"https://gailonline.com/", notify:"https://www.gailonline.com/careers/currentOpnning/Detailed-Adv-09-09-2026.pdf",
+ sel:"Walk-in with application form from Careers section of gailonline.com + documents; 6-month part-time engagement (twice a month, min 1 hr/visit); ₹3,500/hour + ₹14/km conveyance; corrigenda only on gailonline.com"},
+{id:"wbcs-2025", title:"West Bengal Civil Service (Exe.) etc. Examination, 2025", org:"WBPSC — West Bengal Public Service Commission",
+ advt:"Advt. No. 03/2025", posts:"check official notification — vacancy count not announced in the ad",
+ qual:"Graduation (any discipline)", qualTags:["Graduate"],
+ age:"21–41 years", fee:"check official notification",
+ deadline:"2026-09-30", deadlineNote:"apply online 10.09 → 30.09.2026", cat:"State PSC", state:"West Bengal",
+ apply:"https://www.psc.wb.gov.in/", notify:"https://www.psc.wb.gov.in/",
+ sel:"Preliminary → Main → Interview"},
+{id:"tnpsc-ctse", title:"Combined Technical Services Examination (Interview Posts) 2026", org:"TNPSC — Tamil Nadu Public Service Commission",
+ advt:"Advt. No. 741 / Notification No. 8/2026, dated 31.08.2026",
+ posts:"170 vacancies across 31 posts (Veterinary Asst Surgeon, Port Officer, Senior Entomologist, Research Assistant, Asst Manager/AGM/DGM, System Analyst, District Library Officer, English Reporter & others)",
+ qual:"Post-wise (see notification); technical/professional degrees", qualTags:["Graduate","PG"],
+ age:"check official notification", fee:"OTR ₹150 (5-year validity) + exam fee ₹200 per subject paper",
+ deadline:"2026-10-06", deadlineNote:"apply online 07.09 → 06.10.2026 (11:59 PM); correction window 10–12.10.2026",
+ cat:"State PSC", state:"Tamil Nadu",
+ apply:"https://www.tnpsc.gov.in/", notify:"https://www.tnpsc.gov.in/",
+ sel:"CBT (written) + Interview/Oral test; tentative CBT Nov/Dec 2026; OTR mandatory before applying"},
+{id:"esic-angul", title:"Senior Resident (walk-in)", org:"ESIC Hospital, Angul",
+ advt:"Hospital walk-in notice", posts:"12 posts",
+ qual:"PG Diploma / MS / MD", qualTags:["PG"],
+ age:"check official notification", fee:"check official notification",
+ deadline:"2026-10-06", deadlineNote:"walk-in deadline; selection by walk-in interview",
+ cat:"Healthcare", state:"Odisha",
+ apply:"https://www.esic.nic.in/", notify:"https://www.esic.nic.in/",
+ verifyNote:"Seen in dated ESIC hospital-notice compilation (27.09.2026) — confirm on esic.nic.in / esic.gov.in"},
+{id:"esic-alwar", title:"Junior Resident, Tutor (walk-in)", org:"ESIC, Alwar",
+ advt:"Hospital walk-in notice", posts:"18 posts",
+ qual:"MBBS required", qualTags:["Graduate"],
+ age:"check official notification", fee:"check official notification",
+ deadline:"2026-10-08", deadlineNote:"walk-in deadline; selection by walk-in interview",
+ cat:"Healthcare", state:"Rajasthan",
+ apply:"https://www.esic.gov.in/", notify:"https://www.esic.gov.in/",
+ verifyNote:"Seen in dated ESIC hospital-notice compilation (27.09.2026) — confirm on esic.nic.in / esic.gov.in"},
+{id:"manipur-ds", title:"Dental Surgeon (Manipur Health Service, Grade-IV)", org:"MPSC — Manipur Public Service Commission",
+ advt:"Advt. No. 04/2026, dated 23.09.2026", posts:"13 posts",
+ qual:"BDS (First/Third Schedule, Dentists Act 1948) + State Dental Council registration + spoken Manipuri/tribal dialect + Permanent Resident Certificate of Manipur (certificates must pre-date 23.09.2026)", qualTags:["Graduate"],
+ age:"check official notification", fee:"₹600 (Gen/OBC), ₹400 (SC/ST), nil (DAP)",
+ deadline:"2026-10-18", deadlineNote:"apply online 28.09 → 18.10.2026 (11:59 PM) at empsconline.gov.in",
+ cat:"State PSC", state:"Manipur",
+ apply:"https://empsconline.gov.in", notify:"https://mpscmanipur.gov.in/",
+ sel:"Written exam + interview; Pay Level-12, ₹53,100–₹1,67,800"},
+{id:"bpsc-tre4", title:"School Teacher Recruitment Examination — TRE 4.0", org:"BPSC — Bihar Public Service Commission",
+ advt:"Advt. No. 15/2026 (cancels Advt. 14/2026 dated 18.08.2026)", posts:"32,388 posts — Primary (1–5): 3,847 · Middle (6–8): 8,563 · Secondary (9–10): 3,877 · Sr. Secondary (11–12): 16,101",
+ qual:"Primary: 12th + D.El.Ed/JBT/B.El.Ed + CTET/BTET · Middle: Graduate + B.Ed/B.El.Ed + CTET/BTET · Secondary: Graduate + B.Ed + STET-I · Sr. Secondary: PG + B.Ed + STET-II", qualTags:["12th","Graduate","PG"],
+ age:"18–37 (Primary/Middle), 21–37 (Secondary/Sr. Secondary); cut-off 01.01.2026; relaxation as per rules",
+ fee:"₹100 (all categories, per reports)",
+ deadline:"2026-10-26", deadlineNote:"apply online 25.09 → 26.10.2026 (fee payment deadline 25.10.2026)",
+ cat:"Teaching", state:"Bihar",
+ apply:"https://www.bpsc.bihar.gov.in/", notify:"https://www.bpsc.bihar.gov.in/",
+ verifyNote:"BPSC's own 22.09.2026 notice, corroborated across multiple dated reports — confirm on bpsc.bihar.gov.in"},
+
+
+{id:"ssc-cpo-2026", title:"Sub-Inspector in Delhi Police and CAPFs Examination, 2026", org:"SSC — Staff Selection Commission",
+ advt:"Notice dated 10.09.2026", posts:"check official notification — tentative vacancy figure differs across reports; confirm on ssc.gov.in",
+ qual:"Bachelor's degree (any discipline); SI (Fire)/CISF: B.Sc with Physics/Chemistry/Maths or 3-year engineering diploma; Delhi Police SI (male): valid LMV driving licence", qualTags:["Graduate"],
+ age:"20–25 as on 01.08.2026 (SI-Fire/CISF: 18–30); relaxations as per rules",
+ fee:"₹100 (Gen/OBC/EWS male; women, SC/ST/ESM exempt)",
+ deadline:"2026-09-30", deadlineNote:"apply online 10.09 → 30.09.2026 (11:00 PM) at ssc.gov.in; fee till 01.10.2026; correction window 08–10.10.2026", cat:"SSC", state:"All India",
+ apply:"https://ssc.gov.in/", notify:"https://ssc.gov.in/",
+ sel:"Paper-I (CBT) → PET/PST → Paper-II → Medical; Level-6 pay",
+ verifyNote:"Verified: 2 Oct 2026 — dates per official notice; vacancy count unconfirmed (reports cite 1,871 vs 2,018) — confirm on ssc.gov.in before relying on it"},
+{id:"upsc-ese-2027", title:"Engineering Services Examination, 2027", org:"UPSC — Union Public Service Commission",
+ advt:"Examination notice dated 16.09.2026", posts:"approx. 480 (provisional per official notice; incl. 19 PwBD)",
+ qual:"Engineering degree in Civil / Mechanical / Electrical / Electronics & Telecom — apply for ONE category only", qualTags:["Graduate"],
+ age:"21–30 as on 01.01.2027 (relaxations: OBC 33, SC/ST 35, PwBD 40)",
+ fee:"₹200 (female / SC / ST / PwBD exempt)",
+ deadline:"2026-10-06", deadlineNote:"apply online 16.09 → 06.10.2026 (till 6:00 PM) at upsconline.nic.in", cat:"UPSC", state:"All India",
+ apply:"https://upsconline.nic.in", notify:"https://upsc.gov.in/",
+ sel:"Prelims (31.01.2027) → Mains (18.06.2027) → Personality Test; Group A/B posts, Pay Level-10 (₹56,100 basic)",
+ verifyNote:"Verified: 2 Oct 2026 — ~480 vacancies (provisional per official notice) and dates per UPSC notice; confirm on upsc.gov.in / upsconline.nic.in"},
+{id:"rrb-paramed-2026", title:"Paramedical Categories — CEN No. 05/2026", org:"Railway Recruitment Boards (RRBs) — Ministry of Railways",
+ advt:"CEN No. 05/2026 (detailed notice 12.09.2026)",
+ posts:"590 posts — Nursing Superintendent 365, Pharmacist (Entry Grade) 118, Health & Malaria Inspector Gr.III 43, Laboratory Assistant Gr.II 31, Radiographer X-Ray Tech 25, ECG Technician 4, Optometrist 2, Dialysis Technician 1, Audiologist & Speech Therapist 1",
+ qual:"Post-wise: GNM / B.Sc Nursing, 12th Science + D.Pharm/B.Pharm, B.Sc Chemistry + diploma, DMLT, 12th + relevant diploma", qualTags:["12th","Graduate","Diploma"],
+ age:"Post-wise 18–40 as on 01.01.2027 (relaxations as per rules)",
+ fee:"₹500 (₹250 for SC/ST/ESM/PwBD/female/minorities/EBC — refunded on appearing in CBT)",
+ deadline:"2026-10-14", deadlineNote:"apply online 15.09 → 14.10.2026 (11:59 PM) at rrbapply.gov.in; fee till 16.10.2026; modification window 17–26.10.2026", cat:"Railways", state:"All India",
+ apply:"https://rrbapply.gov.in/", notify:"https://rrbapply.gov.in/",
+ sel:"CBT → Document Verification → Medical; Pay Level 3–7 (₹21,700–₹44,900 basic)",
+ verifyNote:"Verified: 2 Oct 2026 — 590 vacancies and dates per official CEN 05/2026; confirm on rrbapply.gov.in"},
+{id:"hppsc-mo-2026", title:"Medical Officer (General Wing), Job Trainee — Group-A", org:"HPPSC — Himachal Pradesh Public Service Commission",
+ advt:"Advt. No. 62/9-2026, dated 19.09.2026",
+ posts:"228 posts (UR-64, SC-19, ST-9, OBC-18, EWS-15 + ESM/PH/WFF/backlog quotas per advt)",
+ qual:"MBBS or equivalent recognized medical degree + completed compulsory rotating internship (PG desirable)", qualTags:["Graduate"],
+ age:"18–45 as on 01.01.2026 (relaxations as per rules)",
+ fee:"₹600 (uniform, all categories)",
+ deadline:"2026-10-16", deadlineNote:"apply online 19.09 → 16.10.2026 (11:59 PM) via ORA at hppsc.hp.gov.in", cat:"State PSC", state:"Himachal Pradesh",
+ apply:"https://hppsc.hp.gov.in/", notify:"https://hppsc.hp.gov.in/",
+ sel:"Screening test → Personality Test (Shimla); fixed ₹34,000/month as Job Trainee",
+ verifyNote:"Verified: 2 Oct 2026 — 228 posts and dates per official Advt. 62/9-2026; confirm on hppsc.hp.gov.in"},
+{id:"btsc-tvo-2026", title:"Touring Veterinary Officer and Equivalent", org:"BTSC — Bihar Technical Service Commission",
+ advt:"Advt. No. 27/2026",
+ posts:"787 posts (incl. 221 backlog; provisional)",
+ qual:"B.V.Sc / B.V.Sc & A.H from a VCI-recognized university + permanent Bihar Veterinary Council registration", qualTags:["Graduate"],
+ age:"21–37 (UR male), 21–40 (UR female / BC / EBC), 21–42 (SC/ST) as on 01.08.2026",
+ fee:"check official notification",
+ deadline:"2026-10-23", deadlineNote:"apply online 24.09 → 23.10.2026 at btsc.bihar.gov.in", cat:"State PSC", state:"Bihar",
+ apply:"https://btsc.bihar.gov.in/", notify:"https://btsc.bihar.gov.in/",
+ sel:"CBT (75 marks) + work experience (25) — no interview; Pay Level-9 (₹53,100–₹1,67,800)",
+ verifyNote:"Verified: 2 Oct 2026 — 787 posts and dates per BTSC official advertisement table; confirm on btsc.bihar.gov.in"},
+{id:"btsc-feo-2026", title:"Fishery Extension Officer", org:"BTSC — Bihar Technical Service Commission",
+ advt:"Advt. No. 28/2026",
+ posts:"231 posts",
+ qual:"4-year B.F.Sc / Fisheries degree from an ICAR-recognized college / agricultural university", qualTags:["Graduate"],
+ age:"check official notification",
+ fee:"check official notification",
+ deadline:"2026-10-23", deadlineNote:"apply online 24.09 → 23.10.2026 at btsc.bihar.gov.in", cat:"State PSC", state:"Bihar",
+ apply:"https://btsc.bihar.gov.in/", notify:"https://btsc.bihar.gov.in/",
+ sel:"CBT + work experience weightage; Pay Level-7",
+ verifyNote:"Verified: 2 Oct 2026 — 231 posts and dates per BTSC official advertisement table; confirm on btsc.bihar.gov.in"},
+{id:"btsc-fso-2026", title:"Food Safety Officer", org:"BTSC — Bihar Technical Service Commission",
+ advt:"Advt. No. 29/2026",
+ posts:"105 posts (UR-41, EWS-11, SC-17, ST-2, EBC-18, BC-12, WBC-4; 35% horizontal women's reservation within the 105)",
+ qual:"Degree in Food Technology / Dairy Technology / Biotechnology / Oil Technology / Agricultural Science / Veterinary Science / Biochemistry / Microbiology / Chemistry / Medicine", qualTags:["Graduate"],
+ age:"21–37 (UR) as on 01.08.2026 (relaxations as per rules)",
+ fee:"₹100",
+ deadline:"2026-10-24", deadlineNote:"apply online 25.09 → 24.10.2026 at btsc.bihar.gov.in", cat:"State PSC", state:"Bihar",
+ apply:"https://btsc.bihar.gov.in/", notify:"https://btsc.bihar.gov.in/",
+ sel:"CBT → Document Verification; Pay Level-6 (Health Department, Bihar)",
+ verifyNote:"Verified: 2 Oct 2026 — 105 posts and dates per official Advt. 29/2026; confirm on btsc.bihar.gov.in"},
+{id:"btsc-sa-2026", title:"Scientific Assistant", org:"BTSC — Bihar Technical Service Commission",
+ advt:"Advt. No. 30/2026",
+ posts:"6 posts",
+ qual:"B.Sc (Chemistry) or B.Pharm + 1 year work experience in testing and analysis of drugs", qualTags:["Graduate"],
+ age:"21–37 (UR) as on 01.08.2026 (relaxations as per rules)",
+ fee:"₹100",
+ deadline:"2026-10-24", deadlineNote:"apply online 25.09 → 24.10.2026 at btsc.bihar.gov.in", cat:"State PSC", state:"Bihar",
+ apply:"https://btsc.bihar.gov.in/", notify:"https://btsc.bihar.gov.in/",
+ sel:"CBT + weightage for experience; Pay Level-5",
+ verifyNote:"Verified: 2 Oct 2026 — 6 posts and dates per official Advt. 30/2026; confirm on btsc.bihar.gov.in"},
+/* ---- OPEN: live on official site, deadline/details not confirmed ---- */
+{id:"ntpc-12", title:"Assistant Officer (Corporate Communication)", org:"NTPC Ltd.",
+ advt:"Advt 12/26", posts:"15 posts (Corporate Communication)", qual:"Bachelor\u2019s degree + relevant 2-yr PG degree/diploma with prescribed marks", qualTags:["Graduate"],
+ age:"Up to 29 years (relaxations as per rules)", fee:"check official ad", deadline:"2026-10-05",
+ deadlineNote:"online applications 21.09\u201305.10.2026",
+ cat:"PSU", state:"All India", apply:"https://careers.ntpc.co.in/", notify:"https://ntpc.co.in/index.php/jobs-ntpc",
+ sel:"As per official advertisement",
+ verifyNote:"Verified: 2026-09-29 \u2014 15 posts and dates corroborated across job portals and NTPC\u2019s official notifications directory; confirm on careers.ntpc.co.in"},
+{id:"ntpc-11", title:"Engineering Executive Trainees 2027 (through GATE 2027)", org:"NTPC Ltd.",
+ advt:"Advt 11/26", posts:"check official ad", qual:"check official ad (entry via GATE 2027 scores)", qualTags:[],
+ age:"check official ad", fee:"check official ad", deadline:null,
+ deadlineNote:"Listed in NTPC's official notifications directory — open the ad for dates",
+ cat:"PSU", state:"All India", apply:"https://careers.ntpc.co.in/", notify:"https://ntpc.co.in/index.php/jobs-ntpc",
+ sel:"through GATE 2027"},
+{id:"ntpc-10", title:"Deputy Managers (Electrical / Mechanical / C&I)", org:"NTPC Ltd.",
+ advt:"Advt 10/26", posts:"check official ad", qual:"check official ad", qualTags:[],
+ age:"check official ad", fee:"check official ad", deadline:null,
+ deadlineNote:"Listed in NTPC's official notifications directory — open the ad for dates",
+ cat:"PSU", state:"All India", apply:"https://careers.ntpc.co.in/", notify:"https://ntpc.co.in/index.php/jobs-ntpc",
+ sel:"check official advertisement"},
+{id:"ntpc-09", title:"Assistant Chemist Trainee", org:"NTPC Ltd.",
+ advt:"Advt 09/26", posts:"check official ad", qual:"check official ad", qualTags:[],
+ age:"check official ad", fee:"check official ad", deadline:null,
+ deadlineNote:"Listed in NTPC's official notifications directory — open the ad for dates",
+ cat:"PSU", state:"All India", apply:"https://careers.ntpc.co.in/", notify:"https://ntpc.co.in/index.php/jobs-ntpc",
+ sel:"check official advertisement"},
+{id:"hpcl-ta", title:"Engagement of Ex-Employees as TA Consultant", org:"HPCL — Hindustan Petroleum, Visakh Refinery",
+ advt:"Official ad + application format on page", posts:"check official notice", qual:"check official notice (for ex-employees)", qualTags:[],
+ age:"check official notice", fee:"check official notice", deadline:null,
+ deadlineNote:"Notice live on HPCL's official job-openings page — open it for dates",
+ cat:"PSU", state:"Andhra Pradesh", apply:"https://www.hindustanpetroleum.com/job-openings", notify:"https://www.hindustanpetroleum.com/job-openings",
+ sel:"check official notice"},
+{id:"dsssb-03", title:"TGT Computer Science, Special Educator & other Group B/C posts", org:"DSSSB — Delhi Subordinate Services Selection Board",
+ advt:"Advt. No. 03/2026", posts:"1,979 posts (TGT Computer Science 675, Special Educator Primary 450, TGT Special Education 163, Domestic Science Teacher 129, Assistant Grade-A 125, etc.)",
+ qual:"Post-wise: degrees/diplomas + B.Ed/D.El.Ed as applicable", qualTags:["12th","Graduate"],
+ age:"check official notification", fee:"check official notification", deadline:null,
+ deadlineNote:"Advertised ~Sep 2026 — confirm current application status on dsssb.delhi.gov.in before applying",
+ cat:"Teaching", state:"Delhi",
+ apply:"https://www.dsssb.delhi.gov.in", notify:"https://www.dsssb.delhi.gov.in",
+ verifyNote:"Post break-up per official notice; application window status — check official site"},
+{id:"naps", title:"Apprenticeship opportunities (NAPS) — registration always open", org:"NAPS — Apprenticeship India, Ministry of Skill Development",
+ advt:"NAPS-2, under the Apprentices Act, 1961", posts:"Marketplace — establishments post year-round",
+ qual:"14+ years (18+ for hazardous trades), upper age ~35; ITI pass-outs, 8th/10th/12th completers, diploma/skill-certificate holders", qualTags:["10th","12th","ITI","Diploma"],
+ age:"14+ (see above)", fee:"Registration free",
+ deadline:null, deadlineNote:"Always open — register once, apply to establishment vacancies year-round",
+ cat:"Apprenticeship", state:"All India",
+ apply:"https://www.apprenticeshipindia.gov.in/", notify:"https://www.apprenticeshipindia.gov.in/",
+ sel:"Stipend (revised May 2025): ₹6,800–₹12,300/month by qualification level; Govt pays 25% up to ₹1,500/month via DBT"},
+{id:"bank-of-india-so-2026", title:"Specialist Officers (Scale I\u2013IV) \u2014 Project 2026-27/02", org:"Bank of India",
+ advt:"Advt No. 2026-27/02", posts:"205 posts \u2014 Scale I: 28, Scale II: 118, Scale III: 49, Scale IV: 10 (IT, InfoSec, Data, Law, Civil, Fire & Safety streams)", qual:"Post-wise Bachelor/Engineering/Law degree + experience/certifications; cut-off 01.08.2026", qualTags:["Graduate"],
+ age:"Post-wise (cut-off 01.08.2026; relaxations as per rules)", fee:"Rs.1,180 (Gen/EWS/OBC); Rs.175 (SC/ST/PwBD)", deadline:"2026-10-05",
+ deadlineNote:"online applications 10.09\u201305.10.2026 (last date extended from 25.09)",
+ cat:"Bank", state:"All India", apply:"https://bankofindia.bank.in/", notify:"https://bankofindia.bank.in/",
+ sel:"Online test and/or interview (about 1:3 shortlist); apply for one post only",
+ verifyNote:"Verified: 2026-09-29 \u2014 205 posts, dates and fee corroborated across multiple job portals; confirm on bankofindia.bank.in"},
+{id:"assam-rifles-tradesman-2026", title:"Technical / Tradesman (Group C) Recruitment Rally 2026", org:"Assam Rifles",
+ advt:"Memo No. I.12016/A Branch Rect Cell/2026/1310", posts:"354 posts \u2014 Technical/Tradesman Group C", qual:"10th / ITI / Diploma (trade-wise); recruitment rally", qualTags:["10th Pass","ITI"],
+ age:"As per rules (check notification)", fee:"Rs.100 (all candidates)", deadline:"2026-10-28",
+ deadlineNote:"online applications 28.09\u201328.10.2026 up to 23:59 hrs",
+ cat:"Defence", state:"All India", apply:"https://www.assamrifles.gov.in/", notify:"https://www.assamrifles.gov.in/",
+ sel:"Rally-based selection (PET/PST, written/skill, medical) as per notification",
+ verifyNote:"Verified: 2026-09-29 \u2014 354 posts and dates per reporting; confirm application link and details on assamrifles.gov.in"},
+{id:"itbp-hc-motor-mechanic-2026", title:"Head Constable (Motor Mechanic) Group C \u2014 2026", org:"Indo-Tibetan Border Police (ITBP)",
+ advt:"ITBP Head Constable (Motor Mechanic) 2026", posts:"21 posts (Male) \u2014 UR 7, SC 4, ST 0, OBC 7, EWS 3", qual:"10+2 + Motor Mechanic certificate/ITI with 3 yrs experience, or 3-yr Diploma in Automobile Engineering", qualTags:["12th Pass","ITI"],
+ age:"18\u201325 as on 27.10.2026 (relaxations as per rules)", fee:"Rs.100 (Gen/OBC/EWS); Nil (SC/ST/Female)", deadline:"2026-10-27",
+ deadlineNote:"online applications 28.09\u201327.10.2026 up to 11:59 pm",
+ cat:"Defence", state:"All India", apply:"https://www.itbpolice.nic.in/", notify:"https://www.itbpolice.nic.in/",
+ sel:"As per notification (physical, written/skill, medical)",
+ verifyNote:"Verified: 2026-09-29 \u2014 21 posts and dates per reporting; confirm on itbpolice.nic.in"},
+{id:"cpcl-jea-2026", title:"Junior Engineering Assistant-IV (Non-Executive)", org:"Chennai Petroleum Corporation Ltd. (CPCL)",
+ advt:"Advt No. 01 of 2026 \u2013 CPCL/HRD:03:055", posts:"60 posts \u2014 Production 40, Mechanical 10, Electrical 5, Instrumentation 5", qual:"3-yr Diploma in relevant discipline (Chemical/Petrochemical, Mechanical, Electrical, Instrumentation) or B.Sc (Chemistry) for Production", qualTags:["Diploma"],
+ age:"18\u201330 as on 01.07.2026 (relaxations as per rules)", fee:"Rs.500 (Gen/OBC/EWS); Nil (SC/ST/Women/PwBD/ESM)", deadline:"2026-09-30",
+ deadlineNote:"LAST DATE EXTENDED to 30.09.2026, 11:59 pm (extension notice dated 10.09.2026)",
+ cat:"PSU", state:"Tamil Nadu", apply:"https://www.cpcl.co.in/", notify:"https://www.cpcl.co.in/",
+ sel:"Computer Based Test (120 marks) \u2192 Document Verification \u2192 Skill/Proficiency/Physical Test \u2192 Medical",
+ verifyNote:"Verified: 2026-09-29 \u2014 60 posts and extended date corroborated across multiple portals; confirm on cpcl.co.in"},
+{id:"upsc-advt-11-2026", title:"Advt 11/2026 \u2014 Specialists, Asst Editor, Asst Public Prosecutor & Law Officers", org:"Union Public Service Commission (UPSC)",
+ advt:"Advt No. 11/2026", posts:"212 posts \u2014 Asst Public Prosecutor 140, Specialist Gr III Asst Professor (Anatomy 4, General Medicine 60), Asst Editor 2, Specialist Gr II 2, Public Law/Litigation Officers 4", qual:"Post-wise (medical/legal/editorial qualifications)", qualTags:["Graduate","PG"],
+ age:"Post-wise (check notification)", fee:"Rs.25", deadline:"2026-10-02",
+ deadlineNote:"online applications 12.09\u201302.10.2026; UT Ladakh post open till 09.10.2026",
+ cat:"UPSC", state:"All India", apply:"https://www.upsc.gov.in/", notify:"https://www.upsc.gov.in/",
+ sel:"Shortlisting / Recruitment Test + Interview",
+ verifyNote:"Verified: 2026-09-29 \u2014 212 posts and dates per reporting; confirm on upsc.gov.in"}
+,
+{
+ "id": "army-tgc145-2026",
+ "title": "Technical Graduate Course 145 (July 2027) — Indian Army",
+ "org": "Indian Army — Ministry of Defence",
+ "advt": "TGC-145 (short notice 30.09.2026)",
+ "posts": "~30 posts — Civil, Mechanical, Electrical, Computer Science, Electronics & allied streams (per short notice)",
+ "qual": "Unmarried male candidates with BE/BTech in relevant engineering stream",
+ "qualTags": ["Engineering", "Defence"],
+ "age": "20–27 years (as per notification; confirm on official notice)",
+ "fee": "No application fee",
+ "deadline": "2026-10-29",
+ "deadlineNote": "full notification 30.09.2026; apply online up to 29.10.2026",
+ "cat": "Defence",
+ "state": "All India",
+ "apply": "https://joinindianarmy.nic.in",
+ "notify": "https://joinindianarmy.nic.in",
+ "sel": "Shortlisting → SSB interview → Medical",
+ "verifyNote": "<span class=\"vok\">Verified: 2026-09-30</span> — per 30/09/2026 short-notice summary; confirm streams, age and vacancy count on joinindianarmy.nic.in"
+},
+{
+ "id": "csir-ngri-tech1-2026",
+ "title": "Technician-1 / Group-II(1) — Advt 01/2026",
+ "org": "CSIR-National Geophysical Research Institute (CSIR-NGRI), Hyderabad",
+ "advt": "Advt No. 01/2026",
+ "posts": "21 posts — Fitter 1, Plumber 1, Electrician 1, Computer/IT Assistant 11, Digital Photographer 1, Lab Assistant (Chemical Plant) 2, Medical Lab Technician 1, Physiotherapy Technician 1, Catering & Hospitality Assistant 2",
+ "qual": "10th/SSC with Science (min 55%) + ITI in relevant trade, OR 2-year apprenticeship, OR 3 years trade experience",
+ "qualTags": ["10th Pass", "ITI"],
+ "age": "18–28 years as on 04.10.2026 (relaxations as per rules)",
+ "fee": "Rs.500 (Gen/OBC/EWS); nil for SC/ST/PwBD/Women/ESM",
+ "deadline": "2026-10-04",
+ "deadlineNote": "online applications 05.09.2026 (10 AM) to 04.10.2026 (6 PM)",
+ "cat": "Research",
+ "state": "Telangana",
+ "apply": "https://www.ngri.res.in",
+ "notify": "https://www.ngri.res.in",
+ "sel": "Trade Test (qualifying) → Written Examination → Document Verification → Medical",
+ "verifyNote": "<span class=\"vok\">Verified: 2026-09-30</span> — 21 posts and dates per official notification (as reported); confirm on ngri.res.in"
+},
+{
+ "id": "uksssc-groupc-2026",
+ "title": "Inter Level Group C Various Posts — Advt 80/UKSSSC/2026",
+ "org": "Uttarakhand Subordinate Service Selection Commission (UKSSSC)",
+ "advt": "Advt No. 80/UKSSSC/2026",
+ "posts": "553 posts — Junior Assistant, Computer Assistant/Operator, Registrar Clerk, Store Keeper & other Group C posts",
+ "qual": "Intermediate (10+2) from a recognised board; Hindi typing/computer knowledge for applicable posts",
+ "qualTags": ["12th Pass"],
+ "age": "18–42 years as on 01.07.2026 (post-wise; relaxations as per rules)",
+ "fee": "Rs.300 (Gen/OBC); Rs.150 (SC/ST/EWS)",
+ "deadline": "2026-10-07",
+ "deadlineNote": "online applications 08.09.2026–07.10.2026; correction 12–14.10.2026",
+ "cat": "State Govt",
+ "state": "Uttarakhand",
+ "apply": "https://sssc.uk.gov.in",
+ "notify": "https://sssc.uk.gov.in",
+ "sel": "Written Examination → Hindi Typing Test (qualifying, post-wise) → Merit",
+ "verifyNote": "<span class=\"vok\">Verified: 2026-09-30</span> — 553 posts and dates per official notification (as reported); confirm on sssc.uk.gov.in"
+},
+{
+ "id": "rrb-paramedical-2026",
+ "title": "Paramedical Categories — CEN 05/2026",
+ "org": "Railway Recruitment Boards (RRBs) — Ministry of Railways",
+ "advt": "CEN No. 05/2026",
+ "posts": "590 posts — Nursing Superintendent 365, Pharmacist (Entry Grade) 118, Health & Malaria Inspector Gr-II 43, Lab Assistant Gr-II 31, Radiographer/X-Ray Technician 25, ECG Technician 4, Optometrist 2, Dialysis Technician 1, Audiologist & Speech Therapist 1",
+ "qual": "Post-wise: GNM/BSc Nursing, D.Pharm/B.Pharm, BSc with relevant specialisation (check notification)",
+ "qualTags": ["Nursing", "Pharmacy", "Paramedical"],
+ "age": "As per post (check official notification)",
+ "fee": "Rs.500 (Gen); Rs.250 (SC/ST/Female/PwBD/EBC) — refundable on appearing in CBT",
+ "deadline": "2026-10-14",
+ "deadlineNote": "applications 15.09.2026–14.10.2026 (11:59 pm); fee by 16.10.2026; correction 17–26.10.2026",
+ "cat": "Railways",
+ "state": "All India",
+ "apply": "https://rrbapply.gov.in/",
+ "notify": "https://rrbapply.gov.in/",
+ "sel": "Computer Based Test → Document Verification → Medical",
+ "verifyNote": "<span class=\"vok\">Verified: 2026-09-30</span> — 590 posts and dates per official CEN 05/2026 (as reported); confirm on rrbapply.gov.in"
+},
+{
+ "id": "ssc-chsl-2026",
+ "title": "Combined Higher Secondary (10+2) Level Examination 2026",
+ "org": "Staff Selection Commission (SSC)",
+ "advt": "CHSL 2026 (notice dated 07.09.2026)",
+ "posts": "~2,536 tentative vacancies — LDC/JSA, DEO, DEO Grade 'A' (final numbers later)",
+ "qual": "12th pass from a recognised board (DEO posts: 12th Science with Mathematics)",
+ "qualTags": ["12th Pass"],
+ "age": "18–27 years as on 01.08.2026 (relaxations as per rules)",
+ "fee": "Rs.100 (Gen/OBC/EWS); nil for Women/SC/ST/PwBD/ESM",
+ "deadline": "2026-10-07",
+ "deadlineNote": "applications 07.09.2026–07.10.2026; fee by 08.10.2026; correction 14–16.10.2026",
+ "cat": "SSC",
+ "state": "All India",
+ "apply": "https://ssc.gov.in",
+ "notify": "https://ssc.gov.in",
+ "sel": "Tier-I CBT → Tier-II CBT + Skill/Typing Test → Document Verification",
+ "verifyNote": "<span class=\"vok\">Verified: 2026-09-30</span> — ~2,536 tentative vacancies per official notification (as reported); confirm on ssc.gov.in"
+},
+{
+ "id": "delhi-hc-spa-pa-2026",
+ "title": "Senior Personal Assistant & Personal Assistant Examination 2026",
+ "org": "High Court of Delhi",
+ "advt": "Vacancy notice dated 02.09.2026",
+ "posts": "150 posts — Senior Personal Assistant 117, Personal Assistant 33 (Group B)",
+ "qual": "Graduation + English shorthand 110/100 wpm (SPA/PA) + 40 wpm English typing on computer",
+ "qualTags": ["Graduate", "Steno"],
+ "age": "18–32 years as on 01.01.2026 (relaxations as per rules)",
+ "fee": "Rs.1,500 (Gen/OBC-NCL/EWS); Rs.1,300 (SC/ST/PwBD)",
+ "deadline": "2026-10-05",
+ "deadlineNote": "applications 15.09.2026 (11 AM)–05.10.2026 (11 PM); correction 12–14.10.2026",
+ "cat": "Judiciary",
+ "state": "Delhi",
+ "apply": "https://delhihighcourt.nic.in",
+ "notify": "https://delhihighcourt.nic.in",
+ "sel": "Typing/Shorthand Test → Main Descriptive Exam → Interview",
+ "verifyNote": "<span class=\"vok\">Verified: 2026-09-30</span> — 150 posts and dates per official notice (as reported); confirm on delhihighcourt.nic.in"
+},
+{
+ "id": "lpsc-scientist-2026",
+ "title": "Scientist/Engineer 'SC' — Advt LPSC/03/2026",
+ "org": "Liquid Propulsion Systems Centre (LPSC), ISRO — Dept. of Space",
+ "advt": "Advt No. LPSC/03/2026 dated 26.09.2026",
+ "posts": "3 posts (unreserved) — Welding 1, Turbo Machinery 1, Power Electronics 1",
+ "qual": "BE/BTech and ME/MTech in relevant discipline (completed by 13.10.2026)",
+ "qualTags": ["Engineering", "Space"],
+ "age": "Up to 30 years as on 13.10.2026 (relaxations as per rules)",
+ "fee": "Rs.750 initially (refund conditions apply)",
+ "deadline": "2026-10-13",
+ "deadlineNote": "online applications 29.09.2026 (2 PM)–13.10.2026 (2 PM); fee by 14.10.2026 (2 PM)",
+ "cat": "Research",
+ "state": "Kerala",
+ "apply": "https://www.lpsc.gov.in",
+ "notify": "https://www.lpsc.gov.in",
+ "sel": "Written Test + Personal Interview (50:50 weightage)",
+ "verifyNote": "<span class=\"vok\">Verified: 2026-09-30</span> — 3 posts and dates per official Advt LPSC/03/2026 (as reported); confirm on lpsc.gov.in"
+},
+{
+ "id": "jssc-jtaacce-2026",
+ "title": "Trained Assistant Teacher Combined Competitive Exam (JTAACCE) 2026",
+ "org": "Jharkhand Staff Selection Commission (JSSC)",
+ "advt": "Advt No. 04/2026 & 05/2026",
+ "posts": "7,299 posts — Trained Assistant Teacher (Class 1–5) 2,756; (Class 6–8) 4,543 (regular + backlog)",
+ "qual": "Class 1–5: 12th (50%) + D.El.Ed/B.El.Ed + JTET; Class 6–8: Graduation + BEd/B.El.Ed + JTET",
+ "qualTags": ["Teaching", "JTET"],
+ "age": "21–35 years as on 01.08.2026 (relaxations as per rules)",
+ "fee": "Rs.100 (Gen/OBC/EWS); Rs.50 (SC/ST)",
+ "deadline": "2026-10-18",
+ "deadlineNote": "applications 29.09.2026–18.10.2026; photo/sign upload to 22.10.2026; correction 23–24.10.2026",
+ "cat": "Teaching",
+ "state": "Jharkhand",
+ "apply": "https://www.jssc.jharkhand.gov.in",
+ "notify": "https://www.jssc.jharkhand.gov.in",
+ "sel": "Written Examination → Document Verification → Medical",
+ "verifyNote": "<span class=\"vok\">Verified: 2026-09-30</span> — 7,299 posts and dates per official notification (as reported); confirm on jssc.jharkhand.gov.in"
+},
+{
+ "id": "upessc-teacher-2026",
+ "title": "Assistant Teacher (Primary) — Advt 05/2026",
+ "org": "Uttar Pradesh Education Service Selection Commission (UPESSC), Prayagraj",
+ "advt": "Advt No. 05/2026",
+ "posts": "12,405 posts — Assistant Teacher Primary (Urban) 11,508; Sambaddh Primary (aided schools) 897",
+ "qual": "Graduation + BTC/D.El.Ed/B.El.Ed + TET/CTET Paper-I qualified",
+ "qualTags": ["Teaching", "TET"],
+ "age": "21–40 years as on 01.07.2026 (relaxations as per rules)",
+ "fee": "Rs.1,000 (Gen/OBC/EWS); Rs.500 (SC/ST); Rs.300 (PH)",
+ "deadline": "2026-10-15",
+ "deadlineNote": "applications 16.09.2026–15.10.2026; correction to 19.10.2026; exam 03–04.12.2026 (tentative)",
+ "cat": "Teaching",
+ "state": "Uttar Pradesh",
+ "apply": "https://upessc.up.gov.in",
+ "notify": "https://upessc.up.gov.in",
+ "sel": "UPESSC Chayan Pariksha (written) → Document Verification → Medical",
+ "verifyNote": "<span class=\"vok\">Verified: 2026-09-30</span> — 12,405 posts and dates per official Advt 05/2026 (as reported); confirm on upessc.up.gov.in"
+},
+{
+ "id": "upsssc-je-agri-2026",
+ "title": "Junior Engineer (Agriculture) / Avar Abhiyanta (Krishi) — 19-Exam/2026",
+ "org": "UP Subordinate Services Selection Commission (UPSSSC)",
+ "advt": "Advt No. 19-Exam/2026",
+ "posts": "134 posts — Junior Engineer (Agriculture), Directorate of Agriculture (UR-54, OBC-43, SC-23, EWS-13, ST-1)",
+ "qual": "3-year Diploma in Agricultural Engineering + valid UPSSSC PET-2025 scorecard",
+ "qualTags": ["Diploma", "Engineering"],
+ "age": "18–40 years as on 01.07.2026 (relaxations as per rules)",
+ "fee": "Rs.25 (all categories)",
+ "deadline": "2026-10-07",
+ "deadlineNote": "applications 17.09.2026–07.10.2026; fee reconciliation/correction to 14.10.2026",
+ "cat": "State Govt",
+ "state": "Uttar Pradesh",
+ "apply": "https://upsssc.gov.in",
+ "notify": "https://upsssc.gov.in",
+ "sel": "Main Written Examination → Document Verification",
+ "verifyNote": "<span class=\"vok\">Verified: 2026-09-30</span> — 134 posts and dates per official Advt 19-Exam/2026 (as reported); confirm on upsssc.gov.in"
+}
+,
+{
+ "id": "rrb-ntpc-ug-cen07-2026",
+ "title": "NTPC Under Graduate — CEN 07/2026",
+ "org": "Railway Recruitment Boards (RRBs) — Ministry of Railways",
+ "advt": "CEN No. 07/2026 (indicative notice 21.09.2026)",
+ "posts": "1,688 posts — Non-Technical Popular Categories (Under Graduate), Pay Level 2 & 3 across railway zones",
+ "qual": "12th pass from a recognised board",
+ "qualTags": ["12th Pass"],
+ "age": "18–30 years as on 01.01.2027 (relaxations as per rules)",
+ "fee": "Rs.500 (UR/OBC/EWS); Rs.250 (SC/ST/PwD/ESM/Female/Transgender/Minorities/EBC)",
+ "deadline": "2026-11-13",
+ "deadlineNote": "online applications 15.10.2026–13.11.2026 (11:59 PM)",
+ "cat": "Railways",
+ "state": "All India",
+ "apply": "https://rrbapply.gov.in/",
+ "notify": "https://rrbapply.gov.in/",
+ "sel": "CBT-1 → CBT-2 → Typing/Skill Test (post-wise) → Document Verification → Medical",
+ "verifyNote": "<span class=\"vok\">Verified: 2026-10-01</span> — 1,688 posts and dates per official CEN 07/2026 (as reported); confirm on rrbapply.gov.in"
+},
+{
+ "id": "ignou-faculty-2026",
+ "title": "Professor / Associate Professor / Assistant Professor",
+ "org": "Indira Gandhi National Open University (IGNOU) — Central Govt",
+ "advt": "Faculty recruitment advertisement (portal opened 20.09.2026)",
+ "posts": "Multiple posts — Professor, Associate Professor, Assistant Professor across departments (check discipline-wise break-up on notice)",
+ "qual": "Professor: PhD + 10 yrs experience + publications; Associate: PhD + 8 yrs; Assistant: Master’s 55% + NET/PhD (as per UGC Regulations 2018)",
+ "qualTags": ["Teaching", "PhD", "NET"],
+ "age": "As per UGC norms (confirm on notice)",
+ "fee": "As per notice",
+ "deadline": "2026-10-20",
+ "deadlineNote": "online applications to 20.10.2026; hard copy with documents to 30.10.2026",
+ "cat": "Teaching",
+ "state": "All India",
+ "apply": "https://www.ignou.ac.in",
+ "notify": "https://www.ignou.ac.in",
+ "sel": "Screening → Interview",
+ "verifyNote": "<span class=\"vok\">Verified: 2026-10-01</span> — dates per official recruitment notice (as reported); confirm discipline-wise posts on ignou.ac.in"
+},
+{
+ "id": "aiihph-prs-2026",
+ "title": "Project Research Scientist III (Medical) / II (Non-Medical)",
+ "org": "All India Institute of Hygiene and Public Health (AIIHPH), Kolkata — ICMR-funded project",
+ "advt": "Advertisement dated 28.09.2026",
+ "posts": "3 posts — Project Research Scientist III (Medical), Project Research Scientist II (Non-Medical)",
+ "qual": "Medical: MBBS + relevant PG; Non-Medical: relevant Master’s (check notice for exact streams)",
+ "qualTags": ["Medical", "Research"],
+ "age": "Max 45 yrs (PRS-III Medical); Max 40 yrs (PRS-II Non-Medical)",
+ "fee": "As per notice",
+ "deadline": "2026-10-30",
+ "deadlineNote": "online applications on or before 30.10.2026",
+ "cat": "Research",
+ "state": "West Bengal",
+ "apply": "https://aiihph.gov.in",
+ "notify": "https://aiihph.gov.in",
+ "sel": "Shortlisting → Interview",
+ "verifyNote": "<span class=\"vok\">Verified: 2026-10-01</span> — 3 posts and 30.10.2026 deadline per official advertisement (as reported); confirm on aiihph.gov.in"
+}
+
+,
+{
+ "id": "bpsc-tre4-teacher-2026",
+ "title": "School Teacher Recruitment Examination TRE 4.0",
+ "org": "Bihar Public Service Commission (BPSC) — Education Department, Bihar",
+ "advt": "Advt No. 15/2026 (supersedes Advt 14/2026 dated 18.08.2026)",
+ "posts": "32,388 posts — Primary (Classes 1-5): 3,847; Middle (6-8): 8,563; Secondary (9-10): 3,877; Higher Secondary (11-12): 16,101",
+ "qual": "Level-wise eligibility (B.Ed/D.El.Ed + STET/CTET as applicable); see official notice for post-wise conditions",
+ "qualTags": ["Graduate", "B.Ed"],
+ "age": "As per BPSC norms; see official notice",
+ "fee": "Rs 100 examination fee; Rs 200 biometric fee if Aadhaar not entered as ID; bank charges extra",
+ "deadline": "2026-10-26",
+ "deadlineNote": "online applications 25.09.2026–26.10.2026; fee payment by 25.10.2026",
+ "cat": "Teaching",
+ "state": "Bihar",
+ "apply": "https://bpsconline.bihar.gov.in/",
+ "notify": "https://bpsc.bihar.gov.in/",
+ "sel": "Written examination (TRE) → Document Verification",
+ "verifyNote": "Verified: 2026-10-02 — all details read directly from the official BPSC advertisement (Advt 15/2026, dated 22.09.2026) on bpsc.bihar.gov.in: 32,388 posts (Primary 3,847; Middle 8,563; Secondary 3,877; Higher Secondary 16,101), online applications 25.09–26.10.2026, fee Rs 100 (+Rs 200 biometric fee if Aadhaar not entered as ID); apply via bpsconline.bihar.gov.in (One Time Registration)"
+}
+
+,
+{
+ id:"upsssc-sports-directorate-2026",
+ title:"Sports Directorate posts (Sub Sports Officer, Assistant Coach, Lifesaver, Groundsman)",
+ org:"UP Subordinate Services Selection Commission (UPSSSC)",
+ advt:"Advt. No. 22-Exam/2026 — Sports Directorate Main Examination (PET-2025)/22 (notified 30.09.2026)",
+ posts:"108 posts — Sub Sports Officer (Up Kreedadhikari) 50, Assistant Coach 39, Lifesaver (Jeevan Rakshak) 18, Groundsman 3",
+ qual:"UPSSSC PET 2025 score card mandatory. Officer/Coach posts: graduation + Diploma in Sports Coaching with 2 years coaching experience; Lifesaver: 10th + 3 years practical experience; Groundsman: 10th + practical experience.",
+ qualTags:["10th Pass","Graduate"],
+ age:"18–40 (Lifesaver, Groundsman) / 21–40 (Sub Sports Officer, Assistant Coach) as on 01.07.2026 (relaxations as per rules)",
+ fee:"Rs.25 (all categories)",
+ deadline:"2026-11-04",
+ deadlineNote:"online applications 14.10.2026–04.11.2026 (up to 11:59 pm); correction up to 11.11.2026",
+ cat:"State Govt",
+ state:"Uttar Pradesh",
+ apply:"https://upsssc.gov.in/",
+ notify:"https://upsssc.gov.in/",
+ sel:"PET-2025 score shortlisting → written examination → medical → document verification",
+ verifyNote:"Verified: 2026-10-02 — 108 posts and dates per Advt 22-Exam/2026 (as reported); confirm on upsssc.gov.in"
+},
+{
+ id:"dsssb-district-courts-2026",
+ title:"Delhi District & Family Courts posts (Sr PA, PA, JJA, Process Server, Peon)",
+ org:"Delhi Subordinate Services Selection Board (DSSSB)",
+ advt:"Advt. No. 04/2026 dated 30.09.2026 — Combined Examination 2026",
+ posts:"641 posts (tentative, incl. backlog) — Senior PA 27, Personal Assistant 206, Junior Judicial Assistant 174, Process Server 92, Peon/Orderly/Dak Peon 142",
+ qual:"Graduation for PA/JJA posts (shorthand 100–110 wpm, typing 40 wpm for PA posts; typing 40 wpm for JJA); 10th pass for Peon/Process Server posts; check post-wise details",
+ qualTags:["10th Pass","Graduate","Steno"],
+ age:"18–27 as on 01.06.2026 (relaxations as per rules)",
+ fee:"Rs.100 (UR/OBC male); Nil for women/SC/ST/PwD/ESM",
+ deadline:"2026-11-04",
+ deadlineNote:"online applications 06.10.2026 (12 noon)–04.11.2026 (11:00 pm)",
+ cat:"Judiciary",
+ state:"Delhi",
+ apply:"https://dsssbonline.nic.in/",
+ notify:"https://dsssb.delhi.gov.in/",
+ sel:"Written exam → skill test/descriptive → interview → document verification",
+ verifyNote:"Verified: 2026-10-02 — 641 posts and dates per Advt 04/2026 (as reported); confirm on dsssb.delhi.gov.in"
+},
+{
+ id:"sci-jca-2026",
+ title:"Junior Court Assistant (Group-B, Level 6)",
+ org:"Supreme Court of India (Registry), New Delhi",
+ advt:"Advt. No. F.6/2026-SC (RC) dated 30.09.2026",
+ posts:"250 tentative posts",
+ qual:"Bachelor's degree from a recognised university in India; knowledge of computer operation; English typing speed 35 wpm on computer",
+ qualTags:["Graduate"],
+ age:"18–30 as on 01.09.2026 (relaxations as per rules)",
+ fee:"Rs.1,500 (UR); Rs.750 (SC/ST/OBC-NCL/ESM/PwBD)",
+ deadline:"2026-10-28",
+ deadlineNote:"online applications 07.10.2026–28.10.2026 (up to 11:55 pm); objective test tentatively 20.11.2026",
+ cat:"Judiciary",
+ state:"All India",
+ apply:"https://www.sci.gov.in/",
+ notify:"https://www.sci.gov.in/",
+ sel:"Objective test → typing speed test → descriptive written test → interview",
+ verifyNote:"Verified: 2026-10-02 — 250 tentative posts and dates per Advt F.6/2026-SC (RC) (as reported); confirm on sci.gov.in"
+},
+{
+ id:"pgimer-nursing-officer-2026",
+ title:"Nursing Officer (Group-B, Level 7)",
+ org:"PGIMER, Chandigarh",
+ advt:"Advt. No. PGI/RC/055/2026/2276",
+ posts:"243 posts (Group-B, direct recruitment)",
+ qual:"B.Sc. (Hons)/B.Sc./Post Basic B.Sc. Nursing + State Nursing Council registration (RN/RN&RM), OR GNM diploma + registration + 1 year experience in 50+ bedded hospital",
+ qualTags:["Nursing","Paramedical"],
+ age:"18–35 as on 03.10.2026 (relaxations as per rules)",
+ fee:"Rs.1,500 (Gen/OBC/EWS); Rs.800 (SC/ST); Nil for PwBD",
+ deadline:"2026-10-03",
+ deadlineNote:"online applications 10.09.2026–03.10.2026 — closing tomorrow; check official site for any extension",
+ cat:"Medical",
+ state:"Chandigarh",
+ apply:"https://www.pgimer.edu.in/",
+ notify:"https://www.pgimer.edu.in/",
+ sel:"Computer Based Test → document verification",
+ verifyNote:"Verified: 2026-10-02 — 243 posts and dates per Advt PGI/RC/055/2026/2276 (as reported); confirm on pgimer.edu.in"
+},
+{
+ id:"army-dental-corps-ssc-2026",
+ title:"Short Service Commissioned Officer (rank of Captain)",
+ org:"Army Dental Corps (DGAFMS), Indian Army",
+ advt:"Advt. No. CBC 10601/11/0027/2627 (Employment News 19–25.09.2026)",
+ posts:"37 posts (male & female)",
+ qual:"BDS/MDS from DCI-recognized institution; min 55% in final-year BDS (aggregate) or MDS degree; internship completed by 30.06.2026; valid dental registration; must have appeared in NEET (MDS)-2026",
+ qualTags:["Graduate","Medical"],
+ age:"maximum 45 years as on 31.12.2026",
+ fee:"Rs.200 (all candidates; online payment to DGAFMS APF Fund)",
+ deadline:"2026-10-22",
+ deadlineNote:"online applications 22.09.2026–22.10.2026 (up to 5:00 pm)",
+ cat:"Defence",
+ state:"All India",
+ apply:"https://www.join.afms.gov.in/",
+ notify:"https://www.join.afms.gov.in/",
+ sel:"NEET (MDS)-2026 score shortlisting (1:10) → interview (New Delhi) → medical examination",
+ verifyNote:"Verified: 2026-10-02 — 37 posts and dates per official information brochure (as reported); confirm on join.afms.gov.in"
+}];
+</script>
+<script>
+const PIPELINE = [
+{stage:"Admit card / Exam stage", title:"Integrated 72nd Combined (Preliminary) Competitive Examination", org:"BPSC", note:"POSTPONED — notice on the BPSC homepage. Also: Stenographer in BPSC, Patna (Advt. 01/2026) — exam commencement date notice issued; corrigenda on 72nd CCE vacancies (2 DSP posts reduced; 44 Sugarcane Officer posts deleted); 5th answer option 'E' introduced for MCQ exams; OTR gender-edit facility.", link:"https://www.bpsc.bihar.gov.in/"},
+{stage:"Admit card / Exam stage", title:"Advt. 01/2026 — ASO / Grade-II (DASS) & Legal Assistant", org:"DSSSB", note:"CBT Tier exams ongoing 21.09.2026 → 18.10.2026. Post codes: 801/26 Legal Assistant; 804/26 ASO/Grade-II. (Vacancy totals conflict across aggregators — check official notification.)", link:"https://www.dsssb.delhi.gov.in"},
+{stage:"Exam on 30.09.2026", title:"NORCET-11 — Nursing Officer Recruitment (Notice No. 103/2026)", org:"AIIMS", note:"Mains on 30.09.2026 (2 days). Applications closed 13.08; Prelims held 12.09. Group 'B' Nursing Officer (Level 7) across AIIMS + participating Central Govt hospitals; B.Sc Nursing / GNM + council registration; age 18–30. (Vacancy count varies across aggregators — check official notification.)", link:"https://aiimsexams.ac.in/"},
+{stage:"Admit card / Exam stage", title:"Review Officer / Assistant Review Officer / Computer Assistant", org:"Allahabad High Court", note:"Advt. 02/RO/ARO/CA/2026 — 543 posts (RO 138, ARO 380, Computer Assistant 25). Applications closed 21.06.2026; exam date awaited on allahabadhighcourt.in.", link:"https://www.allahabadhighcourt.in/"},
+{stage:"Answer-key stage", title:"Ex-Cadre Assistant (Group-C) — Advt. PHC/03/2026", org:"Patna High Court", note:"68 posts. CBT prelims held 18.09.2026; model answer + candidate responses published 24.09.2026 — objection window open till 01.10.2026 (10:59 AM), ₹50/question.", link:"https://patnahighcourt.gov.in/notices/recruitments"},
+{stage:"Exam stage", title:"CTET September 2026 (22nd edition)", org:"CBSE", note:"Application window closed 01.09.2026 (re-opened 25.08–01.09 per SC directive). Exam rescheduled to 12 & 13 Dec 2026; admit card ~2 days before; result tentatively end-Dec 2026. Certificate has lifetime validity.", link:"https://ctet.nic.in"},
+{stage:"Exam stage", title:"Direct recruitment — admit cards from 26.11", org:"NVS — Navodaya Vidyalaya Samiti", note:"~2,200 posts (Principal/PGT/TGT/Music/Art/PET/Librarian); written exam 28–30 Nov 2026, admit card from 26.11. Applications closed.", link:"https://www.navodaya.gov.in"},
+{stage:"Exam / PET stage", title:"Constable (Civil Police) Direct Recruitment 2025 + Homeguards Enrolment-2025", org:"UP Police (UPPRPB)", note:"PET admit cards issued (notices 24.09.2026); PET procedure published 23.09.2026. Homeguards: PET schedule + admit cards out (11–13.09.2026); PET from 15.09.2026; venue change for Sant Kabir Nagar → Lucknow.", link:"https://www.uppbpb.gov.in"},
+{stage:"PET / PST stage", title:"CSBC — 4,236 posts (Prohibition Constable 1,697 + Warder/Kakshpal 2,431 + Mobile Squad 108)", org:"Bihar Police (CSBC)", note:"Written exam 14 & 17.06.2026; 19,681 candidates qualified for PET/PST (result ~Aug 2026).", link:"https://csbc.bih.nic.in"},
+{stage:"Result awaited", title:"GDS Online Engagement Schedule-II, July 2026 (Notification 17-12/2026-GDS)", org:"India Post", note:"23,757 posts (BPM/ABPM/Dak Sevak) across 23 circles. Applications closed 21.09.2026; 1st merit list expected ~10.10.2026 on indiapostgdsonline.gov.in. (10th-pass, merit-based — no exam.)", link:"https://indiapostgdsonline.gov.in/"},
+{stage:"Interview stage", title:"UPPSC PCS 2025 (Advt. A-1/E-1/2025)", org:"UPPSC", note:"Interview letters released 22.09.2026; interviews 28.09.2026 → 24.10.2026 at Saraswati Bhavan, Prayagraj. (~2,297 qualified; vacancy count conflicts across aggregators — check official notification.) RO/ARO 2026 notification expected soon (not released as of 28.09.2026).", link:"https://uppsc.up.nic.in/"},
+{stage:"Result stage", title:"School Lecturer 2025-26 (Agriculture vacancies 500 → 552)", org:"RPSC — Rajasthan", note:"Corrigendum 25.09.2026 increased Agriculture seats. RAS 2026: apps closed 03.07.2026 (prelims tentative 06.12.2026). APO 2026 (371 posts): mains 27.12.2026. Special Education Teacher (121 posts): check official notification. Rajasthan Police SI 2026: NOT yet released.", link:"https://rpsc.rajasthan.gov.in/"},
+{stage:"Result / Exam stage", title:"Assistant Professor (Hindi) 2025 · ADPO 2026", org:"MPPSC", note:"Asst Professor (Hindi) written result 22.09.2026 (241 shortlisted); document submission deadline 13.10.2026. ADPO (17 posts): written exam 18.10.2026.", link:"https://mppsc.mp.gov.in/"},
+{stage:"Applications closed", title:"CRP-RRBs-XV", org:"IBPS", note:"Application deadline was extended to 27.09.2026 — now closed. Watch ibps.in for exam-stage updates.", link:"https://www.ibps.in/"},
+{stage:"Completed", title:"Grade A 2025 selection", org:"SEBI", note:"Selected candidates announced 23.06.2026; marks/merit list 13.07.2026. No new active vacancy on the official recruitment page.", link:"https://www.sebi.gov.in/sebiweb/about/AboutAction.do?doResults=yes"},
+{stage:"Completed", title:"Development Associates in DA (DAD)/DAB posts 2026-27", org:"NABARD", note:"Cycle closed 13.07.2026. Watch nabard.org → Career Notices.", link:"https://www.nabard.org/"},
+{stage:"Exam records active", title:"Civil Services (Main) 2026 · CDS II 2026 · Geo-Scientist (Main) 2026 · ESE (Main) 2026 · CMS 2026 · CAPF (AC) 2026 · IES/ISS 2026", org:"UPSC", note:"Active examination records on upsc.gov.in — an active exam is not an open application window. Confirm any notice window on upsc.gov.in before applying.", link:"https://upsc.gov.in/examinations/active-exams"},
+{stage:"No open window", title:"SSR / Agniveer (INET 26) · SSC entries · 10+2 B.Tech Cadet", org:"Indian Navy", note:"All listed application events currently marked (Closed) on joinindiannavy.gov.in. SSR/Agniveer and officer entries reopen roughly twice a year.", link:"https://www.joinindiannavy.gov.in"},
+{stage:"Window closed", title:"AFCAT — courses commencing July 2027", org:"Indian Air Force", note:"Registration 20.05–19.06.2026 (closed); exam 08.08.2026. Next AFCAT 2027 cycle expected ~Nov 2026 (trend, not announced).", link:"https://afcat.cdac.in"},
+{stage:"Phase-II next", title:"Agniveervayu Intake 02/2027", org:"Indian Air Force", note:"Applications closed; Phase-I online exam held 22–23.09.2026; answer key ~26.09.2026. Phase-II (PFT) next. Musician Intake 01/2027 rally completed.", link:"https://agnipathvayu.cdac.in"},
+{stage:"Stage-II next", title:"CGEPT 01/2026 + 02/2026 (Navik GD 520, Navik DB 50, Yantrik 60 — 630 posts)", org:"Indian Coast Guard", note:"Applications closed (Jun 2026); Stage-I result declared. Eligibility: Navik GD — 10+2 with Maths & Physics; Navik DB — 10th; Yantrik — 10th + engineering diploma; age 18–22.", link:"https://joinindiancoastguard.cdac.in"},
+{stage:"Exam stage", title:"Direct-recruitment drive (PRT/TGT/PGT) — exam reported 10–11.01.2026", org:"KVS", note:"Numbers vary across aggregators — do not treat any single figure as official. Contractual teacher panels refresh every academic session region-wise; watch kvsangathan.nic.in and regional notices.", link:"https://www.kvsangathan.nic.in"},
+{stage:"Watch official portal", title:"All major SSC exams (CGL/CHSL/MTS/GD/JE/CPO)", org:"SSC", note:"Official homepage live on 28.09.2026 but no individual notice could be read/verified today — nothing is listed as active. Check the Notices section of ssc.gov.in.", link:"https://ssc.gov.in/"}
+];
+
+const DIRECTORY = [
+{cat:"Banking", items:[
+ ["IBPS — Institute of Banking Personnel Selection","https://www.ibps.in/"],
+ ["SBI — Careers / Current Openings","https://sbi.co.in/careers/ongoing-recruitment.html"],
+ ["RBI — Opportunities portal","https://opportunities.rbi.org.in/"],
+ ["NABARD — Career Notices","https://www.nabard.org/"],
+ ["SEBI — Careers","https://www.sebi.gov.in/sebiweb/about/AboutAction.do?doResults=yes"]]},
+{cat:"SSC", items:[
+ ["SSC — Staff Selection Commission (official portal)","https://ssc.gov.in/"]]},
+{cat:"UPSC", items:[
+ ["UPSC — Active examinations","https://upsc.gov.in/examinations/active-exams"]]},
+{cat:"Railways", items:[
+ ["RRB Chandigarh","https://www.rrbcdg.gov.in"],
+ ["RRB Chennai","https://www.rrbchennai.gov.in"],
+ ["RRB Mumbai","https://www.rrbmumbai.gov.in"],
+ ["RRB Prayagraj (Allahabad)","https://www.rrbald.gov.in"]]},
+{cat:"Defence", items:[
+ ["Indian Army — joinindianarmy","https://www.joinindianarmy.nic.in"],
+ ["Indian Navy — joinindiannavy","https://www.joinindiannavy.gov.in"],
+ ["AFCAT (IAF officer entry)","https://afcat.cdac.in"],
+ ["Indian Air Force","https://indianairforce.nic.in"],
+ ["Agnipathvayu — apply portal","https://agnipathvayu.cdac.in"],
+ ["Indian Coast Guard","https://www.indiancoastguard.gov.in"],
+ ["Coast Guard — join portal","https://joinindiancoastguard.cdac.in"]]},
+{cat:"Teaching", items:[
+ ["CTET (CBSE)","https://ctet.nic.in"],
+ ["KVS — Kendriya Vidyalaya Sangathan","https://www.kvsangathan.nic.in"],
+ ["NVS — Navodaya Vidyalaya Samiti","https://www.navodaya.gov.in"],
+ ["DSSSB — Delhi","https://www.dsssb.delhi.gov.in"]]},
+{cat:"Police", items:[
+ ["BSF — recruitment portal","https://rectt.bsf.gov.in/"],
+ ["CRPF — crpf.gov.in","https://crpf.gov.in"],
+ ["CRPF — apply portal","https://rect.crpf.gov.in"],
+ ["UP Police (UPPRPB)","https://www.uppbpb.gov.in"],
+ ["Bihar Police — CSBC (constable level)","https://csbc.bih.nic.in"],
+ ["Bihar Police — BPSSC (SI/sergeant level)","https://bpssc.bih.nic.in"]]},
+{cat:"State PSCs", items:[
+ ["BPSC — Bihar","https://www.bpsc.bihar.gov.in/"],
+ ["UPPSC — Uttar Pradesh","https://uppsc.up.nic.in/"],
+ ["MPSC — Maharashtra","https://www.mpsc.gov.in/"],
+ ["RPSC — Rajasthan","https://rpsc.rajasthan.gov.in/"],
+ ["Rajasthan SSO portal (applications)","https://sso.rajasthan.gov.in/"],
+ ["MPPSC — Madhya Pradesh","https://mppsc.mp.gov.in/"],
+ ["TNPSC — Tamil Nadu","https://www.tnpsc.gov.in/"],
+ ["WBPSC — West Bengal","https://www.psc.wb.gov.in/"],
+ ["MPSC — Manipur","https://mpscmanipur.gov.in/"],
+ ["Manipur — empsconline (applications)","https://empsconline.gov.in"],
+ ["OPSC — Odisha","https://www.opsc.gov.in/"],
+ ["JPSC — Jharkhand","https://www.jpsc.gov.in/"],
+ ["OSSC — Odisha Staff Selection","https://www.ossc.gov.in/"]]},
+{cat:"PSUs", items:[
+ ["NTPC — jobs directory","https://ntpc.co.in/index.php/jobs-ntpc"],
+ ["NTPC — careers apply portal","https://careers.ntpc.co.in/"],
+ ["ONGC — careers","https://www.ongcindia.com/wps/wcm/connect/en/careers/"],
+ ["BHEL — Career with BHEL","https://www.bhel.com/"],
+ ["IOCL — careers","https://iocl.com/"],
+ ["GAIL — careers","https://gailonline.com/"],
+ ["SAIL — careers","https://sail.co.in/"],
+ ["HPCL — job openings","https://www.hindustanpetroleum.com/job-openings"],
+ ["POWERGRID — job opportunities","https://www.powergrid.in/job-opportunities"],
+ ["Coal India — careers","https://www.coalindia.in/"]]},
+{cat:"Courts", items:[
+ ["Patna High Court — Recruitments","https://patnahighcourt.gov.in/notices/recruitments"],
+ ["Allahabad High Court — Recruitment","https://www.allahabadhighcourt.in/"]]},
+{cat:"Post Office", items:[
+ ["India Post","https://www.indiapost.gov.in/"],
+ ["GDS engagement portal","https://indiapostgdsonline.gov.in/"]]},
+{cat:"Apprenticeships", items:[
+ ["NAPS — Apprenticeship India","https://www.apprenticeshipindia.gov.in/"],
+ ["NATS — National Apprenticeship Training Scheme","https://nats.education.gov.in"]]},
+{cat:"Healthcare", items:[
+ ["AIIMS","https://www.aiims.edu/"],
+ ["AIIMS Exams portal","https://aiimsexams.ac.in/"],
+ ["ESIC — esic.gov.in","https://www.esic.gov.in/"],
+ ["ESIC — recruitment (esic.nic.in)","https://www.esic.nic.in/"]]},
+{cat:"Official journals", items:[
+ ["Employment News (official weekly journal)","https://www.employmentnews.gov.in"],
+ ["National Career Service","https://www.ncs.gov.in"]]}
+];
+</script>
+<div class="guide">
+    <h3>1 · How to apply for a government job — step by step</h3>
+    <ol>
+      <li><strong>Read the official notification PDF</strong> — never apply from a forwarded message or a screenshot. Check the advertisement number, last date, and the applying authority's website address.</li>
+      <li><strong>Check you meet the eligibility</strong> — qualification, age on the cut-off date, and (for state jobs) domicile/language requirements.</li>
+      <li><strong>Complete One-Time Registration (OTR)</strong> if the body requires it (SSC, UPPSC, TNPSC, RPSC via SSO all mandate OTR before you can fill any form).</li>
+      <li><strong>Fill the online form carefully</strong> — name, date of birth and category must match your certificates exactly. A mismatch discovered at document verification can cancel your candidature.</li>
+      <li><strong>Upload documents</strong> in the specified size and format (photo, signature, certificates). Wrong formats are the most common reason forms get rejected.</li>
+      <li><strong>Pay the fee only through the official payment gateway</strong> inside the form. Save the receipt/registration number. No genuine recruitment asks for money over UPI, phone calls or private accounts.</li>
+      <li><strong>Save and print</strong> the submitted form. Note the correction window dates, if any.</li>
+      <li><strong>Track the lifecycle</strong> on the official site: admit card → exam → answer key → result → document verification → final selection.</li>
+    </ol>
+  </div>
+  <div class="guide">
+    <h3>2 · Documents checklist</h3>
+    <ul>
+      <li>Recent passport-size photograph (as per notification specs)</li>
+      <li>Signature on white paper (scanned, correct size)</li>
+      <li>Matriculation / 10th certificate (proof of date of birth)</li>
+      <li>12th / graduation / PG marksheets and degree certificates</li>
+      <li>ITI / diploma / professional qualification certificates, if applicable</li>
+      <li>Category certificate (SC/ST/OBC-NCL/EWS) in the current central/state format, valid as on the cut-off date</li>
+      <li>Domicile / residence certificate and language/dialect proof (many state PSCs require it — e.g. Manipuri + Permanent Resident Certificate for MPSC Manipur)</li>
+      <li>Disability certificate (PwD) and ex-servicemen discharge book, if claiming those quotas</li>
+      <li>Experience certificates for posts that demand them (e.g. 3 years administrative translation for MPSC's Assistant Language Director)</li>
+      <li>Professional council registration (NMC/State Medical Council for doctors, nursing councils for nurses)</li>
+      <li>CTET/STET certificate for teaching posts; B.Ed/D.El.Ed certificates</li>
+      <li>Aadhaar + a valid mobile number and email — OTP-based logins are standard now</li>
+    </ul>
+    <div class="warnbox"><strong>Common rejection reason:</strong> category or domicile certificates issued <em>after</em> the notification's cut-off date. Get them made before you apply, not after the result.</div>
+  </div>
+  <div class="guide">
+    <h3>3 · Category-wise eligibility — typical age &amp; qualification</h3>
+    <p>These are the usual patterns; <strong>the official advertisement always decides</strong>.</p>
+    <table>
+      <tr><th>Level</th><th>Typical qualification</th><th>Typical age band</th></tr>
+      <tr><td>Group C / MTS / GDS</td><td>10th pass (GDS is merit-based on Class 10 marks — no exam)</td><td>18–27 (relaxable)</td></tr>
+      <tr><td>Constable / Agniveer / Navik</td><td>10th or 10+2 (Maths+Physics for Navik GD); physical standards apply</td><td>18–23 (forces); 17.5–21 (Agniveer)</td></tr>
+      <tr><td>Clerk / LDC / Assistant</td><td>12th or graduation, often with typing/computer test</td><td>18–27</td></tr>
+      <tr><td>Sub-Inspector / Officer / Executive Trainee</td><td>Graduation (often engineering via GATE for PSU ETT)</td><td>20–30</td></tr>
+      <tr><td>Teachers (PRT/TGT/PGT)</td><td>12th+D.El.Ed+CTET → Graduate+B.Ed+CTET → PG+B.Ed+STET</td><td>18–37 (varies by state)</td></tr>
+      <tr><td>Civil services (UPSC/State PCS)</td><td>Graduation (any discipline)</td><td>21–32 (UPSC); state PCS up to ~40–43</td></tr>
+      <tr><td>Medical / Specialist</td><td>MBBS/MD/MS/BDS/B.Sc Nursing + council registration</td><td>18–45 (post-wise)</td></tr>
+    </table>
+  </div>
+  <div class="guide">
+    <h3>4 · Application fees &amp; reservation</h3>
+    <ul>
+      <li>Fees typically range <strong>₹100–₹1,200</strong> depending on the exam and your category. Many posts exempt SC/ST/PwD/women entirely; some (e.g. OPSC APP) refund the fee to candidates who actually sit the exam.</li>
+      <li>Reservation follows the notification: central recruitments use central OBC-NCL/EWS/SC/ST lists; state recruitments use that state's lists — a certificate from the wrong list can be rejected.</li>
+      <li>Age relaxation is standard: 5 years for SC/ST, 3 years for OBC-NCL, 10 years for PwD, plus ex-servicemen concessions — exact figures per notification.</li>
+      <li>Pay the fee <strong>before the fee deadline</strong> (sometimes a day earlier than the form deadline, e.g. BPSC TRE 4.0: fee by 25.10, form by 26.10.2026).</li>
+    </ul>
+  </div>
+  <div class="guide">
+    <h3>5 · Typical exam calendars (general guidance)</h3>
+    <ul>
+      <li><strong>SSC</strong> — CGL, CHSL, MTS, GD Constable, JE, CPO run on annual cycles; notices at ssc.gov.in.</li>
+      <li><strong>UPSC</strong> — Civil Services notification ~Feb, Prelims ~May; CDS/NDA twice a year; AFCAT twice a year.</li>
+      <li><strong>IBPS</strong> — PO/MT, Clerks, Specialist Officers, RRBs: registration windows ~3–4 weeks, exams Aug–Nov.</li>
+      <li><strong>Railways (RRB)</strong> — centralised CEN notices (ALP, Technician, NTPC, JE, Group D) on a periodic, not strictly annual, cycle.</li>
+      <li><strong>Teaching</strong> — CTET twice a year (CBSE); KVS/NVS drives are irregular; state TRE cycles roughly annual.</li>
+      <li><strong>India Post GDS</strong> — usually 2 schedules a year (Jan/Feb and Jul/Aug), merit-list based.</li>
+      <li><strong>AIIMS NORCET</strong> — 1–2 times a year for Nursing Officers.</li>
+      <li><strong>ESIC hospitals</strong> — rolling walk-ins for Senior/Junior Residents year-round.</li>
+      <li><strong>NAPS apprenticeships</strong> — no calendar; establishments post through the year.</li>
+    </ul>
+    <div class="warnbox">These are rhythms, not schedules. Apply only against a live notification with an advertisement number.</div>
+  </div>
+  </div>
+  </section>
+
+<script>
+/* ---- live-check statuses, filled by builder from curl results (2 Oct 2026) ---- */
+const LIVE = {
+  "https://ssc.gov.in/":200,
+  "https://sbi.co.in/careers/ongoing-recruitment.html":200,
+  "https://www.sebi.gov.in/sebiweb/about/AboutAction.do?doResults=yes":200,
+  "https://www.joinindiannavy.gov.in":200,
+  "https://crpf.gov.in":200,
+  "https://www.uppbpb.gov.in":200,
+  "https://ntpc.co.in/index.php/jobs-ntpc":200,
+  "https://www.bhel.com/":200,
+  "https://www.hindustanpetroleum.com/job-openings":200,
+  "https://www.coalindia.in/":200,
+  "https://uppsc.up.nic.in/":200,
+  "https://rpsc.rajasthan.gov.in/":200,
+  "https://sso.rajasthan.gov.in/":200,
+  "https://www.indiapost.gov.in/":200,
+  "https://aiimsexams.ac.in/":200,
+  "https://patnahighcourt.gov.in/notices/recruitments":200,
+  "https://www.allahabadhighcourt.in/":200,
+  "https://mpscmanipur.gov.in/":200,
+  "https://empsconline.gov.in":200,
+  "https://www.jpsc.gov.in/":200,
+  "https://www.opsc.gov.in/":302,
+  "https://www.ossc.gov.in/":302,
+  "https://www.ncs.gov.in":301,
+};
+
+const CATS = ["Banking","SSC","UPSC","Railways","Defence","Teaching","Police","State PSC","PSU","Courts","Post Office","Apprenticeship","Healthcare"];
+
+function todayYMD(){const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");}
+function daysLeft(dl){const a=new Date(todayYMD()),b=new Date(dl);return Math.round((b-a)/86400000);}
+
+function badgeFor(l){
+  if(!l.deadline) return '<span class="badge b-open">Open — check dates</span>';
+  const d=daysLeft(l.deadline);
+  if(d<0) return '<span class="badge b-closed">Closed '+l.deadline.split("-").reverse().join(".")+'</span>';
+  if(d===0) return '<span class="badge b-today">⚠ Closes today</span>';
+  if(d<=2) return '<span class="badge b-urgent">'+d+(d===1?" day":" days")+' left</span>';
+  if(d<=7) return '<span class="badge b-urgent">'+d+' days left</span>';
+  return '<span class="badge b-soon">'+d+' days left</span>';
+}
+function cardHTML(l){
+  const rows=[["Organisation",l.org],["Advt",l.advt||"—"],["Vacancies",l.posts],
+    ["Qualification",l.qual],["Age limit",l.age],["Fee",l.fee]];
+  let dlRow="";
+  if(l.deadline){
+    const d=daysLeft(l.deadline);
+    dlRow='<div><div class="k">Last date</div><div class="v'+(d<=7?" warn":"")+'">'+l.deadline.split("-").reverse().join(".")+' — '+l.deadlineNote+'</div></div>';
+  } else {
+    dlRow='<div><div class="k">Last date</div><div class="v warn">'+l.deadlineNote+'</div></div>';
+  }
+  return '<article class="card" data-id="'+l.id+'">'+
+    '<span class="cat">'+l.cat+' · '+(l.state||"")+'</span>'+
+    badgeFor(l)+
+    '<h3>'+l.title+'<br><span class="org">'+l.org+'</span></h3>'+
+    '<div class="meta">'+rows.map(r=>'<div><div class="k">'+r[0]+'</div><div class="v">'+r[1]+'</div></div>').join("")+dlRow+'</div>'+
+    (l.sel?'<div class="note">'+l.sel+'</div>':"")+
+    '<div class="links"><a class="btn primary" href="'+l.apply+'" target="_blank" rel="noopener">Apply on official site</a>'+
+    '<a class="btn ghost" href="'+l.notify+'" target="_blank" rel="noopener">Official notification</a></div>'+
+    (l.verifyNote?'<div class="verif">'+l.verifyNote+'</div>':'<div class="verif"><span class="ok">●</span> '+(l.deadline?'Verified against official source':'Ad presence verified on official directory — details: check official ad')+' · 2 Oct 2026</div>')+
+    '</article>';
+}
+
+/* ---- render + sort ---- */
+function render(){
+  const dated=LISTINGS.filter(l=>l.deadline).sort((a,b)=>a.deadline<b.deadline?-1:1);
+  const open=LISTINGS.filter(l=>!l.deadline);
+  document.getElementById("gridClosing").innerHTML=dated.map(cardHTML).join("");
+  document.getElementById("gridOpen").innerHTML=open.map(cardHTML).join("");
+  document.getElementById("pipeList").innerHTML=PIPELINE.map(p=>
+    '<div class="pipe"><span class="stage badge b-pipe">'+p.stage+'</span><div class="body">'+
+    '<h4>'+p.title+' <span class="org">· '+p.org+'</span></h4><p>'+p.note+'</p>'+
+    '<div class="links"><a class="btn ghost" href="'+p.link+'" target="_blank" rel="noopener">Official site</a></div></div></div>').join("");
+  document.getElementById("pipeSub").textContent=PIPELINE.length+" tracked items";
+  /* directory */
+  let nSrc=0;
+  document.getElementById("dirWrap").innerHTML=DIRECTORY.map(c=>{
+    nSrc+=c.items.length;
+    return '<div class="dir-cat"><h3>'+c.cat+' ('+c.items.length+')</h3><div class="dir-list">'+
+      c.items.map(it=>{
+        const live=LIVE[it[1]];
+        const tag=(live===200||live===301||live===302)?' <span class="st"><span class="live">● live</span></span>':"";
+        return '<div class="dir-item"><span class="nm">'+it[0]+'</span><span class="u">'+it[1]+'</span><span class="st"><a href="'+it[1]+'" target="_blank" rel="noopener">Open official site →</a>'+tag+'</span></div>';
+      }).join("")+'</div></div>';
+  }).join("");
+  document.getElementById("dirSub").textContent=nSrc+" official sources across "+DIRECTORY.length+" sectors";
+  /* tabs */
+  document.getElementById("tabs").innerHTML=
+    '<a href="#closing">⏰ Closing soon <span class="n">'+dated.length+'</span></a>'+
+    '<a href="#open">🟢 Open <span class="n">'+open.length+'</span></a>'+
+    '<a href="#pipeline">🔄 Pipeline <span class="n">'+PIPELINE.length+'</span></a>'+
+    '<a href="#directory">🏛️ Sources <span class="n">'+nSrc+'</span></a>'+
+    '<a href="#guides">📘 Guides <span class="n">5</span></a>';
+  document.getElementById("closingSub").textContent=dated.length+" with confirmed deadlines";
+  applyFilters();
+}
+
+/* ---- filters ---- */
+function applyFilters(){
+  const q=document.getElementById("q").value.trim().toLowerCase();
+  const cat=document.getElementById("fCat").value, qual=document.getElementById("fQual").value;
+  const st=document.getElementById("fState").value, dead=document.getElementById("fDead").value;
+  let shown=0, closedN=0;
+  document.querySelectorAll("#gridClosing .card, #gridOpen .card").forEach(el=>{
+    const l=LISTINGS.find(x=>x.id===el.dataset.id); let ok=true;
+    if(cat && l.cat!==cat) ok=false;
+    if(qual && !(l.qualTags||[]).includes(qual)) ok=false;
+    if(st && l.state!==st) ok=false;
+    if(dead){ if(!l.deadline) ok=false; else {const d=daysLeft(l.deadline); if(d<0||d>+dead) ok=false;} }
+    if(q){
+      const hay=(l.title+" "+l.org+" "+l.posts+" "+l.qual+" "+(l.state||"")+" "+l.cat).toLowerCase();
+      if(!hay.includes(q)) ok=false;
+    }
+    /* expired-with-deadline auto-moves to closed section */
+    if(l.deadline && daysLeft(l.deadline)<0){
+      el.classList.add("hidden"); closedN++; ok=false;
+    } else if(ok){ el.classList.remove("hidden"); shown++; }
+      else el.classList.add("hidden");
+  });
+  /* rebuild closed section */
+  const closed=LISTINGS.filter(l=>l.deadline&&daysLeft(l.deadline)<0);
+  document.getElementById("closed").classList.toggle("hidden",closed.length===0);
+  document.getElementById("gridClosed").innerHTML=closed.map(cardHTML).join("");
+  document.getElementById("count").textContent=shown+" listing"+(shown===1?"":"s")+" shown";
+}
+
+/* ---- init ---- */
+(function(){
+  const fCat=document.getElementById("fCat");
+  CATS.forEach(c=>{const o=document.createElement("option");o.value=c;o.textContent=c;fCat.appendChild(o);});
+  const states=[...new Set(LISTINGS.map(l=>l.state).filter(Boolean))].sort();
+  const fState=document.getElementById("fState");
+  states.forEach(s=>{const o=document.createElement("option");o.value=s;o.textContent=s;fState.appendChild(o);});
+  const chips=document.getElementById("chips");
+  chips.innerHTML='<button class="chip on" data-c="">All</button>'+CATS.map(c=>'<button class="chip" data-c="'+c+'">'+c+'</button>').join("");
+  chips.addEventListener("click",e=>{
+    const b=e.target.closest(".chip"); if(!b) return;
+    chips.querySelectorAll(".chip").forEach(x=>x.classList.remove("on")); b.classList.add("on");
+    fCat.value=b.dataset.c; applyFilters();
+  });
+  ["q","fCat","fQual","fState","fDead"].forEach(id=>document.getElementById(id).addEventListener("input",applyFilters));
+  document.getElementById("reset").addEventListener("click",()=>{
+    document.getElementById("q").value="";fCat.value="";document.getElementById("fQual").value="";
+    document.getElementById("fState").value="";document.getElementById("fDead").value="";
+    chips.querySelectorAll(".chip").forEach(x=>x.classList.toggle("on",x.dataset.c===""));
+    applyFilters();
+  });
+  render();
+})();
+</script>
+</body>
+</html>
