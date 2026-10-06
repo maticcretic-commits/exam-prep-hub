@@ -6,12 +6,39 @@
   function get() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
   function set(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
 
-  // Called when consent is granted — PostHog snippet is injected here (phase 2, needs API key).
+  // Called when consent is granted — loads PostHog (US cloud).
+  // NOTE: the phc_ key below is public by design (it ships in page source).
   window.__enableAnalytics = function () {
     if (window.__analyticsOn) return;
     window.__analyticsOn = true;
-    // TODO: paste PostHog snippet here once the API key exists.
-    // See POSTHOG-SETUP (tap list) for the key step.
+    (function (t, e) {
+      var o, n, p, r;
+      e.__SV || ((window.posthog = e), (e._i = []), (e.init = function (i, s, a) {
+        function g(t, e) {
+          var o = e.split(".");
+          2 == o.length && ((t = t[o[0]]), (e = o[1])), t.hasOwnProperty(e) && t[e]();
+        }
+        ((o = t.createElement("script")).type = "text/javascript"),
+          (o.crossOrigin = "anonymous"),
+          (o.async = !0),
+          (o.src = s.api_host + "/static/array.js"),
+          (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(o, r);
+        var u = e;
+        for (void 0 !== a ? (u = e[a] = []) : a = "posthog",
+          u.people = u.people || [],
+          u.toString = function (t) {
+            var e = "posthog";
+            return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e;
+          },
+          u.people.toString = function () { return u.toString(1) + ".people"; },
+          n = "capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),
+          p = 0; p < n.length; p++) g(u, n[p]);
+        e._i.push([i, s, a]);
+      }), (e.__SV = 1));
+    })(document, window.posthog || []);
+    window.posthog.init("phc_phHSdCajbiQWYpSZyX7ma7eo4uA4UxCmP2kJaLkcXofH", {
+      api_host: "https://us.i.posthog.com",
+    });
   };
 
   function banner() {
