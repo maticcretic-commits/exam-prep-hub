@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://maticcretic-commits.github.io/exam-prep-hub/sitemap.xml
